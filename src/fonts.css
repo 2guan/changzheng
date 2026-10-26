@@ -15,8 +15,10 @@
 }
 
 :root {
-  --font-body: ChangzhengBody, "STKaiti", "KaiTi", serif;
-  --font-title: ChangzhengTitle, "Songti SC", "STSong", serif;
+  --font-fallback: "Microsoft YaHei", "微软雅黑", "PingFang SC",
+    "Noto Sans CJK SC", sans-serif;
+  --font-body: ChangzhengBody, var(--font-fallback);
+  --font-title: ChangzhengTitle, var(--font-fallback);
 }
 
 textarea {

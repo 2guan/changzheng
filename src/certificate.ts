@@ -135,7 +135,7 @@ export async function createCertificate(
     title = false,
   ) => {
     c.fillStyle = color;
-    c.font = `${size}px ${title ? "ChangzhengTitle" : "ChangzhengBody"}, serif`;
+    c.font = `${size}px ${title ? "ChangzhengTitle" : "ChangzhengBody"}, "Microsoft YaHei", "微软雅黑", "PingFang SC", "Noto Sans CJK SC", sans-serif`;
     c.fillText(s, x, y);
   };
   const rule = (y: number) => {
@@ -152,10 +152,10 @@ export async function createCertificate(
   text("学 习 纪 念", 900, 327, 27, "#84683e");
   rule(367);
   let nameSize = 49;
-  c.font = `${nameSize}px ChangzhengBody, serif`;
+  c.font = `${nameSize}px ChangzhengBody, "Microsoft YaHei", "微软雅黑", "PingFang SC", "Noto Sans CJK SC", sans-serif`;
   while (c.measureText(displayName).width > 1360 && nameSize > 27) {
     nameSize--;
-    c.font = `${nameSize}px ChangzhengBody, serif`;
+    c.font = `${nameSize}px ChangzhengBody, "Microsoft YaHei", "微软雅黑", "PingFang SC", "Noto Sans CJK SC", sans-serif`;
   }
   text(displayName, 900, 449, nameSize, "#3d352b");
   text("循着先辈的足迹，在阅读中回望，在思考中前行。", 900, 509, 29);
