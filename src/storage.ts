@@ -1,4 +1,7 @@
+import { badgeIds } from "./achievements.ts";
 export type Progress = {
+  quizVersion: number;
+  badges: string[];
   visited: number[];
   saved: number[];
   stories: number[];
@@ -8,6 +11,8 @@ export type Progress = {
 };
 export const STORAGE_KEY = "changzheng-fieldnotes-v1";
 export const emptyProgress: Progress = {
+  quizVersion: 2,
+  badges: [],
   visited: [],
   saved: [],
   stories: [],
@@ -27,6 +32,16 @@ export function sanitizeProgress(raw: unknown): Progress {
         ] as number[])
       : [];
   return {
+    quizVersion: 2,
+    badges: Array.isArray(r.badges)
+      ? [
+          ...new Set(
+            r.badges.filter(
+              (x): x is string => typeof x === "string" && badgeIds.includes(x),
+            ),
+          ),
+        ]
+      : [],
     visited: ids(r.visited, 22),
     saved: ids(r.saved, 22),
     stories: ids(r.stories, 20),
@@ -36,16 +51,28 @@ export function sanitizeProgress(raw: unknown): Progress {
             r.tasks.filter(
               (x): x is string =>
                 typeof x === "string" &&
-                ["pack", "decision", "bridge", "night"].includes(x),
+                ([
+                  "pack",
+                  "decision",
+                  "bridge",
+                  "night",
+                  "night-lab",
+                  "bridge-lab",
+                  "marsh",
+                  "cipher",
+                  "tribute",
+                ].includes(x) ||
+                  /^station-([1-9]|1[0-9]|2[0-2])$/.test(x)),
             ),
           ),
         ]
       : [],
-    answers: Array.isArray(r.answers)
-      ? r.answers
-          .slice(0, 15)
-          .map((x) => (Number.isInteger(x) && x >= 0 && x <= 2 ? x : null))
-      : [],
+    answers:
+      r.quizVersion === 2 && Array.isArray(r.answers)
+        ? r.answers
+            .slice(0, 15)
+            .map((x) => (Number.isInteger(x) && x >= 0 && x <= 2 ? x : null))
+        : [],
     lastStation:
       Number.isInteger(r.lastStation) &&
       Number(r.lastStation) >= 1 &&

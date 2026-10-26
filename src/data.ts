@@ -1,3 +1,4 @@
+import fullQuiz from "./quiz-content.ts";
 export type Milestone = {
   id: number;
   title: string;
@@ -766,7 +767,16 @@ export const armies = [
     ] as [number, number][],
   },
 ];
-export const poems = [
+export const poems: {
+  title: string;
+  mapTitle?: string;
+  year: string;
+  location: string;
+  lines: string[];
+  note: string;
+  station: number;
+  source?: { title: string; url: string };
+}[] = [
   {
     title: "七律·长征",
     year: "1935年10月",
@@ -835,6 +845,22 @@ export const poems = [
     note: "作品从雪山的宏大意象，转向关于世界与共同命运的想象。赏析时，可把真实的地理景物与诗中夸张、象征的层次分开。",
     station: 16,
   },
+  {
+    title: "六言诗·给彭德怀同志",
+    mapTitle: "给彭德怀同志",
+    year: "1935年10月",
+    location: "陕西 · 吴起镇",
+    lines: [
+      "山高路远坑深，大军纵横驰奔。",
+      "谁敢横刀立马？唯我彭大将军！",
+    ],
+    note: "前两句把险峻地形与行军气势放在一起，后两句一问一答，将目光落在指挥战斗的人身上。这首短诗让长征的叙述从山河转向战友。",
+    station: 21,
+    source: {
+      title: "新华社｜毛泽东为何专门赋诗赞扬彭德怀",
+      url: "https://www.xinhuanet.com/mil/2016-10/08/c_129313735.htm",
+    },
+  },
 ];
 export type QuizQuestion = {
   question: string;
@@ -843,145 +869,7 @@ export type QuizQuestion = {
   explanation: string;
   station: number;
 };
-export const quiz: QuizQuestion[] = [
-  {
-    question: "1934年10月，中央红军主力在哪里集结渡河，开始战略转移？",
-    options: ["江西于都", "陕西吴起", "甘肃会宁"],
-    answer: 0,
-    explanation: "于都是中央红军长征的重要集结出发地，主力在这里渡过于都河。",
-    station: 1,
-  },
-  {
-    question: "“半条被子”的故事，把哪一种关系变得具体可感？",
-    options: ["装备与战术", "红军与当地群众", "气候与地形"],
-    answer: 1,
-    explanation: "分享被子这一日常行动，体现了红军与群众之间的关心与信任。",
-    station: 3,
-  },
-  {
-    question: "理解湘江战役后的兵力减员，哪一种说法更严谨？",
-    options: [
-      "减员全部等于阵亡",
-      "只看一个数字就足够",
-      "需要区分伤亡、失散等统计口径",
-    ],
-    answer: 2,
-    explanation: "减员涉及多种原因。尊重生命，也需要谨慎理解历史数字。",
-    station: 5,
-  },
-  {
-    question: "通道转兵时，红军为何转向贵州？",
-    options: [
-      "那里道路最平坦",
-      "避开既定方向的重兵，争取主动",
-      "因为长征已经结束",
-    ],
-    answer: 1,
-    explanation:
-      "原计划北上湘西的方向已有重兵部署，转向贵州是应对形势的重要调整。",
-    station: 7,
-  },
-  {
-    question: "遵义会议集中解决了当时哪些具有决定意义的问题？",
-    options: ["军事与组织问题", "结束全部战争", "海外贸易问题"],
-    answer: 0,
-    explanation:
-      "会议总结军事指挥的经验教训，是党独立自主解决自身问题的重要转折。",
-    station: 10,
-  },
-  {
-    question: "观看四渡赤水的过程，最值得学习的思路是什么？",
-    options: ["任何计划都不应改变", "绕得越远越好", "依据敌情变化灵活调整行动"],
-    answer: 2,
-    explanation: "四渡赤水是在不断变化的局势中机动调敌、创造主动的过程。",
-    station: 11,
-  },
-  {
-    question: "红军渡过金沙江后，江流的战略作用发生了什么变化？",
-    options: [
-      "从前方障碍变为隔开追兵的屏障",
-      "河流消失了",
-      "使所有补给困难自动解决",
-    ],
-    answer: 0,
-    explanation:
-      "地理要素的作用取决于双方位置与行动。渡江之后，江流有利于拉开与追兵的距离。",
-    station: 13,
-  },
-  {
-    question: "彝海结盟体现了通过什么方式争取合作？",
-    options: ["尊重、平等与信任", "完全依赖武器数量", "避开所有交流"],
-    answer: 0,
-    explanation:
-      "刘伯承与小叶丹结盟，是红军民族政策与当地合作关系的重要历史节点。",
-    station: 14,
-  },
-  {
-    question: "强渡大渡河后，红军为什么还要迅速赶往泸定桥？",
-    options: [
-      "只为了寻找风景",
-      "有限船只难以迅速运送全部部队",
-      "因为桥在金沙江上",
-    ],
-    answer: 1,
-    explanation: "泸定桥提供了更大的通行能力，夺桥与急行军为后续部队争取通道。",
-    station: 15,
-  },
-  {
-    question: "翻越雪山时，哪一组因素会叠加增加行军困难？",
-    options: [
-      "高寒、缺氧、装备不足",
-      "气温舒适、补给充足",
-      "道路平坦、车辆众多",
-    ],
-    answer: 0,
-    explanation: "长途疲劳叠加高海拔环境与御寒装备不足，使雪山行军格外艰难。",
-    station: 16,
-  },
-  {
-    question: "草地看上去平坦，为什么依然危险？",
-    options: [
-      "没有任何危险",
-      "只有坡度才影响行军",
-      "沼泽、湿冷与补给困难同样重要",
-    ],
-    answer: 2,
-    explanation: "地形不仅是坡度。地表承载力、气候和能否补给，也决定通行难度。",
-    station: 18,
-  },
-  {
-    question: "腊子口突破中，正面攻击之外的重要行动是什么？",
-    options: ["攀崖迂回，从侧后配合", "原地等待道路变宽", "放弃所有侦察"],
-    answer: 0,
-    explanation: "正面与侧翼协同，为突破狭窄关隘创造了条件。",
-    station: 19,
-  },
-  {
-    question: "哈达铺的报纸为什么重要？",
-    options: [
-      "纸张能代替全部粮食",
-      "提供陕北红军与根据地的消息",
-      "它标志着互联网出现",
-    ],
-    answer: 1,
-    explanation: "新的信息帮助红军进一步明确北上陕北的方向。",
-    station: 20,
-  },
-  {
-    question: "四支主要长征队伍中，哪一支最先到达陕北？",
-    options: ["红二方面军", "红四方面军", "红二十五军"],
-    answer: 2,
-    explanation: "红二十五军于1935年9月到达陕北，随后中央红军于10月抵达。",
-    station: 21,
-  },
-  {
-    question: "红军三大主力会师、长征胜利结束的时间是？",
-    options: ["1934年10月", "1935年1月", "1936年10月"],
-    answer: 2,
-    explanation: "1936年10月，三大主力在会宁、将台堡会师，标志着长征胜利结束。",
-    station: 22,
-  },
-];
+export const quiz: QuizQuestion[] = fullQuiz;
 export const sources = [
   {
     title: "党史百问：为什么中央红军要进行战略转移？",
@@ -1012,53 +900,56 @@ export const sources = [
 export const modules = [
   {
     id: "home",
-    name: "启程首页",
-    en: "THE BEGINNING",
+    name: "首页",
+
     desc: "让山川，重新讲述这段远征。",
   },
   {
     id: "prologue",
     name: "历史序幕",
-    en: "BEFORE THE JOURNEY",
+
     desc: "从哪里出发，又为何必须离开？",
   },
   {
     id: "journey",
     name: "万里征途",
-    en: "THE LONG MARCH",
+
     desc: "沿着22个历史坐标，走进现场。",
   },
   {
     id: "armies",
     name: "四路红军",
-    en: "FOUR PATHS, ONE PURPOSE",
+
     desc: "不同的来路，共同的方向。",
   },
   {
     id: "stories",
     name: "篝火夜话",
-    en: "HUMAN STORIES",
+
     desc: "宏大历史中，具体而微的生命。",
   },
   {
     id: "meaning",
     name: "长征回响",
-    en: "BEYOND THE JOURNEY",
+
     desc: "走过的路，如何照亮今天？",
   },
   {
     id: "poetry",
     name: "诗意长征",
-    en: "WORDS THAT ENDURE",
+
     desc: "山河入诗，风骨长存。",
   },
   {
     id: "learn",
     name: "学习中心",
-    en: "YOUR FIELD NOTES",
+
     desc: "把看见的历史，变成自己的理解。",
   },
 ];
+export const themeModules = modules.filter(
+  (m) => m.id !== "home" && m.id !== "learn",
+);
 export function project(point: [number, number]): [number, number] {
   return [(point[0] - 98) * 51 + 35, (38 - point[1]) * 40 + 20];
 }

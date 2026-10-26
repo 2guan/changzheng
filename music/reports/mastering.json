@@ -1,0 +1,16 @@
+{
+  "source": "XSXB-Band v4 mixes",
+  "crossfadeSeconds": 3,
+  "sourceIntegratedLUFS": -30.37,
+  "targetIntegratedLUFS": -22,
+  "truePeakLimitDbTP": -3,
+  "preservedLoudnessRangeLU": 9.7,
+  "fadeInSeconds": 1.5,
+  "fadeOutSeconds": 5,
+  "codec": "MP3 192 kbps, 44.1 kHz stereo",
+  "finalDurationSeconds": 419.484785,
+  "measuredIntegratedLUFS": -22.2,
+  "measuredLoudnessRangeLU": 9.6,
+  "measuredTruePeakDbTP": -5.9,
+  "fileBytes": 10069450
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "id": "terrain",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-4e60be08-7e70-496b-b9cf-5d3689d7505c.png",
+    "file": "public/assets/terrain.webp",
+    "prompt": "Use case: historical-scene. Generate a wide 1000:620 aspect ratio top-down atlas terrain painting for an interactive Long March history map, no text, no labels, no dots, no routes, no borders, no legend. Spatial composition MUST be: left third high Tibetan plateau with snow mountain ridges; center-west Sichuan basin and rugged Hengduan mountain ranges running north south in lower left; upper center loess plateaus; lower center Yunnan Guizhou rugged limestone hills; right third softer southeastern Chinese hills and broad valleys, green forests and pale beige river valleys. Rivers fine desaturated blue gray, mountains rendered as shaded-relief cartography, warm antique parchment beige palette, subtle elegant ink texture, low contrast especially center to leave overlay route readability, professional museum atlas, straight-down orthographic geography-inspired art not perspective landscape, not a precise GIS map. Edge to edge full bleed.",
+    "mode": "built-in image_gen",
+    "revision": "Edited to remove coastline/ocean: inland regional relief only, no text or routes."
+  },
+  {
+    "id": "object-03",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-105c4cc3-79e8-4d4c-ad3d-bd42f6143c05.png",
+    "file": "public/assets/object-03.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一条边缘烧焦、只剩半截且有三个烫印的旧牛皮腰带。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-04",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-75df0adb-a04e-4f86-9819-e6a624e3fe96.png",
+    "file": "public/assets/object-04.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一张折叠磨损的旧党证与恰好七根干燥的红头火柴，不要可读文字。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen",
+    "originalSource": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-93fef9fb-0e68-4458-b224-241938c805f2.png",
+    "editPrompt": "Edit only the matchstick count in this museum still life. There are EIGHT matchsticks in the reference, remove ONE matchstick so there are EXACTLY SEVEN individually countable red-headed wooden matchsticks. Arrange the seven matchsticks in a single clean row, separated with gaps. Keep the old red booklet, background, lighting, palette, composition unchanged. Count seven heads and seven sticks. No text."
+  },
+  {
+    "id": "object-01",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-4bbde4cd-65f1-4487-8865-ef3bb6732ba2.png",
+    "file": "public/assets/object-01.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一根长满红锈、用缝衣针弯成的弯钩，置于一小块褪色暗红布上。金色鱼钩是象征，材质必须是锈铁而不是黄金。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-05",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-524cce18-250a-41bd-87f9-7ddc8f3dcf95.png",
+    "file": "public/assets/object-05.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一袋青稞炒面与一个敞开的旧小布包，露出一块干净牛膝骨。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-02",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-fa1e993d-ddee-4e51-a446-8469cd41e85d.png",
+    "file": "public/assets/object-02.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 半截熄灭的手卷烟与一件单薄破旧的灰布夏装。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-06",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-ed0eaf58-baf2-467b-ad04-931b482aecde.png",
+    "file": "public/assets/object-06.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一副竹担架与一方绣着小红星的旧白手帕。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-07",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-0935bb7c-665e-4c9f-8988-d70a729dd77b.png",
+    "file": "public/assets/object-07.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一把有使用痕迹与凹痕、绑着褪色红绸的黄铜军号。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-08",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-42a715a4-189e-4982-80ee-730f2e33fb30.png",
+    "file": "public/assets/object-08.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一把旧木工锯子与一根磨得光亮的木拐杖，无血迹。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-09",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-332cee7d-6960-4e7c-80ad-a4c981cb1cb5.png",
+    "file": "public/assets/object-09.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一副1930年代双筒望远镜与一张毛笔写着“铁流后卫”四个汉字的褒奖令。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen",
+    "originalSource": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-917736a3-0e1f-486d-a5fd-ccc4c660f91e.png",
+    "editPrompt": "Edit ONLY the very last bottom Chinese character on the document in this image. The inscription must read 铁流后卫 exactly, top to bottom four characters 铁, 流, 后, 卫. The current last character is wrong. Replace it with simplified Chinese 卫: three simple strokes, horizontal-turn-hook frame with a bottom horizontal stroke. NOT 軍, not 军, not 事, not 章. Preserve the first three characters, paper, binoculars, composition and all colors and light. Exact four characters: 铁流后卫."
+  },
+  {
+    "id": "object-12",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-1eb08c7b-3bc2-4a27-88d4-9898082d55bc.png",
+    "file": "public/assets/object-12.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一根弯曲楠竹扁担、两个小黑漆铁皮箱、几张旧纸币，纸币为模糊教学艺术道具不含可读票面。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-10",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-706c88bc-9b07-4977-a399-88295ff98fbe.png",
+    "file": "public/assets/object-10.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一副沉重铁脚镣与一架1930年代折叠老照相机。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-11",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-4528d57b-0598-45c5-b231-d9565aa2ba6f.png",
+    "file": "public/assets/object-11.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一串火红干辣椒与一只装少量辣椒汤的粗瓷大碗。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-13",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-d8ea8bf0-71c5-49ba-ab15-835c10f9e114.png",
+    "file": "public/assets/object-13.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一顶竹编斗笠与系在上面的白布条，布条用墨写“学习”两字。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-14",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-f6514711-ee20-4423-9abd-1f929ae6ec5a.png",
+    "file": "public/assets/object-14.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一顶宽大的灰色八角红军帽，缝布红星，与一双小号草鞋。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-15",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-818c7f0d-9f01-49e3-bfc9-a0feabb3fe9b.png",
+    "file": "public/assets/object-15.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一副1930年代无线电耳机、一台小手摇发电机与一本旧电报密码本。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-16",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-03d53653-8df5-4130-8c3d-bdf06adacb91.png",
+    "file": "public/assets/object-16.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一个朴素木圈麻绳篮球框与一把1930年代手动理发推剪。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-17",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-9b1530c5-5b93-4319-8dc3-bd1a82119c0a.png",
+    "file": "public/assets/object-17.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一幅泛黄手绘法文贵州地形草图与一副圆框老花镜，不要可读地图标签。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-18",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-474043aa-8394-453b-934a-4f9727127cab.png",
+    "file": "public/assets/object-18.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一双绑着褪色红布条的麻耳草鞋与编草鞋用的木耙子。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-19",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-8c25a08b-c0f2-41b2-a892-ab75b1315b09.png",
+    "file": "public/assets/object-19.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一面小红鼓与铜锣，一顶旧黑色瓜皮帽，1930年代流动剧社道具。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "object-20",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-985762f4-7583-44f6-b950-cfca581cd65f.png",
+    "file": "public/assets/object-20.webp",
+    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一门1930年代历史展陈用迫击炮与三枚黄铜色旧炮弹，静物陈列，无操作细节或标注。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "mode": "built-in image_gen"
+  }
+]

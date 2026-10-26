@@ -1,3 +1,5 @@
+import { StationDecision } from "./Experiences";
+import { StationChapters } from "./ReadingContent";
 import { useEffect } from "react";
 import {
   ArrowRight,
@@ -18,17 +20,21 @@ export function Reader({
 }) {
   const m = milestones[id - 1];
   useEffect(() => {
-    document.querySelector("dialog")?.scrollTo({ top: 0, behavior: "instant" });
+    document
+      .querySelector("dialog .dialog-content")
+      ?.scrollTo({ top: 0, behavior: "instant" });
   }, [id]);
   return (
-    <Dialog title="征途手记" onClose={onClose}>
+    <Dialog narratable title="征途手记" onClose={onClose}>
       <article className="reader">
-        <div className="reader-date">
+        <div className="reader-date" data-no-narration>
           第 {String(m.id).padStart(2, "0")} 站 · {m.date}
         </div>
-        <h2>{m.title}</h2>
-        <p className="reader-subtitle">{m.subtitle}</p>
-        <div className="reader-meta">
+        <h2 data-no-narration>{m.title}</h2>
+        <p className="reader-subtitle" data-no-narration>
+          {m.subtitle}
+        </p>
+        <div className="reader-meta" data-no-narration>
           <span>
             <MapPin />
             {m.place}
@@ -36,9 +42,8 @@ export function Reader({
           <SaveButton id={id} />
         </div>
         <p className="reader-lead">{m.summary}</p>
-        {m.body.map((p, i) => (
-          <p key={i}>{p}</p>
-        ))}
+        <StationChapters id={id} />
+        <StationDecision key={id} id={id} />
         <aside className="insight">
           <BookOpen />
           <div>

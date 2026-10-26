@@ -1,0 +1,20 @@
+{
+  "tool": "built-in imagegen",
+  "assets": [
+    {
+      "name": "night",
+      "prompt": "A first person cinematic matte painting of the Yudu riverbank in rural Jiangxi China at blue hour night, October 1934. Wide horizontal landscape, wooden boats moored near left foreground, bamboo pontoon stretching diagonally from center foreground into mist towards right distance, small oil lantern warm amber glow on bank near right foreground, a few distant anonymous silhouettes in plain 1930s grey uniforms, deep indigo water reflecting moonlight, layered mist mountains and trees. Painterly archival film texture, high-end immersive historical game background, quiet human dignity, realistic grounded proportions. No weapons focus, no text, no logo, no UI. Landscape composition 16:9.",
+      "output": "Generated images are saved to /Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6 as /Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-26968fcc-509e-4a54-b426-fb1b838c11fb.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "name": "snow",
+      "prompt": "Immersive historical scene illustration: first person viewpoint on winding footpath across Jiajin snow mountain Sichuan China in June 1935. Tiny column of anonymous walkers in worn plain grey uniforms with packs high up slope to right; solitary companion seated on rock in lower left middle distance; loose grey cloth on rock at right foreground. Vast white mountain peaks, blowing clouds, dark distant ridges, cold desaturated blue silver light, nuanced warm dawn at horizon. Cinematic hand painted realism with subtle film texture, dignified and quiet, high-end historical adventure scenery, landscape16:9. No modern gear, no weapons, no text, no watermark.",
+      "output": "Generated images are saved to /Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6 as /Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-2fbf7dcb-dedc-4fda-b401-495668fcbef3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "name": "marsh",
+      "prompt": "Immersive historical landscape illustration of highland marsh in western Sichuan China late summer1935, first person low viewpoint looking along narrow tufts of grass and shallow black pools towards distant softly lit mountains. Dark olive reeds near foreground, small grassy islets form a meandering path, atmospheric fog at horizon, rain cloud break lets amber light into center, tiny grey-clad anonymous column of travelers with bamboo walking sticks in far middle ground. Cinematic handpainted realistic film matte painting, nuanced tactile earthy textures, historically plausible no modern objects, no text, no UI, wide16:9 scene. A quiet emotionally moving scene for an educational interactive journey.",
+      "output": "Generated images are saved to /Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6 as /Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-dfbf7d53-2efc-437d-8586-9aea5403f3ba.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

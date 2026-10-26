@@ -1,0 +1,134 @@
+{
+  "tool": "Built-in imagegen",
+  "style": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: ",
+  "assets": [
+    {
+      "id": 2,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-464567c2-58cf-4e04-b78f-cdefc64e04e8.png",
+      "target": "public/assets/panorama-02.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: Autumn 1934 Xinfeng southern Jiangxi, layered low green hills after rain, narrow dirt trail through wet terraced fields and an old wooden outpost gate, a small distant column in worn grey uniforms walking westward. Wide sense of quiet movement through a first blockade, no fighting."
+    },
+    {
+      "id": 3,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-c03fa59c-e37c-4814-ba3b-a4c4886a335f.png",
+      "target": "public/assets/panorama-03.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: November 1934 Shazhou village in Rucheng Hunan. Humble rural mudbrick home courtyard at dusk with open wooden door on left, lamplit sleeping platform and folded half cotton quilt visible inside, three anonymous adult women in worn grey uniforms saying goodbye to a village woman, small dignified human figures. Autumn hills and old tiled roofs stretching across right."
+    },
+    {
+      "id": 4,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-9c1e3f31-dabf-4710-b083-a36163e45531.png",
+      "target": "public/assets/panorama-04.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: November 1934 Yizhang Hunan, a steam-era single track railway crossing rural valley, no train visible. Small distant column of grey-clad travelers with wooden shoulder poles and tied canvas luggage carefully crossing railway at dawn. Wet ballast and rails across foreground, cold mist, autumn fields and hills."
+    },
+    {
+      "id": 5,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-50fc08ef-18e9-4c90-9c16-96d8cb8d323c.png",
+      "target": "public/assets/panorama-05.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: Late November1934 Xiang River near Xing'an Guangxi after a difficult crossing. Wide cold river between distant low mountains, abandoned rough wooden planks and a battered straw shoe at shore in foreground, a few anonymous survivors helping each other at distant crossing, faint smoke on far bank, subdued grey amber dusk. Solemn memorial atmosphere, no visible bodies, no blood, no explicit violence."
+    },
+    {
+      "id": 6,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-5db0ebfb-8e1e-4e7b-8223-1cad2465373d.png",
+      "target": "public/assets/panorama-06.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: Early December1934 Laoshanjie mountain of Yuecheng ridge Guangxi. Immense dark layered forest mountain slopes at night, narrow switchback trail with tiny warm torchlights tracing upward diagonally, a few resting grey-clad travelers with bamboo packs near foreground rock. Stars above thin clouds, cinematic blue night and warm orange points, no modern lights."
+    },
+    {
+      "id": 7,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-1f0ec7cc-10f2-4821-87a3-a56f4939e7b7.png",
+      "target": "public/assets/panorama-07.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: December1934 Tongdao Hunan, winter mist in Dong-region forested hills, muddy mountain fork in foreground, a few anonymous plain grey-clad travelers beside rolled paper map on a rough rock and a messenger pointing toward western valley. Timber village roofs left distant, winding westward road right, muted brown olive, thoughtful quiet turning point."
+    },
+    {
+      "id": 8,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-4712c544-1115-46a7-8fee-41f3b0fd0ae3.png",
+      "target": "public/assets/panorama-08.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: Winter1934 Liping Guizhou old timber merchant house meeting room, plain rough rectangular table with open paper maps, oil lamp, stools, worn grey coats hung on side. Doorway opens to misty cobblestone street and layered dark rooftops. No people in foreground, a few small unidentifiable silhouettes through door. Reflective lamplight contrasted with blue cold morning."
+    },
+    {
+      "id": 9,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-47ea0457-fa9a-4a1e-8379-85047167edbe.png",
+      "target": "public/assets/panorama-09.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: January1935 Wujiang Guizhou, dramatic steep limestone gorge river landscape in cold green and grey, bamboo rafts near rocky left riverbank, temporary wooden river crossing in middle distance with tiny grey-clad travelers and workers. Mists between towering rock walls, river powerful and wide, distant activity only, no combat."
+    },
+    {
+      "id": 10,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-64043387-fb65-4c21-8855-3e1a595082ad.png",
+      "target": "public/assets/panorama-10.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: January1935 Zunyi historical meeting setting inspired by early20thcentury southwest Chinese brick and timber two-storey courtyard architecture. View from a wood balcony into a warmly lit simple meeting room: empty long rectangular wooden table, chairs, tea cups, paper maps, oil lamp. Winter blue courtyard and tiled roofs visible on right. No portraits, no identifiable leaders, no text."
+    },
+    {
+      "id": 11,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-ea0a9709-1469-451a-9b61-614cc4b7addc.png",
+      "target": "public/assets/panorama-11.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: Early1935 Chishui River at Tucheng southwest China. Panoramic curving red-brown river threading deep green and ochre hills, old riverside market town tiled roofs at left, small wooden ferry in center, a few distant tiny grey-uniform travelers on winding bank path on right. Drifting fog after rain, layered depth, bright patch of muted sunlight, historical landscape no modern infrastructure."
+    },
+    {
+      "id": 12,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-a3afb901-d8e7-4b46-a073-aa78b2fbebb8.png",
+      "target": "public/assets/panorama-12.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: April1935 Yunnan Guizhou plateau, a broad winding mountain road over ochre ridges toward distant highland town with old city wall. Small grey-clad column moving fast around a bend, very small figures with cloth packs, spring clouds casting sweeping shadows, forked valley roads visible far off, vivid but restrained earth tones. No modern road, cars or military equipment."
+    },
+    {
+      "id": 13,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-c22d018a-f75e-418f-bf72-5b807516a523.png",
+      "target": "public/assets/panorama-13.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: May1935 Jiaopingdu Jinsha River gorge Yunnan, wide tawny fast river between enormous dry ochre cliffs, two wooden ferryboats with oars on near shore, a boatman and small distant anonymous group in grey clothing preparing quiet river crossing, weathered ropes and pebbles foreground, warm reflected canyon light, no bridges or modern objects."
+    },
+    {
+      "id": 14,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-940a8d5f-27eb-4423-9755-b7d6c64dcb1a.png",
+      "target": "public/assets/panorama-14.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: May1935 Yihai lake Mianning Sichuan, serene alpine lake ringed by pine forests and mountain slopes. A small respectful group of local Yi adults in plain dark wool cloaks and grey-uniform visitors meeting by water, no exaggerated costumes, no explicit ritual. Shallow bowl on flat lakeshore rock foreground, mirrored trees and dawn light, calm mood of dialogue and trust."
+    },
+    {
+      "id": 15,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-35c42a82-4ddd-4867-b60e-c29eaff3a643.png",
+      "target": "public/assets/panorama-15.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: May1935 Luding Bridge across Dadu River Sichuan, historically inspired long narrow chain suspension bridge with stone bridgeheads and partial rough wooden planking, river rushing through steep green valley, small grey-clad figures working on planks in distance. Viewed diagonally from riverside at near bridgehead, foreground thick iron links clearly visible, rainy air, dramatic scale, no visible combat, bodies or gore."
+    },
+    {
+      "id": 17,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-df7dd5e5-1e86-4bb9-b2f2-2e081d8f0850.png",
+      "target": "public/assets/panorama-17.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: June1935 Maogong Sichuan, broad highland valley between snowy mountains and green slopes, two small grey-clad columns greeting on a rough rural bridge, subdued faded red cloth banners without text, simple Tibetan region village stone and timber roofs far behind. Soft summer morning, cautious joy and human warmth, no modern objects."
+    },
+    {
+      "id": 19,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-5c64d0f5-3d58-4bd8-978c-cb296c38df94.png",
+      "target": "public/assets/panorama-19.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: September1935 Lazikou Gansu, extremely narrow mountain gorge with steep craggy wooded cliffs, stream and small old wooden bridge on valley floor, rough path climbing along flank, a few very distant grey-clad figures on path for scale, cold autumn mist and dramatic rocks, scene of terrain difficulty, no combat or weapon closeups."
+    },
+    {
+      "id": 20,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-6fd9f86a-fdb5-4599-a570-2ecefd361fe6.png",
+      "target": "public/assets/panorama-20.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: September1935 Hadapu Gansu, rustic tea shop courtyard on old town street. Foreground weathered wood table with folded aged Chinese newspaper, illegible tiny typeset marks not readable words, enamel cup and spectacles. In middle distance small anonymous grey-clad travelers resting and village traders bringing sacks of grain. Autumn afternoon sunlight through wooden lattice, gentle sense of relief and information."
+    },
+    {
+      "id": 21,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-892d293c-182b-4bcb-b328-2b292a850356.png",
+      "target": "public/assets/panorama-21.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: October1935 Liupanshan toward Wuqi northwest China. Vast rolling golden loess hills, thin winding ridge trail under huge pale blue autumn sky, tiny column of grey-clad travelers cresting ridge with one faded red cloth flag without symbols, scattered cave-dwelling doorways in distant valley, dry grasses foreground, expansive quiet arrival, restrained cinematic sunlight."
+    },
+    {
+      "id": 22,
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-a1e56d2c-a6f9-4df1-98fe-1f1d3c46aeb3.png",
+      "target": "public/assets/panorama-22.webp",
+      "prompt": "Use case: historical-scene. Create one ultra-wide panoramic cinematic background for a serious Chinese Long March educational exhibition. Aspect ratio 2.4:1, rich wide environmental storytelling across whole width, no vignetting, no overlaid UI or typography. Painterly photorealism like a premium historical film matte painting, fine organic texture, atmospheric depth, authentic 1930s rural China materials, dignified and understated, no kitsch, no modern objects, no watermark. Scene: October1936 Huining Gansu, historic northwest China rammed earth city gate and rural square, small groups of weary grey-clad travelers from several directions meeting and greeting with raised hands, a few faded red cloth flags without text, modest villagers with baskets, ochre walls and distant loess hills under clear autumn light. Warm yet dignified reunion, human figures small and anonymous, no modern buildings."
+    }
+  ],
+  "reused": [
+    {
+      "id": 1,
+      "path": "public/assets/scene-night.webp"
+    },
+    {
+      "id": 16,
+      "path": "public/assets/scene-snow.webp"
+    },
+    {
+      "id": 18,
+      "path": "public/assets/scene-marsh.webp"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "tool": "Built-in image_gen",
+  "created": "2026-10-24",
+  "assets": [
+    {
+      "id": "world",
+      "prompt": "Use case: historical-scene. Asset type: extra-wide panoramic artwork for a premium Chinese historical learning website. Create ONE continuous 2.4:1 wide landscape illustration. Scene: A sweeping elevated panoramic landscape atlas inspired by China's Long March journey: foreground ochre earth and a winding small river among southern Chinese terraced green hills and a tiny 1930s village; middle ground misty river gorges with paths and a small bridge; far distance dramatic snow mountain peaks on the left fading toward loess plateaus on the right. A continuous cohesive imaginative landscape, NOT a collage. Expansive navigable landscape in the middle 70% of the frame. Tiny winding trails and only a few tiny marching figures as scale cues. No giant foreground objects. Style: exquisite cinematic matte painting with restrained Chinese landscape painting influence, fine paper grain, tactile brushwork, realistic depth and natural materials. Palette: aged warm gold, muted cinnabar accents, deep ink-green shadows, warm ivory mist. Evocative, dignified, atmospheric rather than fantasy. Detail at natural scale. Render a wide full-bleed artwork only, no borders, no map pins, no graphics, no lettering, no numbers, no logos, no watermark. This is interpretive historical art, not an exact geographic map. Aspect ratio 2.4:1.",
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-88ce49ae-764e-43bf-ab78-6f2d7c3fe5f6.png",
+      "asset": "/assets/atlas-world.webp"
+    },
+    {
+      "id": "camp",
+      "prompt": "Use case: historical-scene. Asset type: extra-wide panoramic artwork for a premium Chinese historical learning website. Create ONE continuous 2.4:1 wide landscape illustration. Scene: An intimate yet expansive 1930s Chinese Red Army evening camp on a mountain terrace: small warm campfire at lower right, five distant weary young adult soldiers in simple faded grey cotton uniforms resting together; a small cooking pot, blanket, straw shoes and canteen. The center and left are open grassy mountain ridges and a winding footpath, layered silhouettes in evening mist. Firelight is a small tender accent within a vast tranquil landscape. No prominent portraits, no fighting. Style: exquisite cinematic matte painting with restrained Chinese landscape painting influence, fine paper grain, tactile brushwork, realistic depth and natural materials. Palette: aged warm gold, muted cinnabar accents, deep ink-green shadows, warm ivory mist. Evocative, dignified, atmospheric rather than fantasy. Detail at natural scale. Render a wide full-bleed artwork only, no borders, no map pins, no graphics, no lettering, no numbers, no logos, no watermark. This is interpretive historical art, not an exact geographic map. Aspect ratio 2.4:1.",
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-7f366a7f-bbd8-42ad-a9fd-5648e2f2f4ad.png",
+      "asset": "/assets/atlas-camp.webp"
+    },
+    {
+      "id": "poetry",
+      "prompt": "Use case: historical-scene. Asset type: extra-wide panoramic artwork for a premium Chinese historical learning website. Create ONE continuous 2.4:1 wide landscape illustration. Scene: A majestic quiet panoramic view from a high southern Chinese mountain pass at sunrise. Sculptural layered mountains, distant snow peaks, a sea of pale golden clouds between dark teal ridges. A slender mountain trail winds gently across the foreground toward a small distant column of 1930s travelers. A lone pine at the far right. Open calm center with beautifully atmospheric negative space, contemplative and literary. No book, no calligraphy. Style: exquisite cinematic matte painting with restrained Chinese landscape painting influence, fine paper grain, tactile brushwork, realistic depth and natural materials. Palette: aged warm gold, muted cinnabar accents, deep ink-green shadows, warm ivory mist. Evocative, dignified, atmospheric rather than fantasy. Detail at natural scale. Render a wide full-bleed artwork only, no borders, no map pins, no graphics, no lettering, no numbers, no logos, no watermark. This is interpretive historical art, not an exact geographic map. Aspect ratio 2.4:1.",
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-4b2541c2-b3e1-4be5-b760-b55254dcd202.png",
+      "asset": "/assets/atlas-poetry.webp"
+    },
+    {
+      "id": "study",
+      "prompt": "Use case: historical-scene. Asset type: extra-wide panoramic artwork for a premium Chinese historical learning website. Create ONE continuous 2.4:1 wide landscape illustration. Scene: A panoramic 1930s mountain field-study shelter, an old timber veranda opening onto a vast softly lit Chinese mountain valley at dawn. A low simple wooden desk at lower right holds an open blank yellowed notebook, a short pencil, cloth satchel, oil lamp and a folded unmarked paper map. Left and middle remain open to the tranquil valley with winding footpath and layered ridges. Warm human scale against a broad landscape. No modern objects, no text. Style: exquisite cinematic matte painting with restrained Chinese landscape painting influence, fine paper grain, tactile brushwork, realistic depth and natural materials. Palette: aged warm gold, muted cinnabar accents, deep ink-green shadows, warm ivory mist. Evocative, dignified, atmospheric rather than fantasy. Detail at natural scale. Render a wide full-bleed artwork only, no borders, no map pins, no graphics, no lettering, no numbers, no logos, no watermark. This is interpretive historical art, not an exact geographic map. Aspect ratio 2.4:1.",
+      "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-3f2bdcdd-eee6-4db8-b748-31119bd9d642.png",
+      "asset": "/assets/atlas-study.webp"
+    }
+  ]
+}

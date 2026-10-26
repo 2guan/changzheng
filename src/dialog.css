@@ -1,0 +1,451 @@
+/* A quiet reading surface shared by history, topics and learning dialogs. */
+.dialog {
+  --dialog-scroll-thumb: #a99573;
+  --dialog-rule: #cbbd9f66;
+  width: 820px;
+  max-width: min(820px, calc(100vw - 48px));
+  max-height: 90dvh;
+  background: #f8f4e9;
+  color: #39352d;
+  border: 1px solid #bda985b3;
+  border-radius: 8px;
+  box-shadow:
+    0 8px 28px #17191426,
+    0 28px 100px #10171066;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dialog-scroll-thumb) transparent;
+  scrollbar-gutter: stable;
+  overflow-y: auto;
+}
+.dialog-wide {
+  width: 960px;
+  max-width: min(960px, calc(100vw - 48px));
+}
+.dialog::backdrop {
+  background: #151b18a6;
+  backdrop-filter: blur(6px);
+}
+.dialog *,
+.dialog .reading-table {
+  scrollbar-width: thin;
+  scrollbar-color: var(--dialog-scroll-thumb) transparent;
+}
+.dialog::-webkit-scrollbar,
+.dialog *::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+.dialog::-webkit-scrollbar-track,
+.dialog *::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dialog::-webkit-scrollbar-thumb,
+.dialog *::-webkit-scrollbar-thumb {
+  background: var(--dialog-scroll-thumb);
+  border-radius: 8px;
+  border: 2px solid #f8f4e9;
+}
+.dialog::-webkit-scrollbar-thumb:hover,
+.dialog *::-webkit-scrollbar-thumb:hover {
+  background: #7e6848;
+}
+.dialog-bar {
+  padding: 12px 24px;
+  gap: 16px;
+  min-height: 72px;
+  background: #f3edde;
+  border-bottom: 1px solid var(--dialog-rule);
+}
+.dialog-caption {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+.dialog-caption > svg {
+  flex: none;
+  color: #977747;
+}
+.dialog-caption > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.dialog-brand {
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+  color: #8a7b60;
+}
+.dialog-title {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #554a38;
+  overflow-wrap: anywhere;
+}
+.dialog-bar .icon-button {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  border: 1px solid var(--dialog-rule);
+  border-radius: 50%;
+  color: #78664a;
+  background: transparent;
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+.dialog-bar .icon-button:hover {
+  background: #eaddc5;
+  color: #8d3027;
+  border-color: #bda37c;
+}
+.dialog-bar .icon-button:focus-visible {
+  outline: 2px solid #96362d;
+  outline-offset: 3px;
+}
+.dialog-content {
+  padding: 38px 56px 48px;
+}
+.dialog .reader > h2,
+.dialog .topic-content > h2 {
+  font-family: var(--serif);
+  font-size: clamp(27px, 3vw, 34px);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.025em;
+  text-wrap: pretty;
+  margin: 0 0 20px;
+}
+.dialog .reader-date,
+.dialog .reader > .chapter-label {
+  display: block;
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  color: #906a3c;
+  margin: 0 0 14px;
+}
+.dialog .reader-subtitle {
+  font: 19px/1.8 var(--serif);
+  color: #89724f;
+  margin: 0 0 24px;
+}
+.dialog .reader-meta {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.dialog .reader .reader-lead {
+  border-top-color: var(--dialog-rule);
+  font-size: 18px !important;
+  line-height: 1.95;
+  padding-top: 24px;
+  margin: 24px 0;
+}
+.dialog .reader > .rich-text,
+.dialog .station-chapters {
+  font-size: 17px;
+}
+.dialog .rich-text {
+  color: #484237;
+  line-height: 2.05;
+}
+.dialog .rich-text p {
+  margin-bottom: 1.35em;
+}
+.dialog .rich-text h3,
+.dialog .station-chapters h3 {
+  font: 600 21px/1.65 var(--serif);
+  color: #463a2a;
+  margin: 28px 0 18px;
+}
+.dialog .station-chapters h3 small {
+  color: #a58654;
+  padding-top: 6px;
+  flex: none;
+}
+.dialog .station-chapters section {
+  padding: 4px 0 22px;
+  border-color: var(--dialog-rule);
+}
+.dialog .rich-text blockquote {
+  border-left: 2px solid #af8b53;
+  background: #eee6d559;
+  padding: 18px 24px;
+  margin: 28px 0;
+  color: #625038;
+}
+.dialog .content-note,
+.dialog .insight {
+  background: #eee6d580;
+  border-left: 2px solid #b29970;
+  padding: 20px 22px;
+  gap: 14px;
+}
+.dialog .reader-actions {
+  border-top: 1px solid var(--dialog-rule);
+  padding-top: 24px;
+  margin-top: 32px;
+}
+.dialog .source-block {
+  margin-top: 36px;
+  border-color: var(--dialog-rule);
+}
+.dialog .artifact-viewer > button {
+  border-radius: 4px;
+}
+.dialog .reading-table th,
+.dialog .reading-table td {
+  border-color: var(--dialog-rule);
+}
+.reading-table-cards {
+  display: none;
+}
+@media (max-width: 768px) {
+  .dialog .reading-table-group > .reading-table {
+    display: none;
+  }
+  .dialog .reading-table-cards {
+    display: grid;
+    gap: 20px;
+    margin: 24px 0 32px;
+  }
+  .dialog .reading-table-card {
+    min-width: 0;
+    padding: 20px 16px;
+    background: #a4874920;
+    border-radius: 3px;
+    overflow-wrap: anywhere;
+  }
+  .dialog .reading-table-card dl,
+  .dialog .reading-table-card dd {
+    margin: 0;
+  }
+  .dialog .reading-card-field + .reading-card-field {
+    margin-top: 16px;
+  }
+  .dialog .reading-card-field dt {
+    color: #816b4c;
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 5px;
+  }
+  .dialog .reading-card-field dd {
+    color: #423b30;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  .dialog .reading-card-field:first-child dd {
+    font-family: var(--serif);
+    font-size: 21px;
+    line-height: 1.6;
+    color: #653f2b;
+  }
+}
+@media (max-width: 600px) {
+  .dialog,
+  .dialog-wide {
+    max-width: calc(100vw - 20px);
+    max-height: calc(100dvh - 32px);
+    border-radius: 6px;
+  }
+  .dialog-bar {
+    min-height: 66px;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .dialog-caption {
+    gap: 10px;
+  }
+  .dialog-brand {
+    font-size: 9px;
+  }
+  .dialog-title {
+    font-size: 12px;
+  }
+  .dialog-content {
+    padding: 28px 22px 34px;
+  }
+  .dialog .reader > h2,
+  .dialog .topic-content > h2 {
+    font-size: 27px;
+    line-height: 1.6;
+    letter-spacing: 0;
+    margin-bottom: 18px;
+  }
+  .dialog .reader-subtitle {
+    font-size: 17px;
+  }
+  .dialog .reader > .rich-text,
+  .dialog .station-chapters {
+    font-size: 16px;
+  }
+  .dialog .rich-text h3,
+  .dialog .station-chapters h3 {
+    font-size: 19px;
+  }
+  .dialog .rich-text blockquote {
+    padding: 14px 16px;
+  }
+  .dialog .content-note,
+  .dialog .insight {
+    padding: 16px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dialog-bar .icon-button {
+    transition: none;
+  }
+}
+@media (forced-colors: active) {
+  .dialog,
+  .dialog * {
+    scrollbar-color: auto;
+  }
+}
+
+/* One continuous paper image avoids seams between the border and its centre. */
+.dialog {
+  --dialog-rule: #987d5129;
+  --dialog-scroll-thumb: #b1a080;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 34px 24px;
+  overflow: visible;
+  scrollbar-gutter: auto;
+  isolation: isolate;
+}
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+.dialog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  border: 0;
+  background: url("/assets/letter-paper-aged.webp") center / 100% 100% no-repeat;
+  filter: drop-shadow(0 3px 3px #17170f30) drop-shadow(0 20px 32px #10171066);
+}
+.dialog::backdrop {
+  background: #17201bc2;
+  backdrop-filter: blur(7px) saturate(0.65);
+}
+.dialog-bar {
+  position: relative;
+  top: auto;
+  flex: none;
+  padding: 8px 26px 18px;
+  min-height: 66px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.dialog-bar::after {
+  display: none;
+}
+.dialog-brand {
+  color: #8e6948;
+  letter-spacing: 0.2em;
+}
+.dialog-content {
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding: 40px 48px 48px;
+  background: transparent;
+  -webkit-overflow-scrolling: touch;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 10px,
+    #000 calc(100% - 18px),
+    transparent
+  );
+}
+.dialog .reader > h2,
+.dialog .topic-content > h2 {
+  color: #513e2c;
+}
+.dialog .reader-subtitle {
+  color: #786449;
+}
+.dialog .rich-text {
+  color: #423b30;
+}
+.dialog .content-note,
+.dialog .insight {
+  background: #c6ad7920;
+  border-left: 1px solid #a26c4659;
+}
+.dialog .rich-text blockquote {
+  background: transparent;
+  border-left: 1px solid #a26c4659;
+  font-style: normal;
+}
+.dialog::-webkit-scrollbar-thumb,
+.dialog *::-webkit-scrollbar-thumb {
+  border-color: #f3ebd8;
+}
+.dialog .source-block,
+.dialog .sources {
+  color: #77684f;
+}
+@media (max-width: 600px) {
+  .dialog,
+  .dialog-wide {
+    max-width: calc(100vw - 12px);
+    max-height: calc(100dvh - 24px);
+    padding: 52px 12px 32px;
+  }
+  .dialog-bar {
+    min-height: 62px;
+    padding: 4px 10px 12px 24px;
+    gap: 4px;
+  }
+  .dialog-caption {
+    gap: 7px;
+  }
+  .dialog-caption > svg {
+    width: 17px;
+  }
+  .dialog-bar::after {
+    display: none;
+  }
+  .dialog-content {
+    padding: 34px clamp(24px, 7vw, 34px) 44px;
+    scrollbar-width: none;
+    scrollbar-gutter: auto;
+  }
+  .dialog-content::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  .dialog .reader .reader-lead,
+  .dialog .station-chapters section,
+  .dialog .reader-actions,
+  .dialog .source-block,
+  .dialog .content-note,
+  .dialog .insight,
+  .dialog .rich-text blockquote {
+    border-color: transparent;
+  }
+}
+@media (forced-colors: active) {
+  .dialog {
+    background: Canvas;
+    border: 1px solid CanvasText;
+  }
+  .dialog::before {
+    display: none;
+  }
+}

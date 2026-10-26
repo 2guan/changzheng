@@ -1,0 +1,94 @@
+/* Navigation floats over the same landscape as the page. */
+:root {
+  --site-header-height: 86px;
+}
+body .site-header,
+body:has(.atlas) .site-header,
+body:has(.atlas-home) .site-header {
+  background: linear-gradient(180deg, #181c19e6 0%, #1c201ab3 46%, #20221b52 78%, transparent 100%);
+  color: #ede0c7;
+  border-bottom: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  margin-bottom: calc(-1 * var(--site-header-height));
+  text-shadow: 0 1px 5px #101812aa;
+}
+body .site-header .brand small,
+body .site-header .desktop-nav a {
+  color: #e0d4ba;
+}
+body .site-header .desktop-nav a:hover,
+body .site-header .desktop-nav a.active {
+  color: #f4dfb8;
+}
+.site-header .desktop-nav a.active::after {
+  background: #d4ae73;
+}
+body .site-header .header-actions {
+  gap: 6px;
+}
+body .site-header .header-actions > .header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  color: #e4c895;
+  background: transparent;
+}
+.site-header .header-icon svg {
+  width: 21px;
+  height: 21px;
+}
+body .site-header .header-actions > .header-icon:hover,
+body .site-header .header-actions > .header-icon.active,
+body .site-header .header-actions > .header-icon[aria-expanded="true"] {
+  color: #f4dfb8;
+  background: #d4ae731a;
+  border-color: #d4ae7338;
+}
+body .site-header .header-icon:focus-visible {
+  outline: 2px solid #e4c895;
+  outline-offset: 2px;
+}
+@media (max-width: 1000px) {
+  :root { --site-header-height: 76px; }
+}
+@media (max-width: 640px) {
+  :root { --site-header-height: 70px; }
+  body .site-header .header-actions { gap: 0; }
+}
+
+/* Reserve space for controls while allowing artwork to reach the top edge. */
+.atlas {
+  min-height: 100svh;
+  padding-top: calc(var(--site-header-height) + 22px);
+}
+.panorama:not(.is-focused) {
+  height: 100svh;
+  min-height: calc(650px + var(--site-header-height));
+  padding-top: var(--site-header-height);
+}
+.expedition:not(.is-focused) {
+  min-height: 100svh;
+  padding-top: var(--site-header-height);
+}
+@media (min-width: 901px) and (max-height: 850px) {
+  .atlas { padding-top: calc(var(--site-header-height) + 12px); }
+}
+@media (max-width: 768px) {
+  .atlas { padding-top: calc(var(--site-header-height) + 14px); }
+  .atlas.atlas-fit {
+    min-height: 100svh;
+    padding-top: calc(var(--site-header-height) + 8px);
+  }
+}
+@media (max-width: 650px) {
+  .panorama:not(.is-focused) {
+    min-height: calc(730px + var(--site-header-height));
+  }
+}

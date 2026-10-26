@@ -1,14 +1,5 @@
-@font-face {
-  font-family: JourneyDisplay;
-  src: url("/assets/display.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
 :root {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei",
-    sans-serif;
+  font-family: var(--font-body);
   color: #332e26;
   background: #f7f3e8;
   font-synthesis: none;
@@ -21,7 +12,7 @@
   --red-dark: #74261f;
   --gold: #ac8245;
   --line: #d8cfbc;
-  --serif: "Songti SC", "STSong", "Noto Serif SC", SimSun, serif;
+  --serif: var(--font-body);
 }
 * {
   box-sizing: border-box;
@@ -158,6 +149,18 @@ summary {
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
+}
+.brand-logo {
+  display: block;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.site-header .brand-subtitle {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 .brand-mark {
   width: 38px;
@@ -438,7 +441,7 @@ summary {
   letter-spacing: 2px;
 }
 .hero h1 {
-  font-family: JourneyDisplay, var(--serif);
+  font-family: var(--font-title);
   font-size: clamp(85px, 8.5vw, 135px);
   font-weight: 900;
   line-height: 1.08;
@@ -568,9 +571,7 @@ summary {
   padding: 0;
 }
 .journey-stats strong {
-  font:
-    38px/1.1 Georgia,
-    var(--serif);
+  font: 38px/1.1 var(--font-body);
   color: #5b4430;
   font-variant-numeric: tabular-nums;
 }
@@ -696,7 +697,7 @@ summary {
   background: #eae0ca;
 }
 .module-directory > a > span {
-  font: 12px Georgia;
+  font: 12px var(--font-body);
   color: var(--red);
 }
 .module-directory h3 {
@@ -815,7 +816,7 @@ summary {
   overflow: hidden;
   background: #ece2c9;
 }
-.route-map > svg {
+.map-viewport > svg {
   width: 100%;
   height: auto;
   display: block;
@@ -930,7 +931,7 @@ summary {
   font-size: 9px;
   color: #7e715c;
 }
-.compact-map > svg {
+.compact-map .map-viewport > svg {
   min-height: 0;
 }
 .compact-map .map-caption {
@@ -968,7 +969,7 @@ summary {
   margin: 15px 0 20px;
 }
 .station-large-number {
-  font: 62px Georgia;
+  font: 62px var(--font-body);
   color: #b3956a;
   opacity: 0.55;
   line-height: 1.2;
@@ -1067,7 +1068,7 @@ summary {
   transition: background 0.2s;
 }
 .station-list > button > span {
-  font: 12px Georgia;
+  font: 12px var(--font-body);
   color: #7b6749;
   width: 20px;
   flex-shrink: 0;
@@ -1175,7 +1176,7 @@ summary {
   align-items: center;
 }
 .large-year {
-  font: 90px/0.9 Georgia;
+  font: 90px/0.9 var(--font-body);
   color: #c5ae8b;
   display: block;
   margin-bottom: 28px;
@@ -1316,7 +1317,7 @@ summary {
   border-bottom-color: var(--red);
 }
 .army-tabs span {
-  font: 12px Georgia;
+  font: 12px var(--font-body);
   color: var(--red);
   grid-row: span 2;
 }
@@ -1333,7 +1334,7 @@ summary {
   gap: 30px;
   align-items: start;
 }
-.army-layout .route-map > svg {
+.army-layout .map-viewport > svg {
   min-height: 450px;
 }
 .army-dossier {
@@ -1574,7 +1575,7 @@ summary {
   font: 19px var(--serif);
 }
 .poem-index > a small {
-  font: 11px Georgia;
+  font: 11px var(--font-body);
   color: var(--gold);
 }
 .poem-index > a > svg {
@@ -1727,7 +1728,7 @@ summary {
   align-items: flex-start;
 }
 .meaning-chapter small {
-  font: 14px Georgia;
+  font: 14px var(--font-body);
   color: var(--gold);
   padding-top: 15px;
 }
@@ -1761,7 +1762,7 @@ summary {
   padding: 25px 0;
 }
 .questions-list button > span {
-  font: 30px Georgia;
+  font: 30px var(--font-body);
   color: var(--red);
 }
 .questions-list p {
@@ -1805,7 +1806,7 @@ summary {
   margin-top: 8px;
 }
 .progress-overview strong {
-  font: 40px Georgia;
+  font: 40px var(--font-body);
   color: var(--red);
 }
 .progress-overview strong small {
@@ -1898,7 +1899,7 @@ summary {
   position: absolute;
   right: 25px;
   top: 30px;
-  font: 12px Georgia;
+  font: 12px var(--font-body);
   color: var(--muted);
 }
 .task-grid h3 {
@@ -1936,7 +1937,7 @@ summary {
   border-bottom: 1px solid var(--line);
 }
 .saved-list a > span {
-  font: 18px Georgia;
+  font: 18px var(--font-body);
   color: var(--gold);
 }
 .saved-list a > div {
@@ -2051,12 +2052,12 @@ summary {
   color: var(--muted);
 }
 .packing-result > strong {
-  font: 52px Georgia;
+  font: 52px var(--font-body);
   color: var(--red);
   margin: 15px 0;
 }
 .packing-result > strong small {
-  font: 14px Georgia;
+  font: 14px var(--font-body);
   color: var(--muted);
 }
 .packing-result h4 {
@@ -2070,7 +2071,7 @@ summary {
   margin: 12px 0 18px;
 }
 .packing-result p > b {
-  font: 20px Georgia;
+  font: 20px var(--font-body);
   color: var(--ink);
 }
 .packing-result .button {
@@ -2149,7 +2150,7 @@ summary {
   background: #e8d6b9;
 }
 .decision-options button > span {
-  font: 16px Georgia;
+  font: 16px var(--font-body);
   color: var(--red);
 }
 .decision-options button > svg:last-child {
@@ -2177,7 +2178,7 @@ summary {
   height: 35px;
   border: 1px solid #b7986d;
   border-radius: 50%;
-  font: 14px Georgia;
+  font: 14px var(--font-body);
   color: #897254;
 }
 .sequence-scene > div > span.done {
@@ -2247,7 +2248,7 @@ summary {
   width: 30px;
   height: 30px;
   border: 1px solid var(--line);
-  font: 14px Georgia;
+  font: 14px var(--font-body);
   flex-shrink: 0;
 }
 .quiz-options button.correct {
@@ -2317,7 +2318,7 @@ summary {
   margin: 25px 0;
 }
 .quiz-score strong {
-  font: 85px Georgia;
+  font: 85px var(--font-body);
   color: var(--red);
 }
 .quiz-score > span {
@@ -2627,7 +2628,7 @@ summary {
   border-bottom: 1px solid var(--line);
 }
 .mobile-nav a > span {
-  font: 12px Georgia;
+  font: 12px var(--font-body);
   color: var(--red);
 }
 .mobile-nav a > svg {
@@ -2877,7 +2878,7 @@ summary {
   .journey-hud > div:nth-child(5) {
     display: none;
   }
-  .route-map > svg {
+  .map-viewport > svg {
     min-height: 0;
   }
   .prologue-lead {
@@ -2895,7 +2896,7 @@ summary {
   .army-layout {
     grid-template-columns: 1fr;
   }
-  .army-layout .route-map > svg {
+  .army-layout .map-viewport > svg {
     min-height: 0;
   }
   .army-dossier dl {
@@ -3305,7 +3306,7 @@ summary {
   .route-map {
     margin: 0;
   }
-  .route-map > svg {
+  .map-viewport > svg {
     height: 340px;
     width: 100%;
     object-fit: cover;
@@ -3354,7 +3355,7 @@ summary {
     font-size: 8px;
     bottom: 10px;
   }
-  .compact-map > svg {
+  .compact-map .map-viewport > svg {
     height: 260px;
   }
   .map-entry {
@@ -4110,7 +4111,7 @@ summary {
   .journey-stats > div:first-child strong {
     font-size: 22px;
   }
-  .header-actions a[aria-label="我的行囊"] {
+  .header-actions a[aria-label="学习中心"] {
     min-width: 32px;
     min-height: 40px;
     justify-content: center;

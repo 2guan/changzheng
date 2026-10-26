@@ -1,0 +1,6565 @@
+{
+  "project": {
+    "schemaVersion": 1,
+    "id": "changzheng-shanhe-departure-20261025",
+    "title": "山河长路 · 一、星火启程",
+    "bpm": 88,
+    "key": "D minor",
+    "bars": 48,
+    "timeSignature": [
+      4,
+      4
+    ],
+    "updatedAt": "2026-10-25T08:00:00.000Z",
+    "tracks": [
+      {
+        "id": "v1",
+        "name": "第一小提琴",
+        "instrumentId": "strings",
+        "color": "#9E543B",
+        "volume": 0.2,
+        "pan": -0.3,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-v1-0",
+            "midi": 62,
+            "start": 32,
+            "duration": 0.94,
+            "velocity": 0.6
+          },
+          {
+            "id": "departure-v1-1",
+            "midi": 65,
+            "start": 33,
+            "duration": 0.44,
+            "velocity": 0.604
+          },
+          {
+            "id": "departure-v1-2",
+            "midi": 69,
+            "start": 33.5,
+            "duration": 0.94,
+            "velocity": 0.558
+          },
+          {
+            "id": "departure-v1-3",
+            "midi": 67,
+            "start": 34.5,
+            "duration": 0.44,
+            "velocity": 0.503
+          },
+          {
+            "id": "departure-v1-4",
+            "midi": 65,
+            "start": 35.0,
+            "duration": 0.94,
+            "velocity": 0.491
+          },
+          {
+            "id": "departure-v1-5",
+            "midi": 65,
+            "start": 36,
+            "duration": 1.44,
+            "velocity": 0.6
+          },
+          {
+            "id": "departure-v1-6",
+            "midi": 62,
+            "start": 37.5,
+            "duration": 0.44,
+            "velocity": 0.604
+          },
+          {
+            "id": "departure-v1-7",
+            "midi": 70,
+            "start": 38.0,
+            "duration": 0.94,
+            "velocity": 0.558
+          },
+          {
+            "id": "departure-v1-8",
+            "midi": 69,
+            "start": 39.0,
+            "duration": 0.94,
+            "velocity": 0.503
+          },
+          {
+            "id": "departure-v1-9",
+            "midi": 69,
+            "start": 40,
+            "duration": 0.94,
+            "velocity": 0.6
+          },
+          {
+            "id": "departure-v1-10",
+            "midi": 72,
+            "start": 41,
+            "duration": 0.44,
+            "velocity": 0.604
+          },
+          {
+            "id": "departure-v1-11",
+            "midi": 74,
+            "start": 41.5,
+            "duration": 0.44,
+            "velocity": 0.558
+          },
+          {
+            "id": "departure-v1-12",
+            "midi": 72,
+            "start": 42.0,
+            "duration": 0.94,
+            "velocity": 0.503
+          },
+          {
+            "id": "departure-v1-13",
+            "midi": 69,
+            "start": 43.0,
+            "duration": 0.94,
+            "velocity": 0.491
+          },
+          {
+            "id": "departure-v1-14",
+            "midi": 67,
+            "start": 44,
+            "duration": 0.44,
+            "velocity": 0.6
+          },
+          {
+            "id": "departure-v1-15",
+            "midi": 64,
+            "start": 44.5,
+            "duration": 0.44,
+            "velocity": 0.604
+          },
+          {
+            "id": "departure-v1-16",
+            "midi": 67,
+            "start": 45.0,
+            "duration": 0.94,
+            "velocity": 0.558
+          },
+          {
+            "id": "departure-v1-17",
+            "midi": 72,
+            "start": 46.0,
+            "duration": 1.44,
+            "velocity": 0.503
+          },
+          {
+            "id": "departure-v1-18",
+            "midi": 67,
+            "start": 48,
+            "duration": 1.44,
+            "velocity": 0.6
+          },
+          {
+            "id": "departure-v1-19",
+            "midi": 70,
+            "start": 49.5,
+            "duration": 0.44,
+            "velocity": 0.604
+          },
+          {
+            "id": "departure-v1-20",
+            "midi": 69,
+            "start": 50.0,
+            "duration": 0.44,
+            "velocity": 0.558
+          },
+          {
+            "id": "departure-v1-21",
+            "midi": 67,
+            "start": 50.5,
+            "duration": 0.44,
+            "velocity": 0.503
+          },
+          {
+            "id": "departure-v1-22",
+            "midi": 65,
+            "start": 51.0,
+            "duration": 0.94,
+            "velocity": 0.491
+          },
+          {
+            "id": "departure-v1-23",
+            "midi": 65,
+            "start": 52,
+            "duration": 0.44,
+            "velocity": 0.6
+          },
+          {
+            "id": "departure-v1-24",
+            "midi": 64,
+            "start": 52.5,
+            "duration": 0.44,
+            "velocity": 0.604
+          },
+          {
+            "id": "departure-v1-25",
+            "midi": 62,
+            "start": 53.0,
+            "duration": 1.94,
+            "velocity": 0.558
+          },
+          {
+            "id": "departure-v1-26",
+            "midi": 69,
+            "start": 55.0,
+            "duration": 0.44,
+            "velocity": 0.503
+          },
+          {
+            "id": "departure-v1-27",
+            "midi": 64,
+            "start": 56,
+            "duration": 0.94,
+            "velocity": 0.6
+          },
+          {
+            "id": "departure-v1-28",
+            "midi": 67,
+            "start": 57,
+            "duration": 0.94,
+            "velocity": 0.604
+          },
+          {
+            "id": "departure-v1-29",
+            "midi": 70,
+            "start": 58,
+            "duration": 0.44,
+            "velocity": 0.558
+          },
+          {
+            "id": "departure-v1-30",
+            "midi": 67,
+            "start": 58.5,
+            "duration": 0.44,
+            "velocity": 0.503
+          },
+          {
+            "id": "departure-v1-31",
+            "midi": 64,
+            "start": 59.0,
+            "duration": 0.94,
+            "velocity": 0.491
+          },
+          {
+            "id": "departure-v1-32",
+            "midi": 73,
+            "start": 60,
+            "duration": 0.94,
+            "velocity": 0.6
+          },
+          {
+            "id": "departure-v1-33",
+            "midi": 71,
+            "start": 61,
+            "duration": 0.44,
+            "velocity": 0.604
+          },
+          {
+            "id": "departure-v1-34",
+            "midi": 69,
+            "start": 61.5,
+            "duration": 0.44,
+            "velocity": 0.558
+          },
+          {
+            "id": "departure-v1-35",
+            "midi": 73,
+            "start": 62.0,
+            "duration": 0.94,
+            "velocity": 0.503
+          },
+          {
+            "id": "departure-v1-36",
+            "midi": 69,
+            "start": 63.0,
+            "duration": 0.94,
+            "velocity": 0.491
+          },
+          {
+            "id": "departure-v1-37",
+            "midi": 77,
+            "start": 64,
+            "duration": 3.7,
+            "velocity": 0.297,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-38",
+            "midi": 74,
+            "start": 68,
+            "duration": 3.7,
+            "velocity": 0.297,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-39",
+            "midi": 81,
+            "start": 72,
+            "duration": 3.7,
+            "velocity": 0.297,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-40",
+            "midi": 76,
+            "start": 76,
+            "duration": 3.7,
+            "velocity": 0.297,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-41",
+            "midi": 70,
+            "start": 80,
+            "duration": 3.7,
+            "velocity": 0.297,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-42",
+            "midi": 77,
+            "start": 84,
+            "duration": 3.7,
+            "velocity": 0.297,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-43",
+            "midi": 79,
+            "start": 88,
+            "duration": 3.7,
+            "velocity": 0.297,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-44",
+            "midi": 73,
+            "start": 92,
+            "duration": 3.7,
+            "velocity": 0.297,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-45",
+            "midi": 70,
+            "start": 96,
+            "duration": 3.7,
+            "velocity": 0.329,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-46",
+            "midi": 77,
+            "start": 100,
+            "duration": 3.7,
+            "velocity": 0.329,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-47",
+            "midi": 77,
+            "start": 104,
+            "duration": 3.7,
+            "velocity": 0.329,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-48",
+            "midi": 81,
+            "start": 108,
+            "duration": 3.7,
+            "velocity": 0.329,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-49",
+            "midi": 74,
+            "start": 112,
+            "duration": 3.7,
+            "velocity": 0.329,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-50",
+            "midi": 79,
+            "start": 116,
+            "duration": 3.7,
+            "velocity": 0.329,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-51",
+            "midi": 73,
+            "start": 120,
+            "duration": 3.7,
+            "velocity": 0.329,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-52",
+            "midi": 73,
+            "start": 124,
+            "duration": 3.7,
+            "velocity": 0.329,
+            "articulation": "sustain"
+          },
+          {
+            "id": "departure-v1-53",
+            "midi": 74,
+            "start": 128,
+            "duration": 0.94,
+            "velocity": 0.768
+          },
+          {
+            "id": "departure-v1-54",
+            "midi": 77,
+            "start": 129,
+            "duration": 0.44,
+            "velocity": 0.773
+          },
+          {
+            "id": "departure-v1-55",
+            "midi": 81,
+            "start": 129.5,
+            "duration": 0.94,
+            "velocity": 0.713
+          },
+          {
+            "id": "departure-v1-56",
+            "midi": 79,
+            "start": 130.5,
+            "duration": 0.44,
+            "velocity": 0.643
+          },
+          {
+            "id": "departure-v1-57",
+            "midi": 77,
+            "start": 131.0,
+            "duration": 0.94,
+            "velocity": 0.627
+          },
+          {
+            "id": "departure-v1-58",
+            "midi": 77,
+            "start": 132,
+            "duration": 1.44,
+            "velocity": 0.768
+          },
+          {
+            "id": "departure-v1-59",
+            "midi": 74,
+            "start": 133.5,
+            "duration": 0.44,
+            "velocity": 0.773
+          },
+          {
+            "id": "departure-v1-60",
+            "midi": 82,
+            "start": 134.0,
+            "duration": 0.94,
+            "velocity": 0.713
+          },
+          {
+            "id": "departure-v1-61",
+            "midi": 81,
+            "start": 135.0,
+            "duration": 0.94,
+            "velocity": 0.643
+          },
+          {
+            "id": "departure-v1-62",
+            "midi": 81,
+            "start": 136,
+            "duration": 0.94,
+            "velocity": 0.768
+          },
+          {
+            "id": "departure-v1-63",
+            "midi": 84,
+            "start": 137,
+            "duration": 0.44,
+            "velocity": 0.773
+          },
+          {
+            "id": "departure-v1-64",
+            "midi": 86,
+            "start": 137.5,
+            "duration": 0.44,
+            "velocity": 0.713
+          },
+          {
+            "id": "departure-v1-65",
+            "midi": 84,
+            "start": 138.0,
+            "duration": 0.94,
+            "velocity": 0.643
+          },
+          {
+            "id": "departure-v1-66",
+            "midi": 81,
+            "start": 139.0,
+            "duration": 0.94,
+            "velocity": 0.627
+          },
+          {
+            "id": "departure-v1-67",
+            "midi": 79,
+            "start": 140,
+            "duration": 0.44,
+            "velocity": 0.768
+          },
+          {
+            "id": "departure-v1-68",
+            "midi": 76,
+            "start": 140.5,
+            "duration": 0.44,
+            "velocity": 0.773
+          },
+          {
+            "id": "departure-v1-69",
+            "midi": 79,
+            "start": 141.0,
+            "duration": 0.94,
+            "velocity": 0.713
+          },
+          {
+            "id": "departure-v1-70",
+            "midi": 84,
+            "start": 142.0,
+            "duration": 1.44,
+            "velocity": 0.643
+          },
+          {
+            "id": "departure-v1-71",
+            "midi": 79,
+            "start": 144,
+            "duration": 1.44,
+            "velocity": 0.768
+          },
+          {
+            "id": "departure-v1-72",
+            "midi": 82,
+            "start": 145.5,
+            "duration": 0.44,
+            "velocity": 0.773
+          },
+          {
+            "id": "departure-v1-73",
+            "midi": 81,
+            "start": 146.0,
+            "duration": 0.44,
+            "velocity": 0.713
+          },
+          {
+            "id": "departure-v1-74",
+            "midi": 79,
+            "start": 146.5,
+            "duration": 0.44,
+            "velocity": 0.643
+          },
+          {
+            "id": "departure-v1-75",
+            "midi": 77,
+            "start": 147.0,
+            "duration": 0.94,
+            "velocity": 0.627
+          },
+          {
+            "id": "departure-v1-76",
+            "midi": 77,
+            "start": 148,
+            "duration": 0.44,
+            "velocity": 0.768
+          },
+          {
+            "id": "departure-v1-77",
+            "midi": 76,
+            "start": 148.5,
+            "duration": 0.44,
+            "velocity": 0.773
+          },
+          {
+            "id": "departure-v1-78",
+            "midi": 74,
+            "start": 149.0,
+            "duration": 1.94,
+            "velocity": 0.713
+          },
+          {
+            "id": "departure-v1-79",
+            "midi": 81,
+            "start": 151.0,
+            "duration": 0.44,
+            "velocity": 0.643
+          },
+          {
+            "id": "departure-v1-80",
+            "midi": 76,
+            "start": 152,
+            "duration": 0.94,
+            "velocity": 0.768
+          },
+          {
+            "id": "departure-v1-81",
+            "midi": 79,
+            "start": 153,
+            "duration": 0.94,
+            "velocity": 0.773
+          },
+          {
+            "id": "departure-v1-82",
+            "midi": 82,
+            "start": 154,
+            "duration": 0.44,
+            "velocity": 0.713
+          },
+          {
+            "id": "departure-v1-83",
+            "midi": 79,
+            "start": 154.5,
+            "duration": 0.44,
+            "velocity": 0.643
+          },
+          {
+            "id": "departure-v1-84",
+            "midi": 76,
+            "start": 155.0,
+            "duration": 0.94,
+            "velocity": 0.627
+          },
+          {
+            "id": "departure-v1-85",
+            "midi": 85,
+            "start": 156,
+            "duration": 0.94,
+            "velocity": 0.768
+          },
+          {
+            "id": "departure-v1-86",
+            "midi": 83,
+            "start": 157,
+            "duration": 0.44,
+            "velocity": 0.773
+          },
+          {
+            "id": "departure-v1-87",
+            "midi": 81,
+            "start": 157.5,
+            "duration": 0.44,
+            "velocity": 0.713
+          },
+          {
+            "id": "departure-v1-88",
+            "midi": 85,
+            "start": 158.0,
+            "duration": 0.94,
+            "velocity": 0.643
+          },
+          {
+            "id": "departure-v1-89",
+            "midi": 81,
+            "start": 159.0,
+            "duration": 0.94,
+            "velocity": 0.627
+          },
+          {
+            "id": "departure-v1-90",
+            "midi": 62,
+            "start": 160,
+            "duration": 0.94,
+            "velocity": 0.482
+          },
+          {
+            "id": "departure-v1-91",
+            "midi": 65,
+            "start": 161,
+            "duration": 0.44,
+            "velocity": 0.486
+          },
+          {
+            "id": "departure-v1-92",
+            "midi": 69,
+            "start": 161.5,
+            "duration": 0.94,
+            "velocity": 0.448
+          },
+          {
+            "id": "departure-v1-93",
+            "midi": 67,
+            "start": 162.5,
+            "duration": 0.44,
+            "velocity": 0.404
+          },
+          {
+            "id": "departure-v1-94",
+            "midi": 65,
+            "start": 163.0,
+            "duration": 0.94,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-v1-95",
+            "midi": 65,
+            "start": 164,
+            "duration": 1.44,
+            "velocity": 0.482
+          },
+          {
+            "id": "departure-v1-96",
+            "midi": 62,
+            "start": 165.5,
+            "duration": 0.44,
+            "velocity": 0.486
+          },
+          {
+            "id": "departure-v1-97",
+            "midi": 70,
+            "start": 166.0,
+            "duration": 0.94,
+            "velocity": 0.448
+          },
+          {
+            "id": "departure-v1-98",
+            "midi": 69,
+            "start": 167.0,
+            "duration": 0.94,
+            "velocity": 0.404
+          },
+          {
+            "id": "departure-v1-99",
+            "midi": 69,
+            "start": 168,
+            "duration": 0.94,
+            "velocity": 0.482
+          },
+          {
+            "id": "departure-v1-100",
+            "midi": 72,
+            "start": 169,
+            "duration": 0.44,
+            "velocity": 0.486
+          },
+          {
+            "id": "departure-v1-101",
+            "midi": 74,
+            "start": 169.5,
+            "duration": 0.44,
+            "velocity": 0.448
+          },
+          {
+            "id": "departure-v1-102",
+            "midi": 72,
+            "start": 170.0,
+            "duration": 0.94,
+            "velocity": 0.404
+          },
+          {
+            "id": "departure-v1-103",
+            "midi": 69,
+            "start": 171.0,
+            "duration": 0.94,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-v1-104",
+            "midi": 67,
+            "start": 172,
+            "duration": 0.44,
+            "velocity": 0.482
+          },
+          {
+            "id": "departure-v1-105",
+            "midi": 64,
+            "start": 172.5,
+            "duration": 0.44,
+            "velocity": 0.486
+          },
+          {
+            "id": "departure-v1-106",
+            "midi": 67,
+            "start": 173.0,
+            "duration": 0.94,
+            "velocity": 0.448
+          },
+          {
+            "id": "departure-v1-107",
+            "midi": 72,
+            "start": 174.0,
+            "duration": 1.44,
+            "velocity": 0.404
+          },
+          {
+            "id": "departure-v1-108",
+            "midi": 67,
+            "start": 176,
+            "duration": 1.44,
+            "velocity": 0.434
+          },
+          {
+            "id": "departure-v1-109",
+            "midi": 70,
+            "start": 177.5,
+            "duration": 0.44,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-v1-110",
+            "midi": 69,
+            "start": 178.0,
+            "duration": 0.44,
+            "velocity": 0.403
+          },
+          {
+            "id": "departure-v1-111",
+            "midi": 67,
+            "start": 178.5,
+            "duration": 0.44,
+            "velocity": 0.364
+          },
+          {
+            "id": "departure-v1-112",
+            "midi": 65,
+            "start": 179.0,
+            "duration": 0.94,
+            "velocity": 0.355
+          },
+          {
+            "id": "departure-v1-113",
+            "midi": 65,
+            "start": 180,
+            "duration": 0.44,
+            "velocity": 0.386
+          },
+          {
+            "id": "departure-v1-114",
+            "midi": 64,
+            "start": 180.5,
+            "duration": 0.44,
+            "velocity": 0.388
+          },
+          {
+            "id": "departure-v1-115",
+            "midi": 62,
+            "start": 181.0,
+            "duration": 1.94,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-v1-116",
+            "midi": 69,
+            "start": 183.0,
+            "duration": 0.44,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-v1-117",
+            "midi": 74,
+            "start": 184,
+            "duration": 7.5,
+            "velocity": 0.35
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.3,
+        "humanize": 0.18,
+        "articulation": "sustain"
+      },
+      {
+        "id": "v2",
+        "name": "第二小提琴",
+        "instrumentId": "strings",
+        "color": "#9E543B",
+        "volume": 0.112,
+        "pan": -0.12,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-v2-0",
+            "midi": 62,
+            "start": 0.03,
+            "duration": 3.85,
+            "velocity": 0.248
+          },
+          {
+            "id": "departure-v2-1",
+            "midi": 65,
+            "start": 0.05,
+            "duration": 3.8,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-v2-2",
+            "midi": 58,
+            "start": 4.03,
+            "duration": 3.85,
+            "velocity": 0.248
+          },
+          {
+            "id": "departure-v2-3",
+            "midi": 62,
+            "start": 4.05,
+            "duration": 3.8,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-v2-4",
+            "midi": 65,
+            "start": 8.03,
+            "duration": 3.85,
+            "velocity": 0.248
+          },
+          {
+            "id": "departure-v2-5",
+            "midi": 69,
+            "start": 8.05,
+            "duration": 3.8,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-v2-6",
+            "midi": 60,
+            "start": 12.03,
+            "duration": 3.85,
+            "velocity": 0.248
+          },
+          {
+            "id": "departure-v2-7",
+            "midi": 64,
+            "start": 12.05,
+            "duration": 3.8,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-v2-8",
+            "midi": 55,
+            "start": 16.03,
+            "duration": 3.85,
+            "velocity": 0.248
+          },
+          {
+            "id": "departure-v2-9",
+            "midi": 58,
+            "start": 16.05,
+            "duration": 3.8,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-v2-10",
+            "midi": 62,
+            "start": 20.03,
+            "duration": 3.85,
+            "velocity": 0.248
+          },
+          {
+            "id": "departure-v2-11",
+            "midi": 65,
+            "start": 20.05,
+            "duration": 3.8,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-v2-12",
+            "midi": 64,
+            "start": 24.03,
+            "duration": 3.85,
+            "velocity": 0.248
+          },
+          {
+            "id": "departure-v2-13",
+            "midi": 67,
+            "start": 24.05,
+            "duration": 3.8,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-v2-14",
+            "midi": 57,
+            "start": 28.03,
+            "duration": 3.85,
+            "velocity": 0.248
+          },
+          {
+            "id": "departure-v2-15",
+            "midi": 61,
+            "start": 28.05,
+            "duration": 3.8,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-v2-16",
+            "midi": 62,
+            "start": 32.03,
+            "duration": 3.85,
+            "velocity": 0.378
+          },
+          {
+            "id": "departure-v2-17",
+            "midi": 58,
+            "start": 36.03,
+            "duration": 3.85,
+            "velocity": 0.378
+          },
+          {
+            "id": "departure-v2-18",
+            "midi": 65,
+            "start": 40.03,
+            "duration": 3.85,
+            "velocity": 0.378
+          },
+          {
+            "id": "departure-v2-19",
+            "midi": 60,
+            "start": 44.03,
+            "duration": 3.85,
+            "velocity": 0.378
+          },
+          {
+            "id": "departure-v2-20",
+            "midi": 55,
+            "start": 48.03,
+            "duration": 3.85,
+            "velocity": 0.378
+          },
+          {
+            "id": "departure-v2-21",
+            "midi": 62,
+            "start": 52.03,
+            "duration": 3.85,
+            "velocity": 0.378
+          },
+          {
+            "id": "departure-v2-22",
+            "midi": 64,
+            "start": 56.03,
+            "duration": 3.85,
+            "velocity": 0.378
+          },
+          {
+            "id": "departure-v2-23",
+            "midi": 57,
+            "start": 60.03,
+            "duration": 3.85,
+            "velocity": 0.378
+          },
+          {
+            "id": "departure-v2-24",
+            "midi": 62,
+            "start": 64.03,
+            "duration": 3.85,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-v2-25",
+            "midi": 58,
+            "start": 68.03,
+            "duration": 3.85,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-v2-26",
+            "midi": 65,
+            "start": 72.03,
+            "duration": 3.85,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-v2-27",
+            "midi": 60,
+            "start": 76.03,
+            "duration": 3.85,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-v2-28",
+            "midi": 55,
+            "start": 80.03,
+            "duration": 3.85,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-v2-29",
+            "midi": 62,
+            "start": 84.03,
+            "duration": 3.85,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-v2-30",
+            "midi": 64,
+            "start": 88.03,
+            "duration": 3.85,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-v2-31",
+            "midi": 57,
+            "start": 92.03,
+            "duration": 3.85,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-v2-32",
+            "midi": 55,
+            "start": 96.03,
+            "duration": 3.85,
+            "velocity": 0.453
+          },
+          {
+            "id": "departure-v2-33",
+            "midi": 58,
+            "start": 96.05,
+            "duration": 3.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-v2-34",
+            "midi": 62,
+            "start": 100.03,
+            "duration": 3.85,
+            "velocity": 0.453
+          },
+          {
+            "id": "departure-v2-35",
+            "midi": 65,
+            "start": 100.05,
+            "duration": 3.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-v2-36",
+            "midi": 62,
+            "start": 104.03,
+            "duration": 3.85,
+            "velocity": 0.453
+          },
+          {
+            "id": "departure-v2-37",
+            "midi": 65,
+            "start": 104.05,
+            "duration": 3.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-v2-38",
+            "midi": 65,
+            "start": 108.03,
+            "duration": 3.85,
+            "velocity": 0.453
+          },
+          {
+            "id": "departure-v2-39",
+            "midi": 69,
+            "start": 108.05,
+            "duration": 3.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-v2-40",
+            "midi": 58,
+            "start": 112.03,
+            "duration": 3.85,
+            "velocity": 0.453
+          },
+          {
+            "id": "departure-v2-41",
+            "midi": 62,
+            "start": 112.05,
+            "duration": 3.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-v2-42",
+            "midi": 64,
+            "start": 116.03,
+            "duration": 3.85,
+            "velocity": 0.453
+          },
+          {
+            "id": "departure-v2-43",
+            "midi": 67,
+            "start": 116.05,
+            "duration": 3.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-v2-44",
+            "midi": 57,
+            "start": 120.03,
+            "duration": 3.85,
+            "velocity": 0.453
+          },
+          {
+            "id": "departure-v2-45",
+            "midi": 61,
+            "start": 120.05,
+            "duration": 3.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-v2-46",
+            "midi": 57,
+            "start": 124.03,
+            "duration": 3.85,
+            "velocity": 0.453
+          },
+          {
+            "id": "departure-v2-47",
+            "midi": 61,
+            "start": 124.05,
+            "duration": 3.8,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-v2-48",
+            "midi": 62,
+            "start": 128.03,
+            "duration": 3.85,
+            "velocity": 0.484
+          },
+          {
+            "id": "departure-v2-49",
+            "midi": 65,
+            "start": 128.05,
+            "duration": 3.8,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-v2-50",
+            "midi": 58,
+            "start": 132.03,
+            "duration": 3.85,
+            "velocity": 0.484
+          },
+          {
+            "id": "departure-v2-51",
+            "midi": 62,
+            "start": 132.05,
+            "duration": 3.8,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-v2-52",
+            "midi": 65,
+            "start": 136.03,
+            "duration": 3.85,
+            "velocity": 0.484
+          },
+          {
+            "id": "departure-v2-53",
+            "midi": 69,
+            "start": 136.05,
+            "duration": 3.8,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-v2-54",
+            "midi": 60,
+            "start": 140.03,
+            "duration": 3.85,
+            "velocity": 0.484
+          },
+          {
+            "id": "departure-v2-55",
+            "midi": 64,
+            "start": 140.05,
+            "duration": 3.8,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-v2-56",
+            "midi": 55,
+            "start": 144.03,
+            "duration": 3.85,
+            "velocity": 0.484
+          },
+          {
+            "id": "departure-v2-57",
+            "midi": 58,
+            "start": 144.05,
+            "duration": 3.8,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-v2-58",
+            "midi": 62,
+            "start": 148.03,
+            "duration": 3.85,
+            "velocity": 0.484
+          },
+          {
+            "id": "departure-v2-59",
+            "midi": 65,
+            "start": 148.05,
+            "duration": 3.8,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-v2-60",
+            "midi": 64,
+            "start": 152.03,
+            "duration": 3.85,
+            "velocity": 0.484
+          },
+          {
+            "id": "departure-v2-61",
+            "midi": 67,
+            "start": 152.05,
+            "duration": 3.8,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-v2-62",
+            "midi": 57,
+            "start": 156.03,
+            "duration": 3.85,
+            "velocity": 0.484
+          },
+          {
+            "id": "departure-v2-63",
+            "midi": 61,
+            "start": 156.05,
+            "duration": 3.8,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-v2-64",
+            "midi": 62,
+            "start": 160.03,
+            "duration": 3.85,
+            "velocity": 0.304
+          },
+          {
+            "id": "departure-v2-65",
+            "midi": 58,
+            "start": 164.03,
+            "duration": 3.85,
+            "velocity": 0.304
+          },
+          {
+            "id": "departure-v2-66",
+            "midi": 65,
+            "start": 168.03,
+            "duration": 3.85,
+            "velocity": 0.304
+          },
+          {
+            "id": "departure-v2-67",
+            "midi": 60,
+            "start": 172.03,
+            "duration": 3.85,
+            "velocity": 0.304
+          },
+          {
+            "id": "departure-v2-68",
+            "midi": 55,
+            "start": 176.03,
+            "duration": 3.85,
+            "velocity": 0.273
+          },
+          {
+            "id": "departure-v2-69",
+            "midi": 62,
+            "start": 180.03,
+            "duration": 3.85,
+            "velocity": 0.243
+          },
+          {
+            "id": "departure-v2-70",
+            "midi": 65,
+            "start": 184,
+            "duration": 7.5,
+            "velocity": 0.35
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.3,
+        "humanize": 0.18,
+        "articulation": "sustain"
+      },
+      {
+        "id": "vc",
+        "name": "大提琴",
+        "instrumentId": "cello-section",
+        "color": "#9E543B",
+        "volume": 0.112,
+        "pan": 0.22,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-vc-0",
+            "midi": 50,
+            "start": 0,
+            "duration": 3.8,
+            "velocity": 0.26
+          },
+          {
+            "id": "departure-vc-1",
+            "midi": 46,
+            "start": 4,
+            "duration": 3.8,
+            "velocity": 0.26
+          },
+          {
+            "id": "departure-vc-2",
+            "midi": 53,
+            "start": 8,
+            "duration": 3.8,
+            "velocity": 0.26
+          },
+          {
+            "id": "departure-vc-3",
+            "midi": 48,
+            "start": 12,
+            "duration": 3.8,
+            "velocity": 0.26
+          },
+          {
+            "id": "departure-vc-4",
+            "midi": 43,
+            "start": 16,
+            "duration": 3.8,
+            "velocity": 0.26
+          },
+          {
+            "id": "departure-vc-5",
+            "midi": 50,
+            "start": 20,
+            "duration": 3.8,
+            "velocity": 0.26
+          },
+          {
+            "id": "departure-vc-6",
+            "midi": 52,
+            "start": 24,
+            "duration": 3.8,
+            "velocity": 0.26
+          },
+          {
+            "id": "departure-vc-7",
+            "midi": 45,
+            "start": 28,
+            "duration": 3.8,
+            "velocity": 0.26
+          },
+          {
+            "id": "departure-vc-8",
+            "midi": 50,
+            "start": 32,
+            "duration": 0.82,
+            "velocity": 0.549,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-9",
+            "midi": 57,
+            "start": 33,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-10",
+            "midi": 62,
+            "start": 34,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-11",
+            "midi": 57,
+            "start": 35,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-12",
+            "midi": 46,
+            "start": 36,
+            "duration": 0.82,
+            "velocity": 0.549,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-13",
+            "midi": 53,
+            "start": 37,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-14",
+            "midi": 58,
+            "start": 38,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-15",
+            "midi": 53,
+            "start": 39,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-16",
+            "midi": 53,
+            "start": 40,
+            "duration": 0.82,
+            "velocity": 0.549,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-17",
+            "midi": 60,
+            "start": 41,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-18",
+            "midi": 65,
+            "start": 42,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-19",
+            "midi": 60,
+            "start": 43,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-20",
+            "midi": 48,
+            "start": 44,
+            "duration": 0.82,
+            "velocity": 0.549,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-21",
+            "midi": 55,
+            "start": 45,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-22",
+            "midi": 60,
+            "start": 46,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-23",
+            "midi": 55,
+            "start": 47,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-24",
+            "midi": 43,
+            "start": 48,
+            "duration": 0.82,
+            "velocity": 0.549,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-25",
+            "midi": 50,
+            "start": 49,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-26",
+            "midi": 55,
+            "start": 50,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-27",
+            "midi": 50,
+            "start": 51,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-28",
+            "midi": 50,
+            "start": 52,
+            "duration": 0.82,
+            "velocity": 0.549,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-29",
+            "midi": 57,
+            "start": 53,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-30",
+            "midi": 62,
+            "start": 54,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-31",
+            "midi": 57,
+            "start": 55,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-32",
+            "midi": 52,
+            "start": 56,
+            "duration": 0.82,
+            "velocity": 0.549,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-33",
+            "midi": 58,
+            "start": 57,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-34",
+            "midi": 64,
+            "start": 58,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-35",
+            "midi": 58,
+            "start": 59,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-36",
+            "midi": 45,
+            "start": 60,
+            "duration": 0.82,
+            "velocity": 0.549,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-37",
+            "midi": 52,
+            "start": 61,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-38",
+            "midi": 57,
+            "start": 62,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-39",
+            "midi": 52,
+            "start": 63,
+            "duration": 0.82,
+            "velocity": 0.427,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-40",
+            "midi": 50,
+            "start": 64,
+            "duration": 0.82,
+            "velocity": 0.594,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-41",
+            "midi": 57,
+            "start": 65,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-42",
+            "midi": 62,
+            "start": 66,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-43",
+            "midi": 57,
+            "start": 67,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-44",
+            "midi": 46,
+            "start": 68,
+            "duration": 0.82,
+            "velocity": 0.594,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-45",
+            "midi": 53,
+            "start": 69,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-46",
+            "midi": 58,
+            "start": 70,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-47",
+            "midi": 53,
+            "start": 71,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-48",
+            "midi": 53,
+            "start": 72,
+            "duration": 0.82,
+            "velocity": 0.594,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-49",
+            "midi": 60,
+            "start": 73,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-50",
+            "midi": 65,
+            "start": 74,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-51",
+            "midi": 60,
+            "start": 75,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-52",
+            "midi": 48,
+            "start": 76,
+            "duration": 0.82,
+            "velocity": 0.594,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-53",
+            "midi": 55,
+            "start": 77,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-54",
+            "midi": 60,
+            "start": 78,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-55",
+            "midi": 55,
+            "start": 79,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-56",
+            "midi": 43,
+            "start": 80,
+            "duration": 0.82,
+            "velocity": 0.594,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-57",
+            "midi": 50,
+            "start": 81,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-58",
+            "midi": 55,
+            "start": 82,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-59",
+            "midi": 50,
+            "start": 83,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-60",
+            "midi": 50,
+            "start": 84,
+            "duration": 0.82,
+            "velocity": 0.594,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-61",
+            "midi": 57,
+            "start": 85,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-62",
+            "midi": 62,
+            "start": 86,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-63",
+            "midi": 57,
+            "start": 87,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-64",
+            "midi": 52,
+            "start": 88,
+            "duration": 0.82,
+            "velocity": 0.594,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-65",
+            "midi": 58,
+            "start": 89,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-66",
+            "midi": 64,
+            "start": 90,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-67",
+            "midi": 58,
+            "start": 91,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-68",
+            "midi": 45,
+            "start": 92,
+            "duration": 0.82,
+            "velocity": 0.594,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-69",
+            "midi": 52,
+            "start": 93,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-70",
+            "midi": 57,
+            "start": 94,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-71",
+            "midi": 52,
+            "start": 95,
+            "duration": 0.82,
+            "velocity": 0.462,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-72",
+            "midi": 43,
+            "start": 96,
+            "duration": 0.82,
+            "velocity": 0.657,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-73",
+            "midi": 50,
+            "start": 97,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-74",
+            "midi": 55,
+            "start": 98,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-75",
+            "midi": 50,
+            "start": 99,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-76",
+            "midi": 50,
+            "start": 100,
+            "duration": 0.82,
+            "velocity": 0.657,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-77",
+            "midi": 57,
+            "start": 101,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-78",
+            "midi": 62,
+            "start": 102,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-79",
+            "midi": 57,
+            "start": 103,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-80",
+            "midi": 50,
+            "start": 104,
+            "duration": 0.82,
+            "velocity": 0.657,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-81",
+            "midi": 57,
+            "start": 105,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-82",
+            "midi": 62,
+            "start": 106,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-83",
+            "midi": 57,
+            "start": 107,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-84",
+            "midi": 53,
+            "start": 108,
+            "duration": 0.82,
+            "velocity": 0.657,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-85",
+            "midi": 60,
+            "start": 109,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-86",
+            "midi": 65,
+            "start": 110,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-87",
+            "midi": 60,
+            "start": 111,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-88",
+            "midi": 46,
+            "start": 112,
+            "duration": 0.82,
+            "velocity": 0.657,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-89",
+            "midi": 53,
+            "start": 113,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-90",
+            "midi": 58,
+            "start": 114,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-91",
+            "midi": 53,
+            "start": 115,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-92",
+            "midi": 52,
+            "start": 116,
+            "duration": 0.82,
+            "velocity": 0.657,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-93",
+            "midi": 58,
+            "start": 117,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-94",
+            "midi": 64,
+            "start": 118,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-95",
+            "midi": 58,
+            "start": 119,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-96",
+            "midi": 45,
+            "start": 120,
+            "duration": 0.82,
+            "velocity": 0.657,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-97",
+            "midi": 52,
+            "start": 121,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-98",
+            "midi": 57,
+            "start": 122,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-99",
+            "midi": 52,
+            "start": 123,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-100",
+            "midi": 45,
+            "start": 124,
+            "duration": 0.82,
+            "velocity": 0.657,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-101",
+            "midi": 52,
+            "start": 125,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-102",
+            "midi": 57,
+            "start": 126,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-103",
+            "midi": 52,
+            "start": 127,
+            "duration": 0.82,
+            "velocity": 0.511,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-104",
+            "midi": 50,
+            "start": 128,
+            "duration": 0.82,
+            "velocity": 0.702,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-105",
+            "midi": 57,
+            "start": 129,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-106",
+            "midi": 62,
+            "start": 130,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-107",
+            "midi": 57,
+            "start": 131,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-108",
+            "midi": 46,
+            "start": 132,
+            "duration": 0.82,
+            "velocity": 0.702,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-109",
+            "midi": 53,
+            "start": 133,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-110",
+            "midi": 58,
+            "start": 134,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-111",
+            "midi": 53,
+            "start": 135,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-112",
+            "midi": 53,
+            "start": 136,
+            "duration": 0.82,
+            "velocity": 0.702,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-113",
+            "midi": 60,
+            "start": 137,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-114",
+            "midi": 65,
+            "start": 138,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-115",
+            "midi": 60,
+            "start": 139,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-116",
+            "midi": 48,
+            "start": 140,
+            "duration": 0.82,
+            "velocity": 0.702,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-117",
+            "midi": 55,
+            "start": 141,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-118",
+            "midi": 60,
+            "start": 142,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-119",
+            "midi": 55,
+            "start": 143,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-120",
+            "midi": 43,
+            "start": 144,
+            "duration": 0.82,
+            "velocity": 0.702,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-121",
+            "midi": 50,
+            "start": 145,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-122",
+            "midi": 55,
+            "start": 146,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-123",
+            "midi": 50,
+            "start": 147,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-124",
+            "midi": 50,
+            "start": 148,
+            "duration": 0.82,
+            "velocity": 0.702,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-125",
+            "midi": 57,
+            "start": 149,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-126",
+            "midi": 62,
+            "start": 150,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-127",
+            "midi": 57,
+            "start": 151,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-128",
+            "midi": 52,
+            "start": 152,
+            "duration": 0.82,
+            "velocity": 0.702,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-129",
+            "midi": 58,
+            "start": 153,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-130",
+            "midi": 64,
+            "start": 154,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-131",
+            "midi": 58,
+            "start": 155,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-132",
+            "midi": 45,
+            "start": 156,
+            "duration": 0.82,
+            "velocity": 0.702,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-133",
+            "midi": 52,
+            "start": 157,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-134",
+            "midi": 57,
+            "start": 158,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-135",
+            "midi": 52,
+            "start": 159,
+            "duration": 0.82,
+            "velocity": 0.546,
+            "articulation": "spiccato"
+          },
+          {
+            "id": "departure-vc-136",
+            "midi": 50,
+            "start": 160,
+            "duration": 3.8,
+            "velocity": 0.319
+          },
+          {
+            "id": "departure-vc-137",
+            "midi": 46,
+            "start": 164,
+            "duration": 3.8,
+            "velocity": 0.319
+          },
+          {
+            "id": "departure-vc-138",
+            "midi": 53,
+            "start": 168,
+            "duration": 3.8,
+            "velocity": 0.319
+          },
+          {
+            "id": "departure-vc-139",
+            "midi": 48,
+            "start": 172,
+            "duration": 3.8,
+            "velocity": 0.319
+          },
+          {
+            "id": "departure-vc-140",
+            "midi": 43,
+            "start": 176,
+            "duration": 3.8,
+            "velocity": 0.287
+          },
+          {
+            "id": "departure-vc-141",
+            "midi": 50,
+            "start": 180,
+            "duration": 3.8,
+            "velocity": 0.255
+          },
+          {
+            "id": "departure-vc-142",
+            "midi": 50,
+            "start": 184,
+            "duration": 7.5,
+            "velocity": 0.35
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.3,
+        "humanize": 0.18,
+        "articulation": "sustain"
+      },
+      {
+        "id": "bass",
+        "name": "低音提琴",
+        "instrumentId": "bass",
+        "color": "#9E543B",
+        "volume": 0.22,
+        "pan": 0.1,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-bass-0",
+            "midi": 38,
+            "start": 0,
+            "duration": 1.7,
+            "velocity": 0.32
+          },
+          {
+            "id": "departure-bass-1",
+            "midi": 45,
+            "start": 2,
+            "duration": 1.65,
+            "velocity": 0.268
+          },
+          {
+            "id": "departure-bass-2",
+            "midi": 46,
+            "start": 4,
+            "duration": 1.7,
+            "velocity": 0.32
+          },
+          {
+            "id": "departure-bass-3",
+            "midi": 46,
+            "start": 6,
+            "duration": 1.65,
+            "velocity": 0.268
+          },
+          {
+            "id": "departure-bass-4",
+            "midi": 41,
+            "start": 8,
+            "duration": 1.7,
+            "velocity": 0.32
+          },
+          {
+            "id": "departure-bass-5",
+            "midi": 48,
+            "start": 10,
+            "duration": 1.65,
+            "velocity": 0.268
+          },
+          {
+            "id": "departure-bass-6",
+            "midi": 48,
+            "start": 12,
+            "duration": 1.7,
+            "velocity": 0.32
+          },
+          {
+            "id": "departure-bass-7",
+            "midi": 48,
+            "start": 14,
+            "duration": 1.65,
+            "velocity": 0.268
+          },
+          {
+            "id": "departure-bass-8",
+            "midi": 43,
+            "start": 16,
+            "duration": 1.7,
+            "velocity": 0.32
+          },
+          {
+            "id": "departure-bass-9",
+            "midi": 50,
+            "start": 18,
+            "duration": 1.65,
+            "velocity": 0.268
+          },
+          {
+            "id": "departure-bass-10",
+            "midi": 38,
+            "start": 20,
+            "duration": 1.7,
+            "velocity": 0.32
+          },
+          {
+            "id": "departure-bass-11",
+            "midi": 38,
+            "start": 22,
+            "duration": 1.65,
+            "velocity": 0.268
+          },
+          {
+            "id": "departure-bass-12",
+            "midi": 40,
+            "start": 24,
+            "duration": 1.7,
+            "velocity": 0.32
+          },
+          {
+            "id": "departure-bass-13",
+            "midi": 47,
+            "start": 26,
+            "duration": 1.65,
+            "velocity": 0.268
+          },
+          {
+            "id": "departure-bass-14",
+            "midi": 45,
+            "start": 28,
+            "duration": 1.7,
+            "velocity": 0.32
+          },
+          {
+            "id": "departure-bass-15",
+            "midi": 45,
+            "start": 30,
+            "duration": 1.65,
+            "velocity": 0.268
+          },
+          {
+            "id": "departure-bass-16",
+            "midi": 38,
+            "start": 32,
+            "duration": 1.7,
+            "velocity": 0.488
+          },
+          {
+            "id": "departure-bass-17",
+            "midi": 45,
+            "start": 34,
+            "duration": 1.65,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-bass-18",
+            "midi": 46,
+            "start": 36,
+            "duration": 1.7,
+            "velocity": 0.488
+          },
+          {
+            "id": "departure-bass-19",
+            "midi": 46,
+            "start": 38,
+            "duration": 1.65,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-bass-20",
+            "midi": 41,
+            "start": 40,
+            "duration": 1.7,
+            "velocity": 0.488
+          },
+          {
+            "id": "departure-bass-21",
+            "midi": 48,
+            "start": 42,
+            "duration": 1.65,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-bass-22",
+            "midi": 48,
+            "start": 44,
+            "duration": 1.7,
+            "velocity": 0.488
+          },
+          {
+            "id": "departure-bass-23",
+            "midi": 48,
+            "start": 46,
+            "duration": 1.65,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-bass-24",
+            "midi": 43,
+            "start": 48,
+            "duration": 1.7,
+            "velocity": 0.488
+          },
+          {
+            "id": "departure-bass-25",
+            "midi": 50,
+            "start": 50,
+            "duration": 1.65,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-bass-26",
+            "midi": 38,
+            "start": 52,
+            "duration": 1.7,
+            "velocity": 0.488
+          },
+          {
+            "id": "departure-bass-27",
+            "midi": 38,
+            "start": 54,
+            "duration": 1.65,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-bass-28",
+            "midi": 40,
+            "start": 56,
+            "duration": 1.7,
+            "velocity": 0.488
+          },
+          {
+            "id": "departure-bass-29",
+            "midi": 47,
+            "start": 58,
+            "duration": 1.65,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-bass-30",
+            "midi": 45,
+            "start": 60,
+            "duration": 1.7,
+            "velocity": 0.488
+          },
+          {
+            "id": "departure-bass-31",
+            "midi": 45,
+            "start": 62,
+            "duration": 1.65,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-bass-32",
+            "midi": 38,
+            "start": 64,
+            "duration": 1.7,
+            "velocity": 0.528
+          },
+          {
+            "id": "departure-bass-33",
+            "midi": 45,
+            "start": 66,
+            "duration": 1.65,
+            "velocity": 0.442
+          },
+          {
+            "id": "departure-bass-34",
+            "midi": 46,
+            "start": 68,
+            "duration": 1.7,
+            "velocity": 0.528
+          },
+          {
+            "id": "departure-bass-35",
+            "midi": 46,
+            "start": 70,
+            "duration": 1.65,
+            "velocity": 0.442
+          },
+          {
+            "id": "departure-bass-36",
+            "midi": 41,
+            "start": 72,
+            "duration": 1.7,
+            "velocity": 0.528
+          },
+          {
+            "id": "departure-bass-37",
+            "midi": 48,
+            "start": 74,
+            "duration": 1.65,
+            "velocity": 0.442
+          },
+          {
+            "id": "departure-bass-38",
+            "midi": 48,
+            "start": 76,
+            "duration": 1.7,
+            "velocity": 0.528
+          },
+          {
+            "id": "departure-bass-39",
+            "midi": 48,
+            "start": 78,
+            "duration": 1.65,
+            "velocity": 0.442
+          },
+          {
+            "id": "departure-bass-40",
+            "midi": 43,
+            "start": 80,
+            "duration": 1.7,
+            "velocity": 0.528
+          },
+          {
+            "id": "departure-bass-41",
+            "midi": 50,
+            "start": 82,
+            "duration": 1.65,
+            "velocity": 0.442
+          },
+          {
+            "id": "departure-bass-42",
+            "midi": 38,
+            "start": 84,
+            "duration": 1.7,
+            "velocity": 0.528
+          },
+          {
+            "id": "departure-bass-43",
+            "midi": 38,
+            "start": 86,
+            "duration": 1.65,
+            "velocity": 0.442
+          },
+          {
+            "id": "departure-bass-44",
+            "midi": 40,
+            "start": 88,
+            "duration": 1.7,
+            "velocity": 0.528
+          },
+          {
+            "id": "departure-bass-45",
+            "midi": 47,
+            "start": 90,
+            "duration": 1.65,
+            "velocity": 0.442
+          },
+          {
+            "id": "departure-bass-46",
+            "midi": 45,
+            "start": 92,
+            "duration": 1.7,
+            "velocity": 0.528
+          },
+          {
+            "id": "departure-bass-47",
+            "midi": 45,
+            "start": 94,
+            "duration": 1.65,
+            "velocity": 0.442
+          },
+          {
+            "id": "departure-bass-48",
+            "midi": 43,
+            "start": 96,
+            "duration": 1.7,
+            "velocity": 0.584
+          },
+          {
+            "id": "departure-bass-49",
+            "midi": 50,
+            "start": 98,
+            "duration": 1.65,
+            "velocity": 0.489
+          },
+          {
+            "id": "departure-bass-50",
+            "midi": 38,
+            "start": 100,
+            "duration": 1.7,
+            "velocity": 0.584
+          },
+          {
+            "id": "departure-bass-51",
+            "midi": 38,
+            "start": 102,
+            "duration": 1.65,
+            "velocity": 0.489
+          },
+          {
+            "id": "departure-bass-52",
+            "midi": 38,
+            "start": 104,
+            "duration": 1.7,
+            "velocity": 0.584
+          },
+          {
+            "id": "departure-bass-53",
+            "midi": 45,
+            "start": 106,
+            "duration": 1.65,
+            "velocity": 0.489
+          },
+          {
+            "id": "departure-bass-54",
+            "midi": 41,
+            "start": 108,
+            "duration": 1.7,
+            "velocity": 0.584
+          },
+          {
+            "id": "departure-bass-55",
+            "midi": 41,
+            "start": 110,
+            "duration": 1.65,
+            "velocity": 0.489
+          },
+          {
+            "id": "departure-bass-56",
+            "midi": 46,
+            "start": 112,
+            "duration": 1.7,
+            "velocity": 0.584
+          },
+          {
+            "id": "departure-bass-57",
+            "midi": 53,
+            "start": 114,
+            "duration": 1.65,
+            "velocity": 0.489
+          },
+          {
+            "id": "departure-bass-58",
+            "midi": 40,
+            "start": 116,
+            "duration": 1.7,
+            "velocity": 0.584
+          },
+          {
+            "id": "departure-bass-59",
+            "midi": 40,
+            "start": 118,
+            "duration": 1.65,
+            "velocity": 0.489
+          },
+          {
+            "id": "departure-bass-60",
+            "midi": 45,
+            "start": 120,
+            "duration": 1.7,
+            "velocity": 0.584
+          },
+          {
+            "id": "departure-bass-61",
+            "midi": 52,
+            "start": 122,
+            "duration": 1.65,
+            "velocity": 0.489
+          },
+          {
+            "id": "departure-bass-62",
+            "midi": 45,
+            "start": 124,
+            "duration": 1.7,
+            "velocity": 0.584
+          },
+          {
+            "id": "departure-bass-63",
+            "midi": 45,
+            "start": 126,
+            "duration": 1.65,
+            "velocity": 0.489
+          },
+          {
+            "id": "departure-bass-64",
+            "midi": 38,
+            "start": 128,
+            "duration": 1.7,
+            "velocity": 0.624
+          },
+          {
+            "id": "departure-bass-65",
+            "midi": 45,
+            "start": 130,
+            "duration": 1.65,
+            "velocity": 0.523
+          },
+          {
+            "id": "departure-bass-66",
+            "midi": 46,
+            "start": 132,
+            "duration": 1.7,
+            "velocity": 0.624
+          },
+          {
+            "id": "departure-bass-67",
+            "midi": 46,
+            "start": 134,
+            "duration": 1.65,
+            "velocity": 0.523
+          },
+          {
+            "id": "departure-bass-68",
+            "midi": 41,
+            "start": 136,
+            "duration": 1.7,
+            "velocity": 0.624
+          },
+          {
+            "id": "departure-bass-69",
+            "midi": 48,
+            "start": 138,
+            "duration": 1.65,
+            "velocity": 0.523
+          },
+          {
+            "id": "departure-bass-70",
+            "midi": 48,
+            "start": 140,
+            "duration": 1.7,
+            "velocity": 0.624
+          },
+          {
+            "id": "departure-bass-71",
+            "midi": 48,
+            "start": 142,
+            "duration": 1.65,
+            "velocity": 0.523
+          },
+          {
+            "id": "departure-bass-72",
+            "midi": 43,
+            "start": 144,
+            "duration": 1.7,
+            "velocity": 0.624
+          },
+          {
+            "id": "departure-bass-73",
+            "midi": 50,
+            "start": 146,
+            "duration": 1.65,
+            "velocity": 0.523
+          },
+          {
+            "id": "departure-bass-74",
+            "midi": 38,
+            "start": 148,
+            "duration": 1.7,
+            "velocity": 0.624
+          },
+          {
+            "id": "departure-bass-75",
+            "midi": 38,
+            "start": 150,
+            "duration": 1.65,
+            "velocity": 0.523
+          },
+          {
+            "id": "departure-bass-76",
+            "midi": 40,
+            "start": 152,
+            "duration": 1.7,
+            "velocity": 0.624
+          },
+          {
+            "id": "departure-bass-77",
+            "midi": 47,
+            "start": 154,
+            "duration": 1.65,
+            "velocity": 0.523
+          },
+          {
+            "id": "departure-bass-78",
+            "midi": 45,
+            "start": 156,
+            "duration": 1.7,
+            "velocity": 0.624
+          },
+          {
+            "id": "departure-bass-79",
+            "midi": 45,
+            "start": 158,
+            "duration": 1.65,
+            "velocity": 0.523
+          },
+          {
+            "id": "departure-bass-80",
+            "midi": 38,
+            "start": 160,
+            "duration": 1.7,
+            "velocity": 0.392
+          },
+          {
+            "id": "departure-bass-81",
+            "midi": 45,
+            "start": 162,
+            "duration": 1.65,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-bass-82",
+            "midi": 46,
+            "start": 164,
+            "duration": 1.7,
+            "velocity": 0.392
+          },
+          {
+            "id": "departure-bass-83",
+            "midi": 46,
+            "start": 166,
+            "duration": 1.65,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-bass-84",
+            "midi": 41,
+            "start": 168,
+            "duration": 1.7,
+            "velocity": 0.392
+          },
+          {
+            "id": "departure-bass-85",
+            "midi": 48,
+            "start": 170,
+            "duration": 1.65,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-bass-86",
+            "midi": 48,
+            "start": 172,
+            "duration": 1.7,
+            "velocity": 0.392
+          },
+          {
+            "id": "departure-bass-87",
+            "midi": 48,
+            "start": 174,
+            "duration": 1.65,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-bass-88",
+            "midi": 43,
+            "start": 176,
+            "duration": 1.7,
+            "velocity": 0.353
+          },
+          {
+            "id": "departure-bass-89",
+            "midi": 50,
+            "start": 178,
+            "duration": 1.65,
+            "velocity": 0.295
+          },
+          {
+            "id": "departure-bass-90",
+            "midi": 38,
+            "start": 180,
+            "duration": 1.7,
+            "velocity": 0.314
+          },
+          {
+            "id": "departure-bass-91",
+            "midi": 38,
+            "start": 182,
+            "duration": 1.65,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-bass-92",
+            "midi": 38,
+            "start": 184,
+            "duration": 7.5,
+            "velocity": 0.35
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.13,
+        "humanize": 0.18
+      },
+      {
+        "id": "horn",
+        "name": "圆号",
+        "instrumentId": "french-horn",
+        "color": "#9E543B",
+        "volume": 0.148,
+        "pan": 0.28,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-horn-0",
+            "midi": 50,
+            "start": 0.5,
+            "duration": 0.815,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-horn-1",
+            "midi": 53,
+            "start": 1.375,
+            "duration": 0.3775,
+            "velocity": 0.396
+          },
+          {
+            "id": "departure-horn-2",
+            "midi": 57,
+            "start": 1.8125,
+            "duration": 0.815,
+            "velocity": 0.366
+          },
+          {
+            "id": "departure-horn-3",
+            "midi": 55,
+            "start": 2.6875,
+            "duration": 0.3775,
+            "velocity": 0.33
+          },
+          {
+            "id": "departure-horn-4",
+            "midi": 53,
+            "start": 3.125,
+            "duration": 0.815,
+            "velocity": 0.322
+          },
+          {
+            "id": "departure-horn-5",
+            "midi": 53,
+            "start": 4.5,
+            "duration": 1.2525,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-horn-6",
+            "midi": 50,
+            "start": 5.8125,
+            "duration": 0.3775,
+            "velocity": 0.396
+          },
+          {
+            "id": "departure-horn-7",
+            "midi": 58,
+            "start": 6.25,
+            "duration": 0.815,
+            "velocity": 0.366
+          },
+          {
+            "id": "departure-horn-8",
+            "midi": 57,
+            "start": 7.125,
+            "duration": 0.815,
+            "velocity": 0.33
+          },
+          {
+            "id": "departure-horn-9",
+            "midi": 57,
+            "start": 8.5,
+            "duration": 0.815,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-horn-10",
+            "midi": 60,
+            "start": 9.375,
+            "duration": 0.3775,
+            "velocity": 0.396
+          },
+          {
+            "id": "departure-horn-11",
+            "midi": 62,
+            "start": 9.8125,
+            "duration": 0.3775,
+            "velocity": 0.366
+          },
+          {
+            "id": "departure-horn-12",
+            "midi": 60,
+            "start": 10.25,
+            "duration": 0.815,
+            "velocity": 0.33
+          },
+          {
+            "id": "departure-horn-13",
+            "midi": 57,
+            "start": 11.125,
+            "duration": 0.815,
+            "velocity": 0.322
+          },
+          {
+            "id": "departure-horn-14",
+            "midi": 55,
+            "start": 12.5,
+            "duration": 0.44,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-horn-15",
+            "midi": 52,
+            "start": 13.0,
+            "duration": 0.44,
+            "velocity": 0.396
+          },
+          {
+            "id": "departure-horn-16",
+            "midi": 55,
+            "start": 13.5,
+            "duration": 0.94,
+            "velocity": 0.366
+          },
+          {
+            "id": "departure-horn-17",
+            "midi": 60,
+            "start": 14.5,
+            "duration": 1.44,
+            "velocity": 0.33
+          },
+          {
+            "id": "departure-horn-18",
+            "midi": 55,
+            "start": 16.5,
+            "duration": 1.2525,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-horn-19",
+            "midi": 58,
+            "start": 17.8125,
+            "duration": 0.3775,
+            "velocity": 0.396
+          },
+          {
+            "id": "departure-horn-20",
+            "midi": 57,
+            "start": 18.25,
+            "duration": 0.3775,
+            "velocity": 0.366
+          },
+          {
+            "id": "departure-horn-21",
+            "midi": 55,
+            "start": 18.6875,
+            "duration": 0.3775,
+            "velocity": 0.33
+          },
+          {
+            "id": "departure-horn-22",
+            "midi": 53,
+            "start": 19.125,
+            "duration": 0.815,
+            "velocity": 0.322
+          },
+          {
+            "id": "departure-horn-23",
+            "midi": 53,
+            "start": 20.5,
+            "duration": 0.44,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-horn-24",
+            "midi": 52,
+            "start": 21.0,
+            "duration": 0.44,
+            "velocity": 0.396
+          },
+          {
+            "id": "departure-horn-25",
+            "midi": 50,
+            "start": 21.5,
+            "duration": 1.94,
+            "velocity": 0.366
+          },
+          {
+            "id": "departure-horn-26",
+            "midi": 57,
+            "start": 23.5,
+            "duration": 0.44,
+            "velocity": 0.33
+          },
+          {
+            "id": "departure-horn-27",
+            "midi": 52,
+            "start": 24.5,
+            "duration": 0.815,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-horn-28",
+            "midi": 55,
+            "start": 25.375,
+            "duration": 0.815,
+            "velocity": 0.396
+          },
+          {
+            "id": "departure-horn-29",
+            "midi": 58,
+            "start": 26.25,
+            "duration": 0.3775,
+            "velocity": 0.366
+          },
+          {
+            "id": "departure-horn-30",
+            "midi": 55,
+            "start": 26.6875,
+            "duration": 0.3775,
+            "velocity": 0.33
+          },
+          {
+            "id": "departure-horn-31",
+            "midi": 52,
+            "start": 27.125,
+            "duration": 0.815,
+            "velocity": 0.322
+          },
+          {
+            "id": "departure-horn-32",
+            "midi": 61,
+            "start": 28.5,
+            "duration": 0.815,
+            "velocity": 0.394
+          },
+          {
+            "id": "departure-horn-33",
+            "midi": 59,
+            "start": 29.375,
+            "duration": 0.3775,
+            "velocity": 0.396
+          },
+          {
+            "id": "departure-horn-34",
+            "midi": 57,
+            "start": 29.8125,
+            "duration": 0.3775,
+            "velocity": 0.366
+          },
+          {
+            "id": "departure-horn-35",
+            "midi": 61,
+            "start": 30.25,
+            "duration": 0.815,
+            "velocity": 0.33
+          },
+          {
+            "id": "departure-horn-36",
+            "midi": 57,
+            "start": 31.125,
+            "duration": 0.815,
+            "velocity": 0.322
+          },
+          {
+            "id": "departure-horn-37",
+            "midi": 57,
+            "start": 32.1,
+            "duration": 2.7,
+            "velocity": 0.293
+          },
+          {
+            "id": "departure-horn-38",
+            "midi": 65,
+            "start": 32.13,
+            "duration": 2.7,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-horn-39",
+            "midi": 53,
+            "start": 36.1,
+            "duration": 2.7,
+            "velocity": 0.293
+          },
+          {
+            "id": "departure-horn-40",
+            "midi": 62,
+            "start": 36.13,
+            "duration": 2.7,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-horn-41",
+            "midi": 60,
+            "start": 40.1,
+            "duration": 2.7,
+            "velocity": 0.293
+          },
+          {
+            "id": "departure-horn-42",
+            "midi": 69,
+            "start": 40.13,
+            "duration": 2.7,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-horn-43",
+            "midi": 55,
+            "start": 44.1,
+            "duration": 2.7,
+            "velocity": 0.293
+          },
+          {
+            "id": "departure-horn-44",
+            "midi": 64,
+            "start": 44.13,
+            "duration": 2.7,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-horn-45",
+            "midi": 50,
+            "start": 48.1,
+            "duration": 2.7,
+            "velocity": 0.293
+          },
+          {
+            "id": "departure-horn-46",
+            "midi": 58,
+            "start": 48.13,
+            "duration": 2.7,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-horn-47",
+            "midi": 57,
+            "start": 52.1,
+            "duration": 2.7,
+            "velocity": 0.293
+          },
+          {
+            "id": "departure-horn-48",
+            "midi": 65,
+            "start": 52.13,
+            "duration": 2.7,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-horn-49",
+            "midi": 58,
+            "start": 56.1,
+            "duration": 2.7,
+            "velocity": 0.293
+          },
+          {
+            "id": "departure-horn-50",
+            "midi": 67,
+            "start": 56.13,
+            "duration": 2.7,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-horn-51",
+            "midi": 52,
+            "start": 60.1,
+            "duration": 2.7,
+            "velocity": 0.293
+          },
+          {
+            "id": "departure-horn-52",
+            "midi": 61,
+            "start": 60.13,
+            "duration": 2.7,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-horn-53",
+            "midi": 50,
+            "start": 96.1,
+            "duration": 2.7,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-horn-54",
+            "midi": 58,
+            "start": 96.13,
+            "duration": 2.7,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-horn-55",
+            "midi": 57,
+            "start": 100.1,
+            "duration": 2.7,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-horn-56",
+            "midi": 65,
+            "start": 100.13,
+            "duration": 2.7,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-horn-57",
+            "midi": 57,
+            "start": 104.1,
+            "duration": 2.7,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-horn-58",
+            "midi": 65,
+            "start": 104.13,
+            "duration": 2.7,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-horn-59",
+            "midi": 60,
+            "start": 108.1,
+            "duration": 2.7,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-horn-60",
+            "midi": 69,
+            "start": 108.13,
+            "duration": 2.7,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-horn-61",
+            "midi": 53,
+            "start": 112.1,
+            "duration": 2.7,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-horn-62",
+            "midi": 62,
+            "start": 112.13,
+            "duration": 2.7,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-horn-63",
+            "midi": 58,
+            "start": 116.1,
+            "duration": 2.7,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-horn-64",
+            "midi": 67,
+            "start": 116.13,
+            "duration": 2.7,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-horn-65",
+            "midi": 52,
+            "start": 120.1,
+            "duration": 2.7,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-horn-66",
+            "midi": 61,
+            "start": 120.13,
+            "duration": 2.7,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-horn-67",
+            "midi": 52,
+            "start": 124.1,
+            "duration": 2.7,
+            "velocity": 0.35
+          },
+          {
+            "id": "departure-horn-68",
+            "midi": 61,
+            "start": 124.13,
+            "duration": 2.7,
+            "velocity": 0.263
+          },
+          {
+            "id": "departure-horn-69",
+            "midi": 57,
+            "start": 128.1,
+            "duration": 2.7,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-horn-70",
+            "midi": 65,
+            "start": 128.13,
+            "duration": 2.7,
+            "velocity": 0.281
+          },
+          {
+            "id": "departure-horn-71",
+            "midi": 53,
+            "start": 132.1,
+            "duration": 2.7,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-horn-72",
+            "midi": 62,
+            "start": 132.13,
+            "duration": 2.7,
+            "velocity": 0.281
+          },
+          {
+            "id": "departure-horn-73",
+            "midi": 60,
+            "start": 136.1,
+            "duration": 2.7,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-horn-74",
+            "midi": 69,
+            "start": 136.13,
+            "duration": 2.7,
+            "velocity": 0.281
+          },
+          {
+            "id": "departure-horn-75",
+            "midi": 55,
+            "start": 140.1,
+            "duration": 2.7,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-horn-76",
+            "midi": 64,
+            "start": 140.13,
+            "duration": 2.7,
+            "velocity": 0.281
+          },
+          {
+            "id": "departure-horn-77",
+            "midi": 50,
+            "start": 144.1,
+            "duration": 2.7,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-horn-78",
+            "midi": 58,
+            "start": 144.13,
+            "duration": 2.7,
+            "velocity": 0.281
+          },
+          {
+            "id": "departure-horn-79",
+            "midi": 57,
+            "start": 148.1,
+            "duration": 2.7,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-horn-80",
+            "midi": 65,
+            "start": 148.13,
+            "duration": 2.7,
+            "velocity": 0.281
+          },
+          {
+            "id": "departure-horn-81",
+            "midi": 58,
+            "start": 152.1,
+            "duration": 2.7,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-horn-82",
+            "midi": 67,
+            "start": 152.13,
+            "duration": 2.7,
+            "velocity": 0.281
+          },
+          {
+            "id": "departure-horn-83",
+            "midi": 52,
+            "start": 156.1,
+            "duration": 2.7,
+            "velocity": 0.374
+          },
+          {
+            "id": "departure-horn-84",
+            "midi": 61,
+            "start": 156.13,
+            "duration": 2.7,
+            "velocity": 0.281
+          },
+          {
+            "id": "departure-horn-85",
+            "midi": 57,
+            "start": 184,
+            "duration": 7.5,
+            "velocity": 0.35
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.3,
+        "humanize": 0.18,
+        "articulation": "sustain"
+      },
+      {
+        "id": "flute",
+        "name": "长笛",
+        "instrumentId": "flute",
+        "color": "#9E543B",
+        "volume": 0.216,
+        "pan": -0.18,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-flute-0",
+            "midi": 74,
+            "start": 36.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-1",
+            "midi": 70,
+            "start": 37.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-2",
+            "midi": 65,
+            "start": 38.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-3",
+            "midi": 76,
+            "start": 44.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-4",
+            "midi": 72,
+            "start": 45.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-5",
+            "midi": 67,
+            "start": 46.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-6",
+            "midi": 77,
+            "start": 52.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-7",
+            "midi": 74,
+            "start": 53.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-8",
+            "midi": 69,
+            "start": 54.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-9",
+            "midi": 73,
+            "start": 60.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-10",
+            "midi": 69,
+            "start": 61.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-11",
+            "midi": 64,
+            "start": 62.5,
+            "duration": 0.75,
+            "velocity": 0.348
+          },
+          {
+            "id": "departure-flute-12",
+            "midi": 62,
+            "start": 96,
+            "duration": 0.44,
+            "velocity": 0.718
+          },
+          {
+            "id": "departure-flute-13",
+            "midi": 65,
+            "start": 96.5,
+            "duration": 0.44,
+            "velocity": 0.723
+          },
+          {
+            "id": "departure-flute-14",
+            "midi": 67,
+            "start": 97.0,
+            "duration": 1.94,
+            "velocity": 0.667
+          },
+          {
+            "id": "departure-flute-15",
+            "midi": 70,
+            "start": 99.0,
+            "duration": 0.44,
+            "velocity": 0.602
+          },
+          {
+            "id": "departure-flute-16",
+            "midi": 69,
+            "start": 100,
+            "duration": 1.44,
+            "velocity": 0.718
+          },
+          {
+            "id": "departure-flute-17",
+            "midi": 65,
+            "start": 101.5,
+            "duration": 0.44,
+            "velocity": 0.723
+          },
+          {
+            "id": "departure-flute-18",
+            "midi": 64,
+            "start": 102.0,
+            "duration": 0.44,
+            "velocity": 0.667
+          },
+          {
+            "id": "departure-flute-19",
+            "midi": 62,
+            "start": 102.5,
+            "duration": 1.44,
+            "velocity": 0.602
+          },
+          {
+            "id": "departure-flute-20",
+            "midi": 69,
+            "start": 104,
+            "duration": 1.94,
+            "velocity": 0.718
+          },
+          {
+            "id": "departure-flute-21",
+            "midi": 67,
+            "start": 106,
+            "duration": 0.44,
+            "velocity": 0.723
+          },
+          {
+            "id": "departure-flute-22",
+            "midi": 65,
+            "start": 106.5,
+            "duration": 0.44,
+            "velocity": 0.667
+          },
+          {
+            "id": "departure-flute-23",
+            "midi": 62,
+            "start": 107.0,
+            "duration": 0.94,
+            "velocity": 0.602
+          },
+          {
+            "id": "departure-flute-24",
+            "midi": 72,
+            "start": 108,
+            "duration": 1.44,
+            "velocity": 0.718
+          },
+          {
+            "id": "departure-flute-25",
+            "midi": 69,
+            "start": 109.5,
+            "duration": 0.44,
+            "velocity": 0.723
+          },
+          {
+            "id": "departure-flute-26",
+            "midi": 65,
+            "start": 110.0,
+            "duration": 1.94,
+            "velocity": 0.667
+          },
+          {
+            "id": "departure-flute-27",
+            "midi": 70,
+            "start": 112,
+            "duration": 0.94,
+            "velocity": 0.718
+          },
+          {
+            "id": "departure-flute-28",
+            "midi": 74,
+            "start": 113,
+            "duration": 1.44,
+            "velocity": 0.723
+          },
+          {
+            "id": "departure-flute-29",
+            "midi": 72,
+            "start": 114.5,
+            "duration": 0.44,
+            "velocity": 0.667
+          },
+          {
+            "id": "departure-flute-30",
+            "midi": 70,
+            "start": 115.0,
+            "duration": 0.94,
+            "velocity": 0.602
+          },
+          {
+            "id": "departure-flute-31",
+            "midi": 67,
+            "start": 116,
+            "duration": 0.44,
+            "velocity": 0.718
+          },
+          {
+            "id": "departure-flute-32",
+            "midi": 70,
+            "start": 116.5,
+            "duration": 0.44,
+            "velocity": 0.723
+          },
+          {
+            "id": "departure-flute-33",
+            "midi": 76,
+            "start": 117.0,
+            "duration": 1.44,
+            "velocity": 0.667
+          },
+          {
+            "id": "departure-flute-34",
+            "midi": 74,
+            "start": 118.5,
+            "duration": 0.44,
+            "velocity": 0.602
+          },
+          {
+            "id": "departure-flute-35",
+            "midi": 70,
+            "start": 119.0,
+            "duration": 0.94,
+            "velocity": 0.587
+          },
+          {
+            "id": "departure-flute-36",
+            "midi": 73,
+            "start": 120,
+            "duration": 1.44,
+            "velocity": 0.718
+          },
+          {
+            "id": "departure-flute-37",
+            "midi": 69,
+            "start": 121.5,
+            "duration": 0.44,
+            "velocity": 0.723
+          },
+          {
+            "id": "departure-flute-38",
+            "midi": 64,
+            "start": 122.0,
+            "duration": 0.94,
+            "velocity": 0.667
+          },
+          {
+            "id": "departure-flute-39",
+            "midi": 61,
+            "start": 123.0,
+            "duration": 0.94,
+            "velocity": 0.602
+          },
+          {
+            "id": "departure-flute-40",
+            "midi": 73,
+            "start": 124,
+            "duration": 1.44,
+            "velocity": 0.718
+          },
+          {
+            "id": "departure-flute-41",
+            "midi": 69,
+            "start": 125.5,
+            "duration": 0.44,
+            "velocity": 0.723
+          },
+          {
+            "id": "departure-flute-42",
+            "midi": 64,
+            "start": 126.0,
+            "duration": 0.94,
+            "velocity": 0.667
+          },
+          {
+            "id": "departure-flute-43",
+            "midi": 61,
+            "start": 127.0,
+            "duration": 0.94,
+            "velocity": 0.602
+          },
+          {
+            "id": "departure-flute-44",
+            "midi": 74,
+            "start": 132.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-45",
+            "midi": 70,
+            "start": 133.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-46",
+            "midi": 65,
+            "start": 134.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-47",
+            "midi": 76,
+            "start": 140.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-48",
+            "midi": 72,
+            "start": 141.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-49",
+            "midi": 67,
+            "start": 142.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-50",
+            "midi": 77,
+            "start": 148.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-51",
+            "midi": 74,
+            "start": 149.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-52",
+            "midi": 69,
+            "start": 150.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-53",
+            "midi": 73,
+            "start": 156.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-54",
+            "midi": 69,
+            "start": 157.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          },
+          {
+            "id": "departure-flute-55",
+            "midi": 64,
+            "start": 158.5,
+            "duration": 0.75,
+            "velocity": 0.445
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.3,
+        "humanize": 0.18,
+        "articulation": "sustain"
+      },
+      {
+        "id": "oboe",
+        "name": "双簧管",
+        "instrumentId": "oboe",
+        "color": "#9E543B",
+        "volume": 0.75,
+        "pan": 0.12,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-oboe-0",
+            "midi": 62,
+            "start": 64.5,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-1",
+            "midi": 65,
+            "start": 65.375,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-2",
+            "midi": 69,
+            "start": 65.8125,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-3",
+            "midi": 67,
+            "start": 66.6875,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-4",
+            "midi": 65,
+            "start": 67.125,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-5",
+            "midi": 65,
+            "start": 68.5,
+            "duration": 1.2525,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-6",
+            "midi": 62,
+            "start": 69.8125,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-7",
+            "midi": 70,
+            "start": 70.25,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-8",
+            "midi": 69,
+            "start": 71.125,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-9",
+            "midi": 69,
+            "start": 72.5,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-10",
+            "midi": 72,
+            "start": 73.375,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-11",
+            "midi": 74,
+            "start": 73.8125,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-12",
+            "midi": 72,
+            "start": 74.25,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-13",
+            "midi": 69,
+            "start": 75.125,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-14",
+            "midi": 67,
+            "start": 76.5,
+            "duration": 0.44,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-15",
+            "midi": 64,
+            "start": 77.0,
+            "duration": 0.44,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-16",
+            "midi": 67,
+            "start": 77.5,
+            "duration": 0.94,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-17",
+            "midi": 72,
+            "start": 78.5,
+            "duration": 1.44,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-18",
+            "midi": 67,
+            "start": 80.5,
+            "duration": 1.2525,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-19",
+            "midi": 70,
+            "start": 81.8125,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-20",
+            "midi": 69,
+            "start": 82.25,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-21",
+            "midi": 67,
+            "start": 82.6875,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-22",
+            "midi": 65,
+            "start": 83.125,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-23",
+            "midi": 65,
+            "start": 84.5,
+            "duration": 0.44,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-24",
+            "midi": 64,
+            "start": 85.0,
+            "duration": 0.44,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-25",
+            "midi": 62,
+            "start": 85.5,
+            "duration": 1.94,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-26",
+            "midi": 69,
+            "start": 87.5,
+            "duration": 0.44,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-27",
+            "midi": 64,
+            "start": 88.5,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-28",
+            "midi": 67,
+            "start": 89.375,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-29",
+            "midi": 70,
+            "start": 90.25,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-30",
+            "midi": 67,
+            "start": 90.6875,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-31",
+            "midi": 64,
+            "start": 91.125,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-32",
+            "midi": 73,
+            "start": 92.5,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-33",
+            "midi": 71,
+            "start": 93.375,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-34",
+            "midi": 69,
+            "start": 93.8125,
+            "duration": 0.3775,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-35",
+            "midi": 73,
+            "start": 94.25,
+            "duration": 0.815,
+            "velocity": 0.799
+          },
+          {
+            "id": "departure-oboe-36",
+            "midi": 69,
+            "start": 95.125,
+            "duration": 0.815,
+            "velocity": 0.799
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.3,
+        "humanize": 0.18,
+        "articulation": "vibrato"
+      },
+      {
+        "id": "harp",
+        "name": "竖琴",
+        "instrumentId": "harp",
+        "color": "#9E543B",
+        "volume": 0.088,
+        "pan": -0.45,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-harp-0",
+            "midi": 62,
+            "start": 0,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-1",
+            "midi": 74,
+            "start": 1,
+            "duration": 1.4,
+            "velocity": 0.196
+          },
+          {
+            "id": "departure-harp-2",
+            "midi": 69,
+            "start": 2,
+            "duration": 1.4,
+            "velocity": 0.224
+          },
+          {
+            "id": "departure-harp-3",
+            "midi": 77,
+            "start": 3,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-4",
+            "midi": 58,
+            "start": 4,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-5",
+            "midi": 70,
+            "start": 5,
+            "duration": 1.4,
+            "velocity": 0.196
+          },
+          {
+            "id": "departure-harp-6",
+            "midi": 65,
+            "start": 6,
+            "duration": 1.4,
+            "velocity": 0.224
+          },
+          {
+            "id": "departure-harp-7",
+            "midi": 74,
+            "start": 7,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-8",
+            "midi": 65,
+            "start": 8,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-9",
+            "midi": 77,
+            "start": 9,
+            "duration": 1.4,
+            "velocity": 0.196
+          },
+          {
+            "id": "departure-harp-10",
+            "midi": 72,
+            "start": 10,
+            "duration": 1.4,
+            "velocity": 0.224
+          },
+          {
+            "id": "departure-harp-11",
+            "midi": 81,
+            "start": 11,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-12",
+            "midi": 60,
+            "start": 12,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-13",
+            "midi": 72,
+            "start": 13,
+            "duration": 1.4,
+            "velocity": 0.196
+          },
+          {
+            "id": "departure-harp-14",
+            "midi": 67,
+            "start": 14,
+            "duration": 1.4,
+            "velocity": 0.224
+          },
+          {
+            "id": "departure-harp-15",
+            "midi": 76,
+            "start": 15,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-16",
+            "midi": 55,
+            "start": 16,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-17",
+            "midi": 67,
+            "start": 17,
+            "duration": 1.4,
+            "velocity": 0.196
+          },
+          {
+            "id": "departure-harp-18",
+            "midi": 62,
+            "start": 18,
+            "duration": 1.4,
+            "velocity": 0.224
+          },
+          {
+            "id": "departure-harp-19",
+            "midi": 70,
+            "start": 19,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-20",
+            "midi": 62,
+            "start": 20,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-21",
+            "midi": 74,
+            "start": 21,
+            "duration": 1.4,
+            "velocity": 0.196
+          },
+          {
+            "id": "departure-harp-22",
+            "midi": 69,
+            "start": 22,
+            "duration": 1.4,
+            "velocity": 0.224
+          },
+          {
+            "id": "departure-harp-23",
+            "midi": 77,
+            "start": 23,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-24",
+            "midi": 64,
+            "start": 24,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-25",
+            "midi": 76,
+            "start": 25,
+            "duration": 1.4,
+            "velocity": 0.196
+          },
+          {
+            "id": "departure-harp-26",
+            "midi": 70,
+            "start": 26,
+            "duration": 1.4,
+            "velocity": 0.224
+          },
+          {
+            "id": "departure-harp-27",
+            "midi": 79,
+            "start": 27,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-28",
+            "midi": 57,
+            "start": 28,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-29",
+            "midi": 69,
+            "start": 29,
+            "duration": 1.4,
+            "velocity": 0.196
+          },
+          {
+            "id": "departure-harp-30",
+            "midi": 64,
+            "start": 30,
+            "duration": 1.4,
+            "velocity": 0.224
+          },
+          {
+            "id": "departure-harp-31",
+            "midi": 73,
+            "start": 31,
+            "duration": 1.4,
+            "velocity": 0.168
+          },
+          {
+            "id": "departure-harp-32",
+            "midi": 62,
+            "start": 32,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-33",
+            "midi": 74,
+            "start": 33,
+            "duration": 1.4,
+            "velocity": 0.299
+          },
+          {
+            "id": "departure-harp-34",
+            "midi": 69,
+            "start": 34,
+            "duration": 1.4,
+            "velocity": 0.342
+          },
+          {
+            "id": "departure-harp-35",
+            "midi": 77,
+            "start": 35,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-36",
+            "midi": 58,
+            "start": 36,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-37",
+            "midi": 70,
+            "start": 37,
+            "duration": 1.4,
+            "velocity": 0.299
+          },
+          {
+            "id": "departure-harp-38",
+            "midi": 65,
+            "start": 38,
+            "duration": 1.4,
+            "velocity": 0.342
+          },
+          {
+            "id": "departure-harp-39",
+            "midi": 74,
+            "start": 39,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-40",
+            "midi": 65,
+            "start": 40,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-41",
+            "midi": 77,
+            "start": 41,
+            "duration": 1.4,
+            "velocity": 0.299
+          },
+          {
+            "id": "departure-harp-42",
+            "midi": 72,
+            "start": 42,
+            "duration": 1.4,
+            "velocity": 0.342
+          },
+          {
+            "id": "departure-harp-43",
+            "midi": 81,
+            "start": 43,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-44",
+            "midi": 60,
+            "start": 44,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-45",
+            "midi": 72,
+            "start": 45,
+            "duration": 1.4,
+            "velocity": 0.299
+          },
+          {
+            "id": "departure-harp-46",
+            "midi": 67,
+            "start": 46,
+            "duration": 1.4,
+            "velocity": 0.342
+          },
+          {
+            "id": "departure-harp-47",
+            "midi": 76,
+            "start": 47,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-48",
+            "midi": 55,
+            "start": 48,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-49",
+            "midi": 67,
+            "start": 49,
+            "duration": 1.4,
+            "velocity": 0.299
+          },
+          {
+            "id": "departure-harp-50",
+            "midi": 62,
+            "start": 50,
+            "duration": 1.4,
+            "velocity": 0.342
+          },
+          {
+            "id": "departure-harp-51",
+            "midi": 70,
+            "start": 51,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-52",
+            "midi": 62,
+            "start": 52,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-53",
+            "midi": 74,
+            "start": 53,
+            "duration": 1.4,
+            "velocity": 0.299
+          },
+          {
+            "id": "departure-harp-54",
+            "midi": 69,
+            "start": 54,
+            "duration": 1.4,
+            "velocity": 0.342
+          },
+          {
+            "id": "departure-harp-55",
+            "midi": 77,
+            "start": 55,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-56",
+            "midi": 64,
+            "start": 56,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-57",
+            "midi": 76,
+            "start": 57,
+            "duration": 1.4,
+            "velocity": 0.299
+          },
+          {
+            "id": "departure-harp-58",
+            "midi": 70,
+            "start": 58,
+            "duration": 1.4,
+            "velocity": 0.342
+          },
+          {
+            "id": "departure-harp-59",
+            "midi": 79,
+            "start": 59,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-60",
+            "midi": 57,
+            "start": 60,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-61",
+            "midi": 69,
+            "start": 61,
+            "duration": 1.4,
+            "velocity": 0.299
+          },
+          {
+            "id": "departure-harp-62",
+            "midi": 64,
+            "start": 62,
+            "duration": 1.4,
+            "velocity": 0.342
+          },
+          {
+            "id": "departure-harp-63",
+            "midi": 73,
+            "start": 63,
+            "duration": 1.4,
+            "velocity": 0.256
+          },
+          {
+            "id": "departure-harp-64",
+            "midi": 62,
+            "start": 64,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-65",
+            "midi": 74,
+            "start": 65,
+            "duration": 1.4,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-harp-66",
+            "midi": 69,
+            "start": 66,
+            "duration": 1.4,
+            "velocity": 0.37
+          },
+          {
+            "id": "departure-harp-67",
+            "midi": 77,
+            "start": 67,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-68",
+            "midi": 58,
+            "start": 68,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-69",
+            "midi": 70,
+            "start": 69,
+            "duration": 1.4,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-harp-70",
+            "midi": 65,
+            "start": 70,
+            "duration": 1.4,
+            "velocity": 0.37
+          },
+          {
+            "id": "departure-harp-71",
+            "midi": 74,
+            "start": 71,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-72",
+            "midi": 65,
+            "start": 72,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-73",
+            "midi": 77,
+            "start": 73,
+            "duration": 1.4,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-harp-74",
+            "midi": 72,
+            "start": 74,
+            "duration": 1.4,
+            "velocity": 0.37
+          },
+          {
+            "id": "departure-harp-75",
+            "midi": 81,
+            "start": 75,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-76",
+            "midi": 60,
+            "start": 76,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-77",
+            "midi": 72,
+            "start": 77,
+            "duration": 1.4,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-harp-78",
+            "midi": 67,
+            "start": 78,
+            "duration": 1.4,
+            "velocity": 0.37
+          },
+          {
+            "id": "departure-harp-79",
+            "midi": 76,
+            "start": 79,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-80",
+            "midi": 55,
+            "start": 80,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-81",
+            "midi": 67,
+            "start": 81,
+            "duration": 1.4,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-harp-82",
+            "midi": 62,
+            "start": 82,
+            "duration": 1.4,
+            "velocity": 0.37
+          },
+          {
+            "id": "departure-harp-83",
+            "midi": 70,
+            "start": 83,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-84",
+            "midi": 62,
+            "start": 84,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-85",
+            "midi": 74,
+            "start": 85,
+            "duration": 1.4,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-harp-86",
+            "midi": 69,
+            "start": 86,
+            "duration": 1.4,
+            "velocity": 0.37
+          },
+          {
+            "id": "departure-harp-87",
+            "midi": 77,
+            "start": 87,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-88",
+            "midi": 64,
+            "start": 88,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-89",
+            "midi": 76,
+            "start": 89,
+            "duration": 1.4,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-harp-90",
+            "midi": 70,
+            "start": 90,
+            "duration": 1.4,
+            "velocity": 0.37
+          },
+          {
+            "id": "departure-harp-91",
+            "midi": 79,
+            "start": 91,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-92",
+            "midi": 57,
+            "start": 92,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-93",
+            "midi": 69,
+            "start": 93,
+            "duration": 1.4,
+            "velocity": 0.323
+          },
+          {
+            "id": "departure-harp-94",
+            "midi": 64,
+            "start": 94,
+            "duration": 1.4,
+            "velocity": 0.37
+          },
+          {
+            "id": "departure-harp-95",
+            "midi": 73,
+            "start": 95,
+            "duration": 1.4,
+            "velocity": 0.277
+          },
+          {
+            "id": "departure-harp-96",
+            "midi": 55,
+            "start": 96,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-97",
+            "midi": 67,
+            "start": 97,
+            "duration": 1.4,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-harp-98",
+            "midi": 62,
+            "start": 98,
+            "duration": 1.4,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-harp-99",
+            "midi": 70,
+            "start": 99,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-100",
+            "midi": 62,
+            "start": 100,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-101",
+            "midi": 74,
+            "start": 101,
+            "duration": 1.4,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-harp-102",
+            "midi": 69,
+            "start": 102,
+            "duration": 1.4,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-harp-103",
+            "midi": 77,
+            "start": 103,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-104",
+            "midi": 62,
+            "start": 104,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-105",
+            "midi": 74,
+            "start": 105,
+            "duration": 1.4,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-harp-106",
+            "midi": 69,
+            "start": 106,
+            "duration": 1.4,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-harp-107",
+            "midi": 77,
+            "start": 107,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-108",
+            "midi": 65,
+            "start": 108,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-109",
+            "midi": 77,
+            "start": 109,
+            "duration": 1.4,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-harp-110",
+            "midi": 72,
+            "start": 110,
+            "duration": 1.4,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-harp-111",
+            "midi": 81,
+            "start": 111,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-112",
+            "midi": 58,
+            "start": 112,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-113",
+            "midi": 70,
+            "start": 113,
+            "duration": 1.4,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-harp-114",
+            "midi": 65,
+            "start": 114,
+            "duration": 1.4,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-harp-115",
+            "midi": 74,
+            "start": 115,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-116",
+            "midi": 64,
+            "start": 116,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-117",
+            "midi": 76,
+            "start": 117,
+            "duration": 1.4,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-harp-118",
+            "midi": 70,
+            "start": 118,
+            "duration": 1.4,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-harp-119",
+            "midi": 79,
+            "start": 119,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-120",
+            "midi": 57,
+            "start": 120,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-121",
+            "midi": 69,
+            "start": 121,
+            "duration": 1.4,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-harp-122",
+            "midi": 64,
+            "start": 122,
+            "duration": 1.4,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-harp-123",
+            "midi": 73,
+            "start": 123,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-124",
+            "midi": 57,
+            "start": 124,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-125",
+            "midi": 69,
+            "start": 125,
+            "duration": 1.4,
+            "velocity": 0.358
+          },
+          {
+            "id": "departure-harp-126",
+            "midi": 64,
+            "start": 126,
+            "duration": 1.4,
+            "velocity": 0.409
+          },
+          {
+            "id": "departure-harp-127",
+            "midi": 73,
+            "start": 127,
+            "duration": 1.4,
+            "velocity": 0.307
+          },
+          {
+            "id": "departure-harp-128",
+            "midi": 62,
+            "start": 128,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-129",
+            "midi": 74,
+            "start": 129,
+            "duration": 1.4,
+            "velocity": 0.382
+          },
+          {
+            "id": "departure-harp-130",
+            "midi": 69,
+            "start": 130,
+            "duration": 1.4,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-harp-131",
+            "midi": 77,
+            "start": 131,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-132",
+            "midi": 58,
+            "start": 132,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-133",
+            "midi": 70,
+            "start": 133,
+            "duration": 1.4,
+            "velocity": 0.382
+          },
+          {
+            "id": "departure-harp-134",
+            "midi": 65,
+            "start": 134,
+            "duration": 1.4,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-harp-135",
+            "midi": 74,
+            "start": 135,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-136",
+            "midi": 65,
+            "start": 136,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-137",
+            "midi": 77,
+            "start": 137,
+            "duration": 1.4,
+            "velocity": 0.382
+          },
+          {
+            "id": "departure-harp-138",
+            "midi": 72,
+            "start": 138,
+            "duration": 1.4,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-harp-139",
+            "midi": 81,
+            "start": 139,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-140",
+            "midi": 60,
+            "start": 140,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-141",
+            "midi": 72,
+            "start": 141,
+            "duration": 1.4,
+            "velocity": 0.382
+          },
+          {
+            "id": "departure-harp-142",
+            "midi": 67,
+            "start": 142,
+            "duration": 1.4,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-harp-143",
+            "midi": 76,
+            "start": 143,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-144",
+            "midi": 55,
+            "start": 144,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-145",
+            "midi": 67,
+            "start": 145,
+            "duration": 1.4,
+            "velocity": 0.382
+          },
+          {
+            "id": "departure-harp-146",
+            "midi": 62,
+            "start": 146,
+            "duration": 1.4,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-harp-147",
+            "midi": 70,
+            "start": 147,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-148",
+            "midi": 62,
+            "start": 148,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-149",
+            "midi": 74,
+            "start": 149,
+            "duration": 1.4,
+            "velocity": 0.382
+          },
+          {
+            "id": "departure-harp-150",
+            "midi": 69,
+            "start": 150,
+            "duration": 1.4,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-harp-151",
+            "midi": 77,
+            "start": 151,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-152",
+            "midi": 64,
+            "start": 152,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-153",
+            "midi": 76,
+            "start": 153,
+            "duration": 1.4,
+            "velocity": 0.382
+          },
+          {
+            "id": "departure-harp-154",
+            "midi": 70,
+            "start": 154,
+            "duration": 1.4,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-harp-155",
+            "midi": 79,
+            "start": 155,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-156",
+            "midi": 57,
+            "start": 156,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-157",
+            "midi": 69,
+            "start": 157,
+            "duration": 1.4,
+            "velocity": 0.382
+          },
+          {
+            "id": "departure-harp-158",
+            "midi": 64,
+            "start": 158,
+            "duration": 1.4,
+            "velocity": 0.437
+          },
+          {
+            "id": "departure-harp-159",
+            "midi": 73,
+            "start": 159,
+            "duration": 1.4,
+            "velocity": 0.328
+          },
+          {
+            "id": "departure-harp-160",
+            "midi": 62,
+            "start": 160,
+            "duration": 1.4,
+            "velocity": 0.206
+          },
+          {
+            "id": "departure-harp-161",
+            "midi": 74,
+            "start": 161,
+            "duration": 1.4,
+            "velocity": 0.24
+          },
+          {
+            "id": "departure-harp-162",
+            "midi": 69,
+            "start": 162,
+            "duration": 1.4,
+            "velocity": 0.274
+          },
+          {
+            "id": "departure-harp-163",
+            "midi": 77,
+            "start": 163,
+            "duration": 1.4,
+            "velocity": 0.206
+          },
+          {
+            "id": "departure-harp-164",
+            "midi": 58,
+            "start": 164,
+            "duration": 1.4,
+            "velocity": 0.206
+          },
+          {
+            "id": "departure-harp-165",
+            "midi": 70,
+            "start": 165,
+            "duration": 1.4,
+            "velocity": 0.24
+          },
+          {
+            "id": "departure-harp-166",
+            "midi": 65,
+            "start": 166,
+            "duration": 1.4,
+            "velocity": 0.274
+          },
+          {
+            "id": "departure-harp-167",
+            "midi": 74,
+            "start": 167,
+            "duration": 1.4,
+            "velocity": 0.206
+          },
+          {
+            "id": "departure-harp-168",
+            "midi": 65,
+            "start": 168,
+            "duration": 1.4,
+            "velocity": 0.206
+          },
+          {
+            "id": "departure-harp-169",
+            "midi": 77,
+            "start": 169,
+            "duration": 1.4,
+            "velocity": 0.24
+          },
+          {
+            "id": "departure-harp-170",
+            "midi": 72,
+            "start": 170,
+            "duration": 1.4,
+            "velocity": 0.274
+          },
+          {
+            "id": "departure-harp-171",
+            "midi": 81,
+            "start": 171,
+            "duration": 1.4,
+            "velocity": 0.206
+          },
+          {
+            "id": "departure-harp-172",
+            "midi": 60,
+            "start": 172,
+            "duration": 1.4,
+            "velocity": 0.206
+          },
+          {
+            "id": "departure-harp-173",
+            "midi": 72,
+            "start": 173,
+            "duration": 1.4,
+            "velocity": 0.24
+          },
+          {
+            "id": "departure-harp-174",
+            "midi": 67,
+            "start": 174,
+            "duration": 1.4,
+            "velocity": 0.274
+          },
+          {
+            "id": "departure-harp-175",
+            "midi": 76,
+            "start": 175,
+            "duration": 1.4,
+            "velocity": 0.206
+          },
+          {
+            "id": "departure-harp-176",
+            "midi": 55,
+            "start": 176,
+            "duration": 1.4,
+            "velocity": 0.185
+          },
+          {
+            "id": "departure-harp-177",
+            "midi": 67,
+            "start": 177,
+            "duration": 1.4,
+            "velocity": 0.216
+          },
+          {
+            "id": "departure-harp-178",
+            "midi": 62,
+            "start": 178,
+            "duration": 1.4,
+            "velocity": 0.247
+          },
+          {
+            "id": "departure-harp-179",
+            "midi": 70,
+            "start": 179,
+            "duration": 1.4,
+            "velocity": 0.185
+          },
+          {
+            "id": "departure-harp-180",
+            "midi": 62,
+            "start": 180,
+            "duration": 1.4,
+            "velocity": 0.165
+          },
+          {
+            "id": "departure-harp-181",
+            "midi": 74,
+            "start": 181,
+            "duration": 1.4,
+            "velocity": 0.192
+          },
+          {
+            "id": "departure-harp-182",
+            "midi": 69,
+            "start": 182,
+            "duration": 1.4,
+            "velocity": 0.22
+          },
+          {
+            "id": "departure-harp-183",
+            "midi": 77,
+            "start": 183,
+            "duration": 1.4,
+            "velocity": 0.165
+          },
+          {
+            "id": "departure-harp-184",
+            "midi": 50,
+            "start": 184.0,
+            "duration": 3,
+            "velocity": 0.45
+          },
+          {
+            "id": "departure-harp-185",
+            "midi": 57,
+            "start": 184.5,
+            "duration": 3,
+            "velocity": 0.45
+          },
+          {
+            "id": "departure-harp-186",
+            "midi": 62,
+            "start": 185.0,
+            "duration": 3,
+            "velocity": 0.45
+          },
+          {
+            "id": "departure-harp-187",
+            "midi": 65,
+            "start": 185.5,
+            "duration": 3,
+            "velocity": 0.45
+          },
+          {
+            "id": "departure-harp-188",
+            "midi": 69,
+            "start": 186.0,
+            "duration": 3,
+            "velocity": 0.45
+          },
+          {
+            "id": "departure-harp-189",
+            "midi": 74,
+            "start": 186.5,
+            "duration": 3,
+            "velocity": 0.45
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.3,
+        "humanize": 0.18,
+        "articulation": "pluck"
+      },
+      {
+        "id": "timpani",
+        "name": "定音鼓",
+        "instrumentId": "timpani",
+        "color": "#9E543B",
+        "volume": 0.12,
+        "pan": 0.05,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-timpani-0",
+            "midi": 50,
+            "start": 32,
+            "duration": 0.6,
+            "velocity": 0.427
+          },
+          {
+            "id": "departure-timpani-1",
+            "midi": 50,
+            "start": 36,
+            "duration": 0.6,
+            "velocity": 0.427
+          },
+          {
+            "id": "departure-timpani-2",
+            "midi": 50,
+            "start": 40,
+            "duration": 0.6,
+            "velocity": 0.427
+          },
+          {
+            "id": "departure-timpani-3",
+            "midi": 50,
+            "start": 44,
+            "duration": 0.6,
+            "velocity": 0.427
+          },
+          {
+            "id": "departure-timpani-4",
+            "midi": 45,
+            "start": 47,
+            "duration": 0.6,
+            "velocity": 0.305
+          },
+          {
+            "id": "departure-timpani-5",
+            "midi": 50,
+            "start": 48,
+            "duration": 0.6,
+            "velocity": 0.427
+          },
+          {
+            "id": "departure-timpani-6",
+            "midi": 50,
+            "start": 52,
+            "duration": 0.6,
+            "velocity": 0.427
+          },
+          {
+            "id": "departure-timpani-7",
+            "midi": 50,
+            "start": 56,
+            "duration": 0.6,
+            "velocity": 0.427
+          },
+          {
+            "id": "departure-timpani-8",
+            "midi": 50,
+            "start": 60,
+            "duration": 0.6,
+            "velocity": 0.427
+          },
+          {
+            "id": "departure-timpani-9",
+            "midi": 45,
+            "start": 63,
+            "duration": 0.6,
+            "velocity": 0.305
+          },
+          {
+            "id": "departure-timpani-10",
+            "midi": 50,
+            "start": 96,
+            "duration": 0.6,
+            "velocity": 0.511
+          },
+          {
+            "id": "departure-timpani-11",
+            "midi": 50,
+            "start": 100,
+            "duration": 0.6,
+            "velocity": 0.511
+          },
+          {
+            "id": "departure-timpani-12",
+            "midi": 50,
+            "start": 104,
+            "duration": 0.6,
+            "velocity": 0.511
+          },
+          {
+            "id": "departure-timpani-13",
+            "midi": 50,
+            "start": 108,
+            "duration": 0.6,
+            "velocity": 0.511
+          },
+          {
+            "id": "departure-timpani-14",
+            "midi": 45,
+            "start": 111,
+            "duration": 0.6,
+            "velocity": 0.365
+          },
+          {
+            "id": "departure-timpani-15",
+            "midi": 50,
+            "start": 112,
+            "duration": 0.6,
+            "velocity": 0.511
+          },
+          {
+            "id": "departure-timpani-16",
+            "midi": 50,
+            "start": 116,
+            "duration": 0.6,
+            "velocity": 0.511
+          },
+          {
+            "id": "departure-timpani-17",
+            "midi": 50,
+            "start": 120,
+            "duration": 0.6,
+            "velocity": 0.511
+          },
+          {
+            "id": "departure-timpani-18",
+            "midi": 50,
+            "start": 124,
+            "duration": 0.6,
+            "velocity": 0.511
+          },
+          {
+            "id": "departure-timpani-19",
+            "midi": 45,
+            "start": 127,
+            "duration": 0.6,
+            "velocity": 0.365
+          },
+          {
+            "id": "departure-timpani-20",
+            "midi": 50,
+            "start": 128,
+            "duration": 0.6,
+            "velocity": 0.546
+          },
+          {
+            "id": "departure-timpani-21",
+            "midi": 50,
+            "start": 132,
+            "duration": 0.6,
+            "velocity": 0.546
+          },
+          {
+            "id": "departure-timpani-22",
+            "midi": 50,
+            "start": 136,
+            "duration": 0.6,
+            "velocity": 0.546
+          },
+          {
+            "id": "departure-timpani-23",
+            "midi": 50,
+            "start": 140,
+            "duration": 0.6,
+            "velocity": 0.546
+          },
+          {
+            "id": "departure-timpani-24",
+            "midi": 45,
+            "start": 143,
+            "duration": 0.6,
+            "velocity": 0.39
+          },
+          {
+            "id": "departure-timpani-25",
+            "midi": 50,
+            "start": 144,
+            "duration": 0.6,
+            "velocity": 0.546
+          },
+          {
+            "id": "departure-timpani-26",
+            "midi": 50,
+            "start": 148,
+            "duration": 0.6,
+            "velocity": 0.546
+          },
+          {
+            "id": "departure-timpani-27",
+            "midi": 50,
+            "start": 152,
+            "duration": 0.6,
+            "velocity": 0.546
+          },
+          {
+            "id": "departure-timpani-28",
+            "midi": 50,
+            "start": 156,
+            "duration": 0.6,
+            "velocity": 0.546
+          },
+          {
+            "id": "departure-timpani-29",
+            "midi": 45,
+            "start": 159,
+            "duration": 0.6,
+            "velocity": 0.39
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.13,
+        "humanize": 0.18,
+        "articulation": "hit"
+      },
+      {
+        "id": "snare",
+        "name": "小军鼓",
+        "instrumentId": "snare",
+        "color": "#9E543B",
+        "volume": 0.26,
+        "pan": 0.18,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-snare-0",
+            "midi": 60,
+            "start": 33,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-1",
+            "midi": 60,
+            "start": 35,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-2",
+            "midi": 60,
+            "start": 37,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-3",
+            "midi": 60,
+            "start": 39,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-4",
+            "midi": 60,
+            "start": 41,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-5",
+            "midi": 60,
+            "start": 43,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-6",
+            "midi": 60,
+            "start": 45,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-7",
+            "midi": 60,
+            "start": 47,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-8",
+            "midi": 60,
+            "start": 49,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-9",
+            "midi": 60,
+            "start": 51,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-10",
+            "midi": 60,
+            "start": 53,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-11",
+            "midi": 60,
+            "start": 55,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-12",
+            "midi": 60,
+            "start": 57,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-13",
+            "midi": 60,
+            "start": 59,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-14",
+            "midi": 60,
+            "start": 61,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-15",
+            "midi": 60,
+            "start": 63,
+            "duration": 0.15,
+            "velocity": 0.623
+          },
+          {
+            "id": "departure-snare-16",
+            "midi": 60,
+            "start": 97,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-17",
+            "midi": 60,
+            "start": 99,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-18",
+            "midi": 60,
+            "start": 101,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-19",
+            "midi": 60,
+            "start": 103,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-20",
+            "midi": 60,
+            "start": 105,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-21",
+            "midi": 60,
+            "start": 107,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-22",
+            "midi": 60,
+            "start": 109,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-23",
+            "midi": 60,
+            "start": 111,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-24",
+            "midi": 60,
+            "start": 113,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-25",
+            "midi": 60,
+            "start": 115,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-26",
+            "midi": 60,
+            "start": 117,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-27",
+            "midi": 60,
+            "start": 119,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-28",
+            "midi": 60,
+            "start": 121,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-29",
+            "midi": 60,
+            "start": 123,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-30",
+            "midi": 60,
+            "start": 125,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-31",
+            "midi": 60,
+            "start": 127,
+            "duration": 0.15,
+            "velocity": 0.638
+          },
+          {
+            "id": "departure-snare-32",
+            "midi": 60,
+            "start": 129,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-33",
+            "midi": 60,
+            "start": 130.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-34",
+            "midi": 60,
+            "start": 131,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-35",
+            "midi": 60,
+            "start": 131.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-36",
+            "midi": 60,
+            "start": 133,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-37",
+            "midi": 60,
+            "start": 134.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-38",
+            "midi": 60,
+            "start": 135,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-39",
+            "midi": 60,
+            "start": 135.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-40",
+            "midi": 60,
+            "start": 137,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-41",
+            "midi": 60,
+            "start": 138.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-42",
+            "midi": 60,
+            "start": 139,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-43",
+            "midi": 60,
+            "start": 139.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-44",
+            "midi": 60,
+            "start": 141,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-45",
+            "midi": 60,
+            "start": 142.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-46",
+            "midi": 60,
+            "start": 143,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-47",
+            "midi": 60,
+            "start": 143.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-48",
+            "midi": 60,
+            "start": 145,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-49",
+            "midi": 60,
+            "start": 146.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-50",
+            "midi": 60,
+            "start": 147,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-51",
+            "midi": 60,
+            "start": 147.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-52",
+            "midi": 60,
+            "start": 149,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-53",
+            "midi": 60,
+            "start": 150.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-54",
+            "midi": 60,
+            "start": 151,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-55",
+            "midi": 60,
+            "start": 151.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-56",
+            "midi": 60,
+            "start": 153,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-57",
+            "midi": 60,
+            "start": 154.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-58",
+            "midi": 60,
+            "start": 155,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-59",
+            "midi": 60,
+            "start": 155.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-60",
+            "midi": 60,
+            "start": 157,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-61",
+            "midi": 60,
+            "start": 158.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-62",
+            "midi": 60,
+            "start": 159,
+            "duration": 0.15,
+            "velocity": 0.644
+          },
+          {
+            "id": "departure-snare-63",
+            "midi": 60,
+            "start": 159.5,
+            "duration": 0.15,
+            "velocity": 0.644
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.13,
+        "humanize": 0.18
+      },
+      {
+        "id": "gong",
+        "name": "锣",
+        "instrumentId": "gong",
+        "color": "#9E543B",
+        "volume": 0.128,
+        "pan": 0.1,
+        "muted": false,
+        "solo": false,
+        "notes": [
+          {
+            "id": "departure-gong-0",
+            "midi": 60,
+            "start": 96,
+            "duration": 3,
+            "velocity": 0.65
+          },
+          {
+            "id": "departure-gong-1",
+            "midi": 60,
+            "start": 128,
+            "duration": 3,
+            "velocity": 0.65
+          }
+        ],
+        "release": 0.3,
+        "reverb": 0.3,
+        "humanize": 0.18,
+        "articulation": "hit"
+      }
+    ]
+  }
+}

@@ -7,3 +7,19 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <App />
   </React.StrictMode>,
 );
+
+import "./expansion.css";
+
+import "./expedition.css";
+
+import "./panorama.css";
+
+import "./atlas.css";
+
+import "./dialog.css";
+import "./fonts.css";
+
+import "./header.css";
+
+import "./audio.css";
+import "./badges.css";

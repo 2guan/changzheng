@@ -1,0 +1,16 @@
+[
+  {
+    "source": "fonts/source/lxgw-zhenkai.ttf",
+    "web": "public/assets/fonts/lxgw-zhenkai.woff2",
+    "characters": 7433,
+    "source_sha256": "292ff5aacfde267fb01c03435968f048a561cf1b044569a68d3986aac9e528ad",
+    "web_bytes": 1501716
+  },
+  {
+    "source": "fonts/source/nanxi-ink-song.ttf",
+    "web": "public/assets/fonts/nanxi-ink-song.woff2",
+    "characters": 7628,
+    "source_sha256": "61ea2320a5742cf39cb0ff95e3ed684d422b2f4bcb0bce8c4d80584bbf578dcd",
+    "web_bytes": 10579236
+  }
+]

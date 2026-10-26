@@ -1,3 +1,6 @@
+import { BadgeGallery } from "./Badges";
+import { PANORAMA_KEY, sanitizePanoramaProgress } from "../panoramas";
+import { Experiences, Reflection, ProgressBackup } from "./Experiences";
 import { useState } from "react";
 import {
   Backpack,
@@ -18,7 +21,7 @@ import {
 import { milestones, quiz } from "../data";
 import { useProgress } from "../state";
 import { packingStats, scoreAnswers } from "../storage";
-import { PageHead, Dialog, LinkButton } from "./UI";
+import { Dialog, LinkButton } from "./UI";
 const items = [
   { name: "步枪", weight: 4.5, note: "基本装备" },
   { name: "弹药", weight: 1.5, note: "有限携带" },
@@ -292,7 +295,7 @@ export function TaskDialog({
   const complete = () =>
     setProgress((p) => ({ ...p, tasks: [...new Set([...p.tasks, task])] }));
   return (
-    <Dialog title={taskNames[task]} onClose={onClose} wide>
+    <Dialog narratable title={taskNames[task]} onClose={onClose} wide>
       {task === "pack" ? (
         <Packing onComplete={complete} />
       ) : task === "decision" ? (
@@ -303,7 +306,11 @@ export function TaskDialog({
     </Dialog>
   );
 }
-function createCertificate(name: string, score: number, visited: number) {
+async function createCertificate(name: string, score: number, visited: number) {
+  await Promise.all([
+    document.fonts.load('24px "ChangzhengBody"', name + "长征路上的同行者"),
+    document.fonts.load('70px "ChangzhengTitle"', "山河为证，初心如炬"),
+  ]).catch(() => []);
   const canvas = document.createElement("canvas");
   canvas.width = 1600;
   canvas.height = 1100;
@@ -318,19 +325,19 @@ function createCertificate(name: string, score: number, visited: number) {
   c.strokeRect(58, 58, 1484, 984);
   c.textAlign = "center";
   c.fillStyle = "#9c3029";
-  c.font = "24px sans-serif";
+  c.font = "24px ChangzhengBody, serif";
   c.fillText("重走长征路 · 学习纪念", 800, 150);
-  c.font = '70px "Songti SC",serif';
+  c.font = "70px ChangzhengTitle, serif";
   c.fillText("山河为证，初心如炬", 800, 300);
   c.fillStyle = "#3c332b";
-  c.font = '44px "Songti SC",serif';
+  c.font = "44px ChangzhengBody, serif";
   c.fillText(name.trim().slice(0, 20) || "长征路上的同行者", 800, 450);
-  c.font = "28px sans-serif";
+  c.font = "28px ChangzhengBody, serif";
   c.fillText("已完成长征知识测验", 800, 540);
   c.fillText(`答对 ${score} / 15 题    ·    阅读 ${visited} / 22 站`, 800, 610);
-  c.font = '30px "Songti SC",serif';
+  c.font = "30px ChangzhengBody, serif";
   c.fillText("每一次回望，都是新的出发。", 800, 750);
-  c.font = "20px sans-serif";
+  c.font = "20px ChangzhengBody, serif";
   c.fillStyle = "#857560";
   c.fillText(new Intl.DateTimeFormat("zh-CN").format(new Date()), 800, 880);
   c.fillText("个人学习纪念 · 不代表官方认证或学历证明", 800, 950);
@@ -353,7 +360,7 @@ export function Quiz({ onClose }: { onClose: () => void }) {
   const q = quiz[index];
   const answer = progress.answers[index];
   return (
-    <Dialog title="长征知识测验" onClose={onClose} wide>
+    <Dialog narratable title="长征知识测验" onClose={onClose} wide>
       {index < 15 ? (
         <div className="quiz">
           <div className="quiz-top">
@@ -465,9 +472,9 @@ export function Quiz({ onClose }: { onClose: () => void }) {
           </label>
           <button
             className="button"
-            onClick={() =>
+            onClick={async () =>
               setCertificate(
-                createCertificate(name, score, progress.visited.length),
+                await createCertificate(name, score, progress.visited.length),
               )
             }
           >
@@ -526,176 +533,233 @@ export function Quiz({ onClose }: { onClose: () => void }) {
     </Dialog>
   );
 }
-export function Learning() {
+export function Learning({ params }: { params: URLSearchParams }) {
   const { progress, storageError } = useProgress();
+  const [panorama] = useState(() => {
+    try {
+      return sanitizePanoramaProgress(
+        JSON.parse(localStorage.getItem(PANORAMA_KEY) || "null"),
+      );
+    } catch {
+      return sanitizePanoramaProgress(null);
+    }
+  });
   const [task, setTask] = useState<keyof typeof taskNames | null>(null);
   const [quizOpen, setQuiz] = useState(false);
+  const focus = params.get("focus");
   const [tab, setTab] = useState("saved");
   const answered = progress.answers.filter((a) => a != null).length;
   const ids = tab === "saved" ? progress.saved : progress.visited;
   return (
-    <main className="page-wrap">
-      <PageHead
-        number="08"
-        title="我的行囊"
-        en="YOUR FIELD NOTES"
-        subtitle="读过的故事，走过的坐标，还有那些值得再次思考的问题。"
-      />
+    <div className="topic-content learning-detail">
       {storageError && (
         <p className="task-feedback" role="alert">
           当前浏览器无法保存本地记录，仍可继续学习；关闭页面后进度可能丢失。
         </p>
       )}
-      <div className="progress-overview">
-        <div>
-          <Footprints />
-          <strong>
-            {progress.visited.length}
-            <small>/22</small>
-          </strong>
-          <span>留下足迹</span>
-        </div>
-        <div>
-          <BookOpen />
-          <strong>
-            {progress.stories.length}
-            <small>/20</small>
-          </strong>
-          <span>读过故事</span>
-        </div>
-        <div>
-          <Flag />
-          <strong>
-            {progress.tasks.length}
-            <small>/4</small>
-          </strong>
-          <span>完成情境任务</span>
-        </div>
-        <div>
-          <Certificate />
-          <strong>
-            {answered}
-            <small>/15</small>
-          </strong>
-          <span>回答问题</span>
-        </div>
-      </div>
-      <section className="learning-actions">
-        <div className="continue-panel">
-          <span className="chapter-label">沿着上次的脚步</span>
-          <h2>{milestones[progress.lastStation - 1].title}</h2>
-          <p>
-            第 {String(progress.lastStation).padStart(2, "0")} 站 ·{" "}
-            {milestones[progress.lastStation - 1].place}
-          </p>
-          <LinkButton href={`#/journey?station=${progress.lastStation}`}>
-            继续我的征途
-          </LinkButton>
-        </div>
-        <div className="quiz-invite">
-          <Certificate size={45} />
-          <h2>你会如何理解这段历史？</h2>
-          <p>15 道情境题，逐题解析。完成后生成一张专属学习纪念。</p>
-          <button className="text-button" onClick={() => setQuiz(true)}>
-            {answered === 15
-              ? "查看结果与证书"
-              : answered
-                ? "继续知识测验"
-                : "开始知识测验"}
-            <ArrowRight />
-          </button>
-        </div>
-      </section>
-      <section className="section">
-        <h2>走进当时，做一次选择。</h2>
-        <div className="task-grid">
-          {(Object.keys(taskNames) as (keyof typeof taskNames)[]).map(
-            (key, i) => {
-              const Icon = [Scales, Flag, Boat, Bridge][i];
-              return (
-                <button key={key} onClick={() => setTask(key)}>
-                  <Icon size={36} />
-                  <span className="task-number">0{i + 1}</span>
-                  <h3>{taskNames[key]}</h3>
-                  <p>
-                    {
-                      [
-                        "你能背起多少物资？",
-                        "当计划遇到新的敌情。",
-                        "在黎明前完成一次渡河。",
-                        "在有限通道中理解协作。",
-                      ][i]
-                    }
-                  </p>
-                  <span className="task-status">
-                    {progress.tasks.includes(key) ? (
-                      <>
-                        <Check />
-                        已完成 · 再体验
-                      </>
-                    ) : (
-                      <>
-                        进入情境
-                        <ArrowRight />
-                      </>
-                    )}
-                  </span>
-                </button>
-              );
-            },
-          )}
-        </div>
-      </section>
-      <section className="section">
-        <div className="tabs">
-          <button
-            className={tab === "saved" ? "active" : ""}
-            onClick={() => setTab("saved")}
+      {focus === "progress" && (
+        <>
+          <BadgeGallery />{" "}
+          <a
+            className="exp-learning-entry"
+            href={`#/journey?station=${panorama.lastStation}`}
           >
-            <BookmarkSimple />
-            收藏的站点 · {progress.saved.length}
-          </button>
-          <button
-            className={tab === "visited" ? "active" : ""}
-            onClick={() => setTab("visited")}
-          >
-            <Footprints />
-            走过的站点 · {progress.visited.length}
-          </button>
-        </div>
-        {ids.length ? (
-          <div className="saved-list">
-            {ids.map((id) => (
-              <a key={id} href={`#/journey?station=${id}&read=1`}>
-                <span>{String(id).padStart(2, "0")}</span>
-                <div>
-                  <strong>{milestones[id - 1].title}</strong>
-                  <small>{milestones[id - 1].place}</small>
-                </div>
+            <div>
+              <span>万里征途 · 二十二站全景</span>
+              <h2>
+                {panorama.seen.length > 0
+                  ? `上次走到 · ${milestones[panorama.lastStation - 1].title}`
+                  : "把二十二站山河，慢慢看完。"}
+              </h2>
+              <p>全景环顾，沿途叙事。无需完成任务，随时前行或停留。</p>
+            </div>
+            <span>
+              <strong>
+                {panorama.seen.length}
+                <small> / 22</small>
+              </strong>
+              {panorama.seen.length > 0 ? "继续全景漫游" : "展开第一站"}
+              <ArrowRight />
+            </span>
+          </a>
+          <a className="panorama-legacy-link" href="#/journey?mode=interactive">
+            可选：六幕互动体验 <ArrowRight />
+          </a>
+          <div id="atlas-progress" tabIndex={-1} className="progress-overview">
+            <div>
+              <Footprints />
+              <strong>
+                {progress.visited.length}
+                <small>/22</small>
+              </strong>
+              <span>留下足迹</span>
+            </div>
+            <div>
+              <BookOpen />
+              <strong>
+                {progress.stories.length}
+                <small>/20</small>
+              </strong>
+              <span>读过故事</span>
+            </div>
+            <div>
+              <Flag />
+              <strong>
+                {progress.tasks.filter((x) => !x.startsWith("station-")).length}
+                <small>/9</small>
+              </strong>
+              <span>完成情境任务</span>
+            </div>
+            <div>
+              <Certificate />
+              <strong>
+                {answered}
+                <small>/15</small>
+              </strong>
+              <span>回答问题</span>
+            </div>
+          </div>
+          <section className="learning-actions">
+            <div className="continue-panel">
+              <span className="chapter-label">沿着上次的脚步</span>
+              <h2>{milestones[progress.lastStation - 1].title}</h2>
+              <p>
+                第 {String(progress.lastStation).padStart(2, "0")} 站 ·{" "}
+                {milestones[progress.lastStation - 1].place}
+              </p>
+              <LinkButton href={`#/journey?station=${progress.lastStation}`}>
+                继续我的征途
+              </LinkButton>
+            </div>
+            <div id="atlas-quiz" tabIndex={-1} className="quiz-invite">
+              <Certificate size={45} />
+              <h2>你会如何理解这段历史？</h2>
+              <p>15 道情境题，逐题解析。完成后生成一张专属学习纪念。</p>
+              <button className="text-button" onClick={() => setQuiz(true)}>
+                {answered === 15
+                  ? "查看结果与证书"
+                  : answered
+                    ? "继续知识测验"
+                    : "开始知识测验"}
                 <ArrowRight />
-              </a>
-            ))}
+              </button>
+            </div>
+          </section>
+        </>
+      )}
+      {focus === "tasks" && (
+        <>
+          {" "}
+          <section id="atlas-tasks" tabIndex={-1} className="section">
+            <h2>走进当时，做一次选择。</h2>
+            <div className="task-grid">
+              {(Object.keys(taskNames) as (keyof typeof taskNames)[]).map(
+                (key, i) => {
+                  const Icon = [Scales, Flag, Boat, Bridge][i];
+                  return (
+                    <button key={key} onClick={() => setTask(key)}>
+                      <Icon size={36} />
+                      <span className="task-number">0{i + 1}</span>
+                      <h3>{taskNames[key]}</h3>
+                      <p>
+                        {
+                          [
+                            "你能背起多少物资？",
+                            "当计划遇到新的敌情。",
+                            "在黎明前完成一次渡河。",
+                            "在有限通道中理解协作。",
+                          ][i]
+                        }
+                      </p>
+                      <span className="task-status">
+                        {progress.tasks.includes(key) ? (
+                          <>
+                            <Check />
+                            已完成 · 再体验
+                          </>
+                        ) : (
+                          <>
+                            进入情境
+                            <ArrowRight />
+                          </>
+                        )}
+                      </span>
+                    </button>
+                  );
+                },
+              )}
+            </div>
+          </section>
+          <Experiences />
+          <div className="station-check-progress">
+            <strong>
+              {progress.tasks.filter((x) => x.startsWith("station-")).length} /
+              22
+            </strong>
+            <span>站点思考已完成</span>
+            <a href="#/journey?mode=archive">继续在地图上思考 →</a>
           </div>
-        ) : (
-          <div className="empty-state">
-            <Backpack size={40} />
-            <h3>
-              {tab === "saved"
-                ? "行囊还轻，故事正等着你。"
-                : "第一枚足迹，从一次阅读开始。"}
-            </h3>
-            <p>在历史站点中点击“收入行囊”收藏，点击“完成这一站”记录阅读。</p>
-            <a className="text-button" href="#/journey">
-              去地图上走走 <ArrowRight />
-            </a>
-          </div>
-        )}
-      </section>
+        </>
+      )}
+      {focus === "reflection" && <Reflection />}
+      {focus === "backup" && <ProgressBackup />}
+      {focus === "saved" && (
+        <>
+          {" "}
+          <section id="atlas-saved" tabIndex={-1} className="section">
+            <div className="tabs">
+              <button
+                className={tab === "saved" ? "active" : ""}
+                onClick={() => setTab("saved")}
+              >
+                <BookmarkSimple />
+                收藏的站点 · {progress.saved.length}
+              </button>
+              <button
+                className={tab === "visited" ? "active" : ""}
+                onClick={() => setTab("visited")}
+              >
+                <Footprints />
+                走过的站点 · {progress.visited.length}
+              </button>
+            </div>
+            {ids.length ? (
+              <div className="saved-list">
+                {ids.map((id) => (
+                  <a key={id} href={`#/journey?station=${id}&read=1`}>
+                    <span>{String(id).padStart(2, "0")}</span>
+                    <div>
+                      <strong>{milestones[id - 1].title}</strong>
+                      <small>{milestones[id - 1].place}</small>
+                    </div>
+                    <ArrowRight />
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <div className="empty-state">
+                <Backpack size={40} />
+                <h3>
+                  {tab === "saved"
+                    ? "行囊还轻，故事正等着你。"
+                    : "第一枚足迹，从一次阅读开始。"}
+                </h3>
+                <p>
+                  在历史站点中点击“收入行囊”收藏，点击“完成这一站”记录阅读。
+                </p>
+                <a className="text-button" href="#/journey?mode=archive">
+                  去地图上走走 <ArrowRight />
+                </a>
+              </div>
+            )}
+          </section>
+        </>
+      )}
       <p className="fineprint centered">
-        你的记录仅保存在当前浏览器。无需注册，也不会上传个人学习数据。
+        你的学习记录保存在当前浏览器，无需注册，可在行囊备份中导出。
       </p>
-      {task && <TaskDialog task={task} onClose={() => setTask(null)} />}{" "}
+      {task && <TaskDialog task={task} onClose={() => setTask(null)} />}
       {quizOpen && <Quiz onClose={() => setQuiz(false)} />}
-    </main>
+    </div>
   );
 }

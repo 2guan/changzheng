@@ -1,0 +1,101 @@
+[
+  {
+    "id": "bass",
+    "name": "低音提琴",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sfzinstruments/karoryfer.meatbass",
+    "licenseUrl": "https://github.com/sfzinstruments/karoryfer.meatbass/blob/ac9e859564bda286ab5ec672d00ff1aa2fef2895/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "strings",
+    "name": "弦乐 · 小提琴组",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VSCO-2-CE",
+    "licenseUrl": "https://github.com/sgossner/VSCO-2-CE/blob/440300901dfe9275fd84e0b7763af1f8443ae62e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "cello-section",
+    "name": "大提琴组",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VSCO-2-CE",
+    "licenseUrl": "https://github.com/sgossner/VSCO-2-CE/blob/440300901dfe9275fd84e0b7763af1f8443ae62e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "harp",
+    "name": "竖琴",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VCSL",
+    "licenseUrl": "https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "flute",
+    "name": "长笛",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VSCO-2-CE",
+    "licenseUrl": "https://github.com/sgossner/VSCO-2-CE/blob/440300901dfe9275fd84e0b7763af1f8443ae62e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "french-horn",
+    "name": "圆号",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VSCO-2-CE",
+    "licenseUrl": "https://github.com/sgossner/VSCO-2-CE/blob/440300901dfe9275fd84e0b7763af1f8443ae62e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "trumpet",
+    "name": "小号",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VSCO-2-CE",
+    "licenseUrl": "https://github.com/sgossner/VSCO-2-CE/blob/440300901dfe9275fd84e0b7763af1f8443ae62e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "timpani",
+    "name": "定音鼓",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VCSL",
+    "licenseUrl": "https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "gong",
+    "name": "大锣",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VCSL",
+    "licenseUrl": "https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "snare",
+    "name": "军鼓",
+    "author": null,
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VCSL",
+    "licenseUrl": "https://github.com/sgossner/VCSL/blob/c1ea7bcc3c7309650ab0da9d15c9cd1fbc4a4c7e/LICENSE",
+    "sourceRevision": null
+  },
+  {
+    "id": "oboe",
+    "name": "双簧管",
+    "author": "Versilian Studios",
+    "license": "CC0-1.0",
+    "sourceUrl": "https://github.com/sgossner/VSCO-2-CE",
+    "licenseUrl": "https://github.com/sgossner/VSCO-2-CE/blob/440300901dfe9275fd84e0b7763af1f8443ae62e/LICENSE",
+    "sourceRevision": "440300901dfe9275fd84e0b7763af1f8443ae62e"
+  }
+]

@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import type { ReactNode, Dispatch, SetStateAction } from "react";
+import { earnedBadgeIds } from "./achievements";
 import { emptyProgress, STORAGE_KEY, sanitizeProgress } from "./storage";
 import type { Progress } from "./storage";
 const Context = createContext<{
@@ -18,6 +19,16 @@ export function ProgressProvider({ children }: { children: ReactNode }) {
       return { ...emptyProgress };
     }
   });
+  useEffect(() => {
+    const earned = earnedBadgeIds(progress).filter(
+      (id) => !progress.badges.includes(id),
+    );
+    if (earned.length)
+      setProgress((p) => ({
+        ...p,
+        badges: [...new Set([...p.badges, ...earned])],
+      }));
+  }, [progress]);
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));

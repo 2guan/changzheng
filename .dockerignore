@@ -1,0 +1,15 @@
+.git
+.openai
+node_modules
+dist
+release
+docs
+/fonts/
+tests
+scripts
+*.log
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+music

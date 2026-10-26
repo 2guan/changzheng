@@ -51,7 +51,7 @@ function ChishuiFilm() {
     <AbsoluteFill
       style={{
         background: "#ede1c5",
-        fontFamily: "Songti SC, STSong, serif",
+        fontFamily: "var(--font-body)",
         color: "#362e26",
       }}
     >

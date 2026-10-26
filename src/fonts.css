@@ -1,0 +1,55 @@
+@font-face {
+  font-family: ChangzhengBody;
+  src: url("/assets/fonts/lxgw-zhenkai.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: ChangzhengTitle;
+  src: url("/assets/fonts/nanxi-ink-song.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-body: ChangzhengBody, "STKaiti", "KaiTi", serif;
+  --font-title: ChangzhengTitle, "Songti SC", "STSong", serif;
+}
+
+textarea {
+  font-family: var(--font-body);
+}
+
+/* Existing serif component styles inherit the appropriate semantic font. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --serif: var(--font-title);
+  font-family: var(--font-title);
+}
+
+.brand-mark,
+.brand strong,
+.atlas-stop-title,
+.atlas-directory strong,
+.dialog-title,
+.station-list strong,
+.army-tabs strong,
+.saved-list strong,
+.panorama-hotspot b,
+.map-node text,
+.terrain-fact strong,
+.rich-text .reading-subtitle,
+.exp-roles strong,
+.exp-gear strong,
+.exp-map-point b,
+.exp-chapter-menu strong {
+  --serif: var(--font-title);
+  font-family: var(--font-title);
+}

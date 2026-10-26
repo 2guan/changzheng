@@ -1,0 +1,141 @@
+.badge-gallery {
+  padding: 2px 0 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #ac855630;
+}
+.badge-gallery > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.badge-gallery h2 {
+  font: 28px/1.5 var(--serif);
+  margin: 8px 0 10px;
+}
+.badge-gallery > header > span {
+  color: #8b6040;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.badge-gallery > p {
+  color: #756750;
+  font-size: 15px;
+  line-height: 1.9;
+}
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 16px;
+  margin: 30px 0;
+}
+.badge {
+  text-align: center;
+  min-width: 0;
+}
+.badge img {
+  width: 100%;
+  max-width: 135px;
+  height: auto;
+  display: block;
+  margin: auto;
+  filter: drop-shadow(0 5px 4px #533d3438);
+}
+.badge.locked img {
+  filter: grayscale(0.85) sepia(0.2);
+  opacity: 0.48;
+}
+.badge small {
+  font-size: 10px;
+  color: #837356;
+  letter-spacing: 0.06em;
+}
+.dialog .badge h3 {
+  font: 20px/1.6 var(--serif);
+  margin: 5px 0 6px;
+  color: #5b3d27;
+}
+.badge p {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0 auto 9px;
+  max-width: 130px;
+  min-height: 40px;
+  color: #756750;
+}
+.badge-status {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  color: #8d5035;
+  font-size: 12px;
+}
+.badge progress {
+  display: block;
+  margin: 8px auto;
+  width: 70%;
+  height: 3px;
+  accent-color: #9c6a39;
+}
+.badge-gallery .badge-note {
+  font-size: 11px;
+  color: #8b7b61;
+}
+.badge-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  color: #edddbc;
+  background: #27342df2;
+  border: 1px solid #b8975550;
+  box-shadow: 0 10px 35px #0004;
+  border-radius: 6px;
+}
+.badge-toast img {
+  flex: none;
+}
+.badge-toast strong,
+.badge-toast span,
+.badge-toast a {
+  display: block;
+}
+.badge-toast span {
+  color: #c8ab74;
+  font-size: 11px;
+}
+.badge-toast strong {
+  font: 20px/1.7 var(--serif);
+}
+.badge-toast a {
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.badge-toast button {
+  align-self: flex-start;
+  padding: 8px;
+  color: inherit;
+  border: 0;
+  background: transparent;
+  min-width: 44px;
+  min-height: 44px;
+}
+@media (max-width: 600px) {
+  .badge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+  .badge-toast {
+    right: 12px;
+    bottom: 16px;
+    left: 12px;
+  }
+  .badge-toast > div {
+    flex: 1;
+  }
+}

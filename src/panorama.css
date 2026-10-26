@@ -1,0 +1,869 @@
+body:has(.panorama.is-focused) .site-header {
+  display: none;
+}
+.panorama {
+  position: relative;
+  isolation: isolate;
+  height: calc(100svh - var(--site-header-height));
+  min-height: 650px;
+  background: #111d23;
+  color: #f4efdf;
+  overflow: hidden;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0 clamp(20px, 3.4vw, 64px);
+}
+.panorama.is-focused {
+  height: 100svh;
+}
+.panorama-world {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+}
+.panorama-world:active {
+  cursor: grabbing;
+}
+.panorama-canvas {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  will-change: transform;
+  user-select: none;
+}
+.panorama-canvas > img {
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+.panorama-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(0deg, #0b1822ee, transparent 58%),
+    linear-gradient(90deg, #101a28bb, transparent 75%),
+    linear-gradient(180deg, #0d192bcc, transparent 26%);
+  transition: opacity 0.4s;
+}
+.panorama.is-quiet .panorama-vignette {
+  opacity: 0.45;
+}
+.panorama-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  height: 74px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #ffefd52b;
+  font-size: 12px;
+}
+.panorama-toolbar > a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+}
+.panorama-toolbar svg {
+  width: 18px;
+  height: 18px;
+}
+.panorama-series {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  letter-spacing: 0.15em;
+}
+.panorama-series b {
+  font-weight: 400;
+}
+.panorama-series > span {
+  font-size: 10px;
+  color: #d4c7b4;
+  border-left: 1px solid #ffffff44;
+  padding-left: 20px;
+}
+.panorama-tools {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.panorama-tools button {
+  min-height: 44px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #e8e7de;
+}
+.panorama-tools button[aria-pressed="true"] {
+  color: #ecc896;
+}
+.panorama-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding-top: clamp(28px, 5vh, 55px);
+  pointer-events: none;
+  text-shadow: 0 2px 16px #0005;
+}
+.panorama-location > div {
+  flex: 1;
+  min-width: 0;
+}
+.panorama-location > span {
+  flex-shrink: 0;
+  text-align: right;
+  border-top: 1px solid #e0c18b;
+  padding-top: 12px;
+  color: #e0c18b;
+  font-size: 12px;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+}
+.panorama-location p {
+  font-size: 11px;
+  color: #e2d7c6;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+.panorama-location i {
+  width: 3px;
+  height: 3px;
+  background: #d3b587;
+  border-radius: 50%;
+}
+.panorama-location h1 {
+  font-family: var(--font-title);
+  font-size: clamp(32px, 4.2vw, 62px);
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  margin: 0 0 14px;
+  line-height: 1.25;
+}
+.panorama-location > div > span {
+  font-family: var(--serif);
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  color: #ece0cb;
+}
+.panorama-center-label {
+  position: absolute;
+  right: 40px;
+  top: 40%;
+  writing-mode: vertical-rl;
+  font-family: var(--serif);
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  color: #e3d4bd;
+  text-shadow: 0 2px 10px #000;
+  pointer-events: none;
+}
+.panorama-story {
+  max-width: 490px;
+  width: 46%;
+  margin-top: auto;
+  padding: 28px 0 14px;
+  position: relative;
+  z-index: 2;
+}
+.panorama-story-tabs {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.panorama-story-tabs button {
+  padding: 0 0 9px;
+  font-size: 11px;
+  position: relative;
+  color: #c5c9c6;
+  min-height: 30px;
+  white-space: nowrap;
+}
+.panorama-story-tabs button[aria-pressed="true"] {
+  color: #efd2a4;
+}
+.panorama-story-tabs button > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: transparent;
+}
+.panorama-story-tabs button[aria-pressed="true"] > span {
+  background: #e6c38e;
+}
+.panorama-story-tabs > span {
+  margin-left: auto;
+  color: #babcb5;
+  font-size: 9px;
+  white-space: nowrap;
+}
+.panorama-story > p {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.95;
+  margin: 0 0 18px;
+  min-height: 66px;
+  text-shadow: 0 1px 12px #0009;
+}
+.panorama-story > blockquote {
+  font-size: 12px;
+  color: #e2c18c;
+  margin: 0 0 14px;
+  padding-left: 12px;
+  border-left: 1px solid #c2a470;
+  line-height: 1.9;
+}
+.panorama-story-actions {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  font-size: 11px;
+}
+.panorama-story-actions > button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font: inherit;
+  padding: 6px 0;
+  min-height: 32px;
+  color: #e2e1d6;
+}
+.panorama-story-actions svg {
+  width: 16px;
+  height: 16px;
+}
+.panorama-detail-links {
+  display: flex;
+  gap: 18px;
+  padding-top: 12px;
+}
+.panorama-detail-links > button {
+  font-size: 10px;
+  color: #d9bd8a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 28px;
+}
+.panorama-detail-links svg {
+  width: 13px;
+  height: 13px;
+}
+.panorama-camera {
+  position: absolute;
+  right: clamp(24px, 3.4vw, 64px);
+  bottom: 180px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 220px;
+  font-size: 10px;
+  color: #ded6c2;
+  text-shadow: 0 1px 12px #0006;
+}
+.panorama-camera input {
+  width: 160px;
+  accent-color: #e2c28e;
+  height: 30px;
+  cursor: ew-resize;
+}
+.panorama-camera small {
+  position: absolute;
+  right: 0;
+  bottom: -21px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+}
+.panorama-footer {
+  z-index: 2;
+  flex-shrink: 0;
+  margin-top: 14px;
+}
+.panorama-navigation {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+  border-top: 1px solid #f8e8c840;
+  padding-top: 17px;
+}
+.panorama-navigation button {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  min-height: 45px;
+  font-size: 12px;
+}
+.panorama-navigation .panorama-next {
+  padding: 12px 22px;
+  background: #e5c69a;
+  color: #18232d;
+  letter-spacing: 0.08em;
+}
+.panorama-navigation > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 11px;
+}
+.panorama-navigation > div > span {
+  color: #e1c395;
+}
+.panorama-navigation small {
+  color: #bfc8c7;
+  font-size: 10px;
+}
+.panorama-navigation svg {
+  width: 18px;
+  height: 18px;
+}
+.panorama-stations {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: relative;
+  margin-top: 17px;
+}
+.panorama-stations > button {
+  padding: 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 36px;
+  color: #aebbbf;
+}
+.panorama-stations > button > span {
+  width: 100%;
+  height: 2px;
+  background: #bec6c555;
+  transition: background 0.3s;
+}
+.panorama-stations small {
+  font-size: 8px;
+  margin-top: 8px;
+}
+.panorama-stations > button.seen > span {
+  background: #c1aa7b;
+}
+.panorama-stations > button[aria-current="step"] > span {
+  height: 3px;
+  background: #f2d29c;
+}
+.panorama-stations > button[aria-current="step"] {
+  color: #f2d29c;
+}
+.panorama-colophon {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #9daeb5;
+  font-size: 9px;
+  padding: 10px 0 14px;
+  letter-spacing: 0.02em;
+}
+.panorama-hotspot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+.panorama-hotspot > span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #edd3a7;
+  border-radius: 50%;
+  background: #182735a6;
+  box-shadow: 0 0 0 7px #f0dcb424;
+  color: #ffedca;
+  font-size: 19px;
+  transition: box-shadow 0.3s;
+}
+.panorama-hotspot:hover > span,
+.panorama-hotspot.selected > span {
+  box-shadow: 0 0 0 11px #f0dcb433;
+}
+.panorama-hotspot b {
+  font-weight: 400;
+  font-size: 11px;
+  white-space: nowrap;
+  background: #142331c9;
+  padding: 5px 8px;
+  color: #f2dfbc;
+}
+.panorama-detail-story {
+  padding: 20px 24px;
+  background: #14232be8;
+  border: 1px solid #d9c39244;
+}
+.panorama-detail-story > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #d6b887;
+}
+.panorama-detail-story > div > button {
+  display: grid;
+  place-items: center;
+  min-width: 32px;
+  min-height: 32px;
+}
+.panorama-detail-story h2 {
+  font-family: var(--serif);
+  font-size: 25px;
+  letter-spacing: 0.1em;
+  margin: 6px 0 14px;
+}
+.panorama-detail-story p {
+  font-size: 13px;
+  line-height: 1.95;
+  margin-bottom: 10px;
+}
+.panorama-detail-story > button {
+  font-size: 11px;
+  color: #dfc391;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 30px;
+}
+.panorama-loading {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  z-index: 2;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+.panorama-loading svg {
+  width: 35px;
+  height: 35px;
+  animation: panorama-turn 12s linear infinite;
+}
+.panorama-directory {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.panorama-directory > button {
+  position: relative;
+  text-align: left;
+  background: #eee5d3;
+  padding: 0;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+.panorama-directory > button.active {
+  border-color: #9f6943;
+}
+.panorama-directory img {
+  width: 100%;
+  aspect-ratio: 2.2;
+  object-fit: cover;
+  transition: scale 0.4s;
+}
+.panorama-directory button:hover img {
+  scale: 1.035;
+}
+.panorama-directory button > div {
+  padding: 14px;
+}
+.panorama-directory span {
+  font-size: 9px;
+  color: #8c7450;
+  letter-spacing: 0.02em;
+}
+.panorama-directory h3 {
+  font-family: var(--serif);
+  font-size: 19px;
+  margin: 8px 0;
+}
+.panorama-directory small {
+  font-size: 10px;
+  color: #796b58;
+}
+.panorama-directory button > svg {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #1a3026cc;
+  color: #f6e4ba;
+  padding: 5px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+.panorama :focus-visible {
+  outline: 2px solid #f1ce92;
+  outline-offset: 4px;
+}
+.panorama.is-quiet .panorama-camera {
+  bottom: 180px;
+}
+.panorama.is-quiet .panorama-footer {
+  margin-top: auto;
+}
+.panorama.is-quiet .panorama-center-label {
+  font-size: 20px;
+  right: 5%;
+  letter-spacing: 0.25em;
+}
+.panorama .dialog {
+  color: var(--ink);
+}
+@keyframes panorama-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 1500px) {
+  .panorama-story {
+    max-width: 560px;
+  }
+  .panorama-story > p {
+    font-size: 19px;
+  }
+  .panorama-camera {
+    bottom: 195px;
+  }
+}
+@media (max-width: 950px) {
+  .panorama-series > span {
+    display: none;
+  }
+  .panorama-story {
+    width: 56%;
+  }
+  .panorama-story > p {
+    font-size: 15px;
+  }
+  .panorama-camera {
+    width: 160px;
+    right: 28px;
+  }
+  .panorama-camera input {
+    width: 110px;
+  }
+  .panorama-story-tabs {
+    gap: 14px;
+  }
+  .panorama-story-tabs > span {
+    display: none;
+  }
+  .panorama-location h1 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 650px) {
+  .panorama {
+    padding: 0 18px;
+    min-height: 730px;
+    height: calc(100svh - var(--site-header-height));
+  }
+  .panorama.is-focused {
+    height: 100svh;
+  }
+  .panorama-toolbar {
+    height: 58px;
+    gap: 8px;
+  }
+  .panorama-toolbar > a {
+    font-size: 10px;
+    gap: 6px;
+  }
+  .panorama-toolbar svg {
+    width: 17px;
+    height: 17px;
+  }
+  .panorama-series {
+    display: none;
+  }
+  .panorama-tools {
+    gap: 5px;
+  }
+  .panorama-tools button {
+    min-width: 36px;
+  }
+  .panorama-tools button > span {
+    display: none;
+  }
+  .panorama-location {
+    padding-top: 27px;
+    gap: 13px;
+  }
+  .panorama-location > span {
+    font-size: 9px;
+    padding-top: 8px;
+  }
+  .panorama-location p {
+    font-size: 9px;
+    letter-spacing: 0;
+    gap: 6px;
+    flex-wrap: wrap;
+    line-height: 1.8;
+    max-width: 260px;
+    margin-bottom: 9px;
+  }
+  .panorama-location h1 {
+    font-size: 30px;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+  .panorama-location > div > span {
+    font-size: 12px;
+    letter-spacing: 0.03em;
+  }
+  .panorama-center-label {
+    right: 20px;
+    top: 34%;
+    font-size: 10px;
+  }
+  .panorama-story {
+    width: 100%;
+    max-width: none;
+    padding: 18px 0 7px;
+  }
+  .panorama-story-tabs {
+    gap: 21px;
+    margin-bottom: 11px;
+  }
+  .panorama-story-tabs button {
+    font-size: 10px;
+    min-height: 32px;
+    padding-bottom: 7px;
+  }
+  .panorama-story-tabs > span {
+    display: inline;
+    font-size: 8px;
+  }
+  .panorama-story > p {
+    font-size: 14px;
+    line-height: 1.95;
+    margin-bottom: 12px;
+    min-height: 56px;
+  }
+  .panorama-story > blockquote {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .panorama-story-actions {
+    gap: 20px;
+    font-size: 10px;
+  }
+  .panorama-story-actions svg {
+    width: 14px;
+    height: 14px;
+  }
+  .panorama-story-actions > button {
+    min-height: 34px;
+  }
+  .panorama-detail-links {
+    gap: 12px;
+    padding-top: 8px;
+  }
+  .panorama-detail-links > button {
+    font-size: 9px;
+  }
+  .panorama-camera {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    align-self: flex-end;
+    width: 100%;
+    gap: 10px;
+    margin: 0 0 0;
+    height: 34px;
+  }
+  .panorama-camera input {
+    width: 100%;
+    height: 30px;
+    flex: 1;
+  }
+  .panorama-camera small {
+    display: none;
+  }
+  .panorama-navigation {
+    gap: 12px;
+    padding-top: 12px;
+  }
+  .panorama-navigation > div {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+  .panorama-navigation > div > span {
+    font-size: 9px;
+  }
+  .panorama-navigation small {
+    display: none;
+  }
+  .panorama-navigation button {
+    font-size: 10px;
+    gap: 7px;
+  }
+  .panorama-navigation .panorama-next {
+    padding: 10px 13px;
+    font-size: 10px;
+    min-height: 42px;
+    white-space: nowrap;
+  }
+  .panorama-navigation svg {
+    width: 15px;
+    height: 15px;
+  }
+  .panorama-prev > span {
+    display: none;
+  }
+  .panorama-prev {
+    width: 30px;
+    justify-content: center;
+  }
+  .panorama-footer {
+    margin-top: 6px;
+  }
+  .panorama-stations {
+    gap: 4px;
+    margin-top: 10px;
+  }
+  .panorama-stations > button {
+    min-width: 25px;
+    min-height: 33px;
+  }
+  .panorama-colophon {
+    font-size: 8px;
+    padding-top: 9px;
+    padding-bottom: 12px;
+    gap: 10px;
+    line-height: 1.5;
+  }
+  .panorama-colophon > span:last-child {
+    text-align: right;
+  }
+  .panorama-directory {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .panorama-directory h3 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .panorama-directory button > div {
+    padding: 10px;
+  }
+  .panorama-directory span {
+    font-size: 8px;
+  }
+  .panorama-directory small {
+    font-size: 9px;
+  }
+  .panorama-detail-story {
+    padding: 16px;
+  }
+  .panorama-detail-story h2 {
+    font-size: 23px;
+  }
+  .panorama-detail-story p {
+    font-size: 12px;
+  }
+  .panorama.is-quiet .panorama-camera {
+    position: absolute;
+    bottom: 155px;
+    width: calc(100% - 36px);
+  }
+  .panorama.is-quiet .panorama-center-label {
+    top: 38%;
+    font-size: 22px;
+  }
+  .panorama-vignette {
+    background:
+      linear-gradient(
+        0deg,
+        #101b25fc,
+        rgba(12, 24, 35, 0.65) 35%,
+        transparent 67%
+      ),
+      linear-gradient(180deg, #0b1d32df, transparent 48%);
+  }
+  .panorama-hotspot b {
+    font-size: 10px;
+  }
+}
+@media (max-height: 720px) and (min-width: 651px) {
+  .panorama-location {
+    padding-top: 22px;
+  }
+  .panorama-location h1 {
+    font-size: 38px;
+  }
+  .panorama-story {
+    padding-top: 14px;
+  }
+  .panorama-story > p {
+    font-size: 15px;
+    margin-bottom: 9px;
+  }
+  .panorama-story-tabs {
+    margin-bottom: 9px;
+  }
+  .panorama-story-actions > button {
+    min-height: 28px;
+  }
+  .panorama-camera {
+    bottom: 168px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .panorama * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .panorama-canvas {
+    will-change: auto;
+  }
+}
+.panorama-legacy-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -10px 0 28px;
+  font-size: 12px;
+  color: #887455;
+}

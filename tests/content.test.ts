@@ -43,6 +43,7 @@ test("story links and quiz explanations always resolve to a real station", () =>
 });
 test("saved state rejects malformed IDs, impossible answers and unknown tasks", () => {
   const p = sanitizeProgress({
+    quizVersion: 2,
     visited: [1, 1, 22, 23, -1, "3"],
     saved: [10, 100],
     stories: [20, 21],
@@ -80,4 +81,15 @@ test("unanswered or incorrect quiz entries cannot earn points", () => {
     ),
     0,
   );
+});
+
+test("v1 quiz answers reset while previous reading progress survives", () => {
+  const p = sanitizeProgress({
+    visited: [1, 10],
+    answers: [0, 1, 2],
+    tasks: ["night", "marsh", "station-22", "station-23"],
+  });
+  assert.deepEqual(p.answers, []);
+  assert.deepEqual(p.visited, [1, 10]);
+  assert.deepEqual(p.tasks, ["night", "marsh", "station-22"]);
 });

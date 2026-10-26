@@ -1,14 +1,16 @@
-import { useEffect, useRef } from "react";
+import { readingSpeech } from "../readingSpeech";
+import { useEffect, useRef, useId } from "react";
 import type { ReactNode } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowUpRight,
   X,
   ArrowRight,
-  Compass,
+  BookOpen,
   BookmarkSimple,
   Check,
 } from "@phosphor-icons/react";
+import { NarrateButton, AudioControls } from "../audio";
 import { useProgress } from "../state";
 export function Reveal({
   children,
@@ -36,18 +38,15 @@ export function PageHead({
   number,
   title,
   subtitle,
-  en,
 }: {
   number: string;
   title: string;
   subtitle: string;
-  en: string;
 }) {
   return (
     <header className="page-head">
       <div className="page-kicker">
         <span>{number} / 08</span>
-        <span>{en}</span>
       </div>
       <h1>
         {title}
@@ -73,26 +72,36 @@ export function LinkButton({
     </a>
   );
 }
+let openDialogs = 0;
+let originalBodyOverflow = "";
 export function Dialog({
   title,
   children,
   onClose,
   wide = false,
+  narratable = false,
 }: {
   title: string;
   children: ReactNode;
   onClose: () => void;
   wide?: boolean;
+  narratable?: boolean;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
+  const narrationId = useId();
+  const reading = useRef<HTMLDivElement>(null);
+  const readText = () => readingSpeech(reading.current);
   useEffect(() => {
     const el = ref.current;
-    const old = document.body.style.overflow;
+    if (openDialogs === 0) originalBodyOverflow = document.body.style.overflow;
+    openDialogs += 1;
     document.body.style.overflow = "hidden";
     el?.showModal();
     return () => {
       el?.close();
-      document.body.style.overflow = old;
+      openDialogs -= 1;
+      if (openDialogs === 0)
+        document.body.style.overflow = originalBodyOverflow;
     };
   }, []);
   return (
@@ -104,19 +113,48 @@ export function Dialog({
         onClose();
       }}
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        if (e.target !== e.currentTarget) return;
+        const rect = e.currentTarget.getBoundingClientRect();
+        if (
+          e.clientX < rect.left ||
+          e.clientX > rect.right ||
+          e.clientY < rect.top ||
+          e.clientY > rect.bottom
+        )
+          onClose();
       }}
       aria-label={title}
     >
       <div className="dialog-bar">
-        <span>
-          <Compass size={17} /> 重走长征路 · {title}
-        </span>
-        <button className="icon-button" aria-label="关闭窗口" onClick={onClose}>
-          <X size={22} />
-        </button>
+        <div className="dialog-caption">
+          <BookOpen size={20} weight="light" aria-hidden="true" />
+          <div>
+            <span className="dialog-brand">重走长征路</span>
+            <span className="dialog-title">{title}</span>
+          </div>
+        </div>
+        <div className="dialog-actions">
+          {narratable && <AudioControls />}
+          {narratable && (
+            <NarrateButton
+              id={`reader-${narrationId}`}
+              text={readText}
+              iconOnly
+              label="朗读正文"
+            />
+          )}
+          <button
+            className="icon-button"
+            aria-label="关闭窗口"
+            onClick={onClose}
+          >
+            <X size={22} />
+          </button>
+        </div>
       </div>
-      <div className="dialog-content">{children}</div>
+      <div className="dialog-content" ref={reading}>
+        {children}
+      </div>
     </dialog>
   );
 }

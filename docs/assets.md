@@ -19,3 +19,9 @@ Use case: historical-scene. Asset type: editorial museum website story cover ill
 - 其余中文宋体使用设备字体栈，正文为系统黑体，无远程字体请求。
 - 图标：@phosphor-icons/react，使用依赖自带许可。
 - Remotion：实际使用的版本见package-lock.json；商业使用资格须按 https://www.remotion.dev/license 判断。当前交付未购买组织许可证，也未代用户接受额外商业合同。
+
+## 2026-10-23 本地完整版新增素材
+
+使用内置 image_gen 逐件制作了 20 件故事物件图片及 1 张内陆地形艺术底图，最终存入 `public/assets/`，无需外链加载。文件、完整提示词与源图对应见 `generated-assets-v2.json`；修订提示词另见 `image-revisions-v2.json`。
+
+美术检查修正了七根火柴的数量和“铁流后卫”的最后一个字。底图移除了海岸线，改为连续内陆地势；地形画仅承载氛围，路线和交互由 SVG 叠加，图内没有伪造的精确测绘标签。所有物件图均为艺术再现，不冒充馆藏实物照片。格式转换使用本地 WebP 编码，无外部图片服务。

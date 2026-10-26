@@ -1,0 +1,12 @@
+[
+  {
+    "id": "object-04",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-75df0adb-a04e-4f86-9819-e6a624e3fe96.png",
+    "prompt": "Edit only the matchstick count in this museum still life. There are EIGHT matchsticks in the reference, remove ONE matchstick so there are EXACTLY SEVEN individually countable red-headed wooden matchsticks. Arrange the seven matchsticks in a single clean row, separated with gaps. Keep the old red booklet, background, lighting, palette, composition unchanged. Count seven heads and seven sticks. No text."
+  },
+  {
+    "id": "object-09",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-332cee7d-6960-4e7c-80ad-a4c981cb1cb5.png",
+    "prompt": "Edit ONLY the very last bottom Chinese character on the document in this image. The inscription must read 铁流后卫 exactly, top to bottom four characters 铁, 流, 后, 卫. The current last character is wrong. Replace it with simplified Chinese 卫: three simple strokes, horizontal-turn-hook frame with a bottom horizontal stroke. NOT 軍, not 军, not 事, not 章. Preserve the first three characters, paper, binoculars, composition and all colors and light. Exact four characters: 铁流后卫."
+  }
+]

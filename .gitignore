@@ -1,5 +1,15 @@
 node_modules/
 dist/
-.openai/.local/
+release/
+.openai/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+*.tar
+*.tar.gz
 *.log
 .DS_Store
+.env
+.env.*
+!.env.example
+music/exports/

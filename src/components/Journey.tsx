@@ -1,3 +1,6 @@
+import { RichText, content } from "./ReadingContent";
+import { StationDecision, Experiences } from "./Experiences";
+import { ElevationTrail } from "./TerrainExplore";
 import { useState, useEffect, lazy, Suspense } from "react";
 import { RouteMap } from "./RouteMap";
 import {
@@ -18,7 +21,7 @@ import {
 } from "@phosphor-icons/react";
 import { armies, milestones, phases, project, routePath } from "../data";
 import { go, useProgress } from "../state";
-import { PageHead, SaveButton, Reveal, ReadMark } from "./UI";
+import { SaveButton, Reveal, ReadMark } from "./UI";
 import { Reader } from "./Reader";
 const StoryFilm = lazy(() => import("./StoryFilm"));
 export function Journey({ params }: { params: URLSearchParams }) {
@@ -32,7 +35,7 @@ export function Journey({ params }: { params: URLSearchParams }) {
   const read = params.get("read") === "1";
   const select = (id: number) => {
     setArmy("first");
-    go("journey", { station: id });
+    go("journey", { mode: "archive", station: id });
     setProgress((p) => ({ ...p, lastStation: id }));
   };
   useEffect(() => {
@@ -49,12 +52,14 @@ export function Journey({ params }: { params: URLSearchParams }) {
   }, [active, filter]);
   return (
     <main className="journey-page">
-      <PageHead
-        number="03"
-        title="万里征途"
-        en="TRACE THE JOURNEY"
-        subtitle="地图上的每一个坐标，都曾是一个艰难的当下。"
-      />
+      <a
+        className="archive-experience-link"
+        href={`#/journey?station=${active}`}
+      >
+        <Play />
+        走进全景漫游 <span>二十二站，沿着画卷慢慢走</span>
+        <ArrowRight />
+      </a>
       <div className="journey-hud" aria-live="polite">
         <div>
           <CalendarBlank />
@@ -93,6 +98,7 @@ export function Journey({ params }: { params: URLSearchParams }) {
           </span>
         </div>
       </div>
+      <ElevationTrail active={active} onSelect={select} />
       <div className="journey-workspace">
         <div className="journey-main">
           <RouteMap
@@ -129,6 +135,11 @@ export function Journey({ params }: { params: URLSearchParams }) {
               </div>
             </div>
             <div className="station-actions">
+              <a className="button" href={`#/journey?station=${active}`}>
+                <ArrowsOutSimple />
+                进入本站全景
+                <ArrowRight />
+              </a>
               <button
                 className="button"
                 onClick={() => go("journey", { station: active, read: 1 })}
@@ -218,6 +229,20 @@ export function Journey({ params }: { params: URLSearchParams }) {
           </p>
         </aside>
       </div>
+      <div className="journey-enrichment">
+        <StationDecision key={active} id={active} />
+        {[1, 5, 15, 18, 20].includes(active) && (
+          <Experiences
+            key={`experience-${active}`}
+            initial={
+              ({ 1: 0, 5: 4, 15: 1, 18: 2, 20: 3 } as Record<number, number>)[
+                active
+              ]
+            }
+            embedded
+          />
+        )}
+      </div>
       {film && (
         <section className="section film-section">
           <h2>在转向之中，读懂主动。</h2>
@@ -243,47 +268,19 @@ export function Journey({ params }: { params: URLSearchParams }) {
   );
 }
 export function Armies({ params }: { params: URLSearchParams }) {
-  const initial = params.get("army") || "first";
-  const [army, setArmyLocal] = useState(
-    armies.some((a) => a.id === initial) ? initial : "first",
-  );
-  const a = armies.find((a) => a.id === army)!;
-  const setArmy = (id: string) => {
-    setArmyLocal(id);
-    go("armies", { army: id });
-  };
-  useEffect(() => {
-    const id = params.get("army");
-    if (id && armies.some((a) => a.id === id)) setArmyLocal(id);
-  }, [params.toString()]);
+  const army = params.get("army") || "first";
+  const a = armies.find((a) => a.id === army) || armies[0];
+  const setArmy = (id: string) => go("armies", { army: id });
   return (
-    <main className="page-wrap">
-      <PageHead
-        number="04"
-        title="四路红军"
-        en="FOUR PATHS, ONE PURPOSE"
-        subtitle="长征不只有一条路线。把四支队伍放在同一幅图上，才能看见更完整的历史。"
-      />
-      <div className="army-tabs" role="tablist" aria-label="选择红军队伍">
-        {armies.map((ar, i) => (
-          <button
-            role="tab"
-            aria-selected={army === ar.id}
-            key={ar.id}
-            className={army === ar.id ? "selected" : ""}
-            onClick={() => setArmy(ar.id)}
-          >
-            <span>0{i + 1}</span>
-            <strong>{ar.name}</strong>
-            <small>{ar.short}</small>
-          </button>
-        ))}
-      </div>
+    <article className="topic-content army-detail">
+      {" "}
       <div className="army-layout">
         <RouteMap army={army} setArmy={setArmy} />
         <article className="army-dossier" style={{ borderColor: a.color }}>
-          <p className="chapter-label">{a.time}</p>
-          <h2>{a.name}</h2>
+          <p className="chapter-label" data-no-narration>
+            {a.time}
+          </p>
+          <h2 data-no-narration>{a.name}</h2>
           <p>{a.description}</p>
           <dl>
             <div>
@@ -308,6 +305,14 @@ export function Armies({ params }: { params: URLSearchParams }) {
           </p>
         </article>
       </div>
+      <section className="section army-full-table">
+        <span className="chapter-label">四路全景 · 完整对照</span>
+        <h2>时间、行程，与各自的贡献。</h2>
+        <RichText text={content.armies} />
+        <p className="fineprint">
+          省份采用历史行政区划；兵力和里程随统计时点与口径不同而变化。
+        </p>
+      </section>
       <section className="section">
         <h2>同一段历史，不同的时间刻度。</h2>
         <div className="army-timeline">
@@ -332,6 +337,6 @@ export function Armies({ params }: { params: URLSearchParams }) {
           1935年10月，中央红军到达陕北；1936年10月，三大主力会师。两个时刻，都值得准确记住。
         </p>
       </section>
-    </main>
+    </article>
   );
 }
