@@ -31,7 +31,10 @@ export function certificateRecord(raw: Progress) {
         label: "征途问答",
         unit: "题",
       },
-    ],
+    ].map((metric) => ({
+      ...metric,
+      score: Math.round((metric.value / metric.total) * 100),
+    })),
   };
 }
 
@@ -168,10 +171,21 @@ export async function createCertificate(
   );
   record.metrics.forEach((m, i) => {
     const x = 340 + i * 373;
-    text(String(m.value).padStart(2, "0"), x, 665, 53, "#8f3328", true);
-    text(`${m.label} · ${m.unit}`, x, 708, 23, "#78664d");
+    text(m.label, x, 608, 23, "#78664d");
+    // Red-pen grading with a lightly slanted numeral.
+    c.save();
+    c.translate(x, 675);
+    c.rotate(-0.045);
+    c.transform(1, 0, -0.12, 1, 0, 0);
+    text(String(m.score), -14, 0, 62, "#a33228");
+    const percentX = c.measureText(String(m.score)).width / 2 - 8;
+    c.textAlign = "left";
+    text("%", percentX, -4, 26, "#a33228");
+    c.restore();
+    text(`${m.value}/${m.total}`, x, 727, 23, "#78664d");
     if (i < 3) {
       c.strokeStyle = "#b69a6c66";
+      c.lineWidth = 1;
       c.beginPath();
       c.moveTo(x + 187, 620);
       c.lineTo(x + 187, 713);

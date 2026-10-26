@@ -16,6 +16,10 @@ test("certificate uses actual learning activity rather than a quiz score", () =>
     [6, 5, 1, 2],
   );
   assert.deepEqual(
+    record.metrics.map((m) => m.score),
+    [27, 25, 11, 13],
+  );
+  assert.deepEqual(
     record.badges.map((b) => b.id),
     ["first-light", "mountain-path", "fireside", "practice"],
   );
