@@ -194,7 +194,7 @@
   margin-top: 36px;
   border-color: var(--dialog-rule);
 }
-.dialog .artifact-viewer > button {
+.dialog .artifact-viewer > img {
   border-radius: 4px;
 }
 .dialog .reading-table th,

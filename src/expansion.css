@@ -214,36 +214,10 @@
 .artifact-viewer {
   margin: 24px 0 35px;
 }
-.artifact-viewer button {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  width: 100%;
-  background: #eadeca;
-  cursor: zoom-in;
-}
 .artifact-viewer img {
   display: block;
   width: 100%;
   height: auto;
-  transition: transform 0.5s;
-}
-.artifact-viewer.is-zoomed button {
-  cursor: zoom-out;
-}
-.artifact-viewer.is-zoomed img {
-  transform: scale(1.65);
-}
-.artifact-viewer button > span {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  background: #f7f1e1dd;
-  padding: 10px 16px;
-  font-size: 12px;
 }
 .artifact-viewer figcaption {
   display: flex;
@@ -1391,7 +1365,6 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .artifact-card-image img,
-  .artifact-viewer img,
   .pontoon span,
   .river-travellers span {
     transition: none;

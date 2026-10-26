@@ -18,6 +18,7 @@ import {
 } from "@phosphor-icons/react";
 import { stories, poems, sources } from "../data";
 import { useProgress } from "../state";
+import { ImportantDiscourse } from "./ImportantDiscourse";
 import { Reveal } from "./UI";
 import { Packing } from "./Learning";
 
@@ -135,6 +136,7 @@ export function Stories({ params }: { params: URLSearchParams }) {
         {story.subtitle}
       </p>
       <ArtifactViewer id={story.id} />
+      <ImportantDiscourse page="stories" params={params} />
       <ContentNote storyId={story.id} />
       <RichText text={content.stories[story.id - 1].text} />
       <aside className="insight">

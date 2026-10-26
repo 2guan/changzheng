@@ -911,6 +911,7 @@ body:has(.atlas-home) .desktop-nav a:hover {
   stroke-width: 1.5;
 }
 .atlas-home .atlas-stop {
+  transform: translate(-50%, -32px);
   background: none;
   color: #f5e8d0;
   text-shadow:
@@ -918,10 +919,23 @@ body:has(.atlas-home) .desktop-nav a:hover {
     0 0 14px #211e19;
 }
 .atlas-home .atlas-stop-pin {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
   background: #302b22;
   color: #e7cf9f;
   border-color: #c8a872;
   box-shadow: 0 0 0 4px #211e1933;
+}
+.atlas-home-pin-title {
+  width: 2.2em;
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 .atlas-home .atlas-stop:hover .atlas-stop-pin {
   background: #594734;
@@ -1110,10 +1124,9 @@ body:has(.atlas-home) .desktop-nav a:hover {
   .atlas-fit {
     --fit-header-height: 76px;
     display: grid;
-    grid-template-rows: auto auto minmax(
-        var(--fit-map-min-height, 240px),
-        1fr
-      ) auto auto;
+    grid-template-rows:
+      auto auto minmax(var(--fit-map-min-height, 240px), 1fr)
+      auto auto;
     min-height: calc(100svh - var(--fit-header-height));
     padding: 8px 20px max(10px, env(safe-area-inset-bottom));
   }
@@ -1121,15 +1134,15 @@ body:has(.atlas-home) .desktop-nav a:hover {
   .atlas-fit .atlas-topline a {
     min-height: 44px;
   }
-  .atlas-fit .atlas-heading {
+  :is(.atlas-fit, .journey-atlas) .atlas-heading {
     margin: 0;
     padding-bottom: clamp(8px, 1.5svh, 16px);
   }
-  .atlas-fit .atlas-heading h1 {
+  :is(.atlas-fit, .journey-atlas) .atlas-heading h1 {
     line-height: 1.25;
     margin: 6px 0 8px;
   }
-  .atlas-fit .atlas-heading p {
+  :is(.atlas-fit, .journey-atlas) .atlas-heading p {
     line-height: 1.8;
   }
   .atlas-fit .atlas-map-area {

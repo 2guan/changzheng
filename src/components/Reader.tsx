@@ -9,6 +9,7 @@ import {
 } from "@phosphor-icons/react";
 import { milestones, sources } from "../data";
 import { Dialog, SaveButton, ReadMark } from "./UI";
+import { ImportantDiscourse } from "./ImportantDiscourse";
 export function Reader({
   id,
   onClose,
@@ -41,6 +42,10 @@ export function Reader({
           </span>
           <SaveButton id={id} />
         </div>
+        <ImportantDiscourse
+          page="journey"
+          params={new URLSearchParams({ station: String(id) })}
+        />
         <p className="reader-lead">{m.summary}</p>
         <StationChapters id={id} />
         <StationDecision key={id} id={id} />

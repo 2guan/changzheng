@@ -148,7 +148,7 @@ function Site() {
           <span>
             <strong>重走长征路</strong>
             <small className="brand-subtitle">
-              交付事业部纪念长征胜利90周年专栏
+              交付事业部·纪念长征胜利90周年专题
             </small>
           </span>
         </a>

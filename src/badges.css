@@ -35,7 +35,7 @@
 }
 .badge img {
   width: 100%;
-  max-width: 135px;
+  max-width: 110px;
   height: auto;
   display: block;
   margin: auto;
@@ -58,9 +58,8 @@
 .badge p {
   font-size: 12px;
   line-height: 1.7;
-  margin: 0 auto 9px;
+  margin: 0 auto 3px;
   max-width: 130px;
-  min-height: 40px;
   color: #756750;
 }
 .badge-status {
@@ -127,8 +126,40 @@
 }
 @media (max-width: 600px) {
   .badge-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px 8px;
+    margin: 22px 0;
+  }
+  .badge img {
+    max-width: 64px;
+  }
+  .badge small {
+    display: none;
+  }
+  .dialog .badge h3 {
+    font-size: clamp(11px, 3.3vw, 14px);
+    line-height: 1.5;
+    white-space: nowrap;
+    margin: 5px 0 7px;
+  }
+  .badge p {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 3px;
+  }
+  .badge-status {
+    font-size: 11px;
+    gap: 3px;
+    white-space: nowrap;
+  }
+  .badge-status svg {
+    flex: none;
+    width: 11px;
+    height: 11px;
+  }
+  .badge progress {
+    width: 80%;
+    margin: 6px auto;
   }
   .badge-toast {
     right: 12px;

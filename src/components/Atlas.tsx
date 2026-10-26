@@ -1,3 +1,4 @@
+import JourneyAtlas from "./JourneyAtlas";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import {
   ArrowLeft,
@@ -24,7 +25,15 @@ import { PageNarrateButton, useAudio } from "../audio";
 import { moduleNarration } from "../narration";
 import { useLandscapeDrag } from "./useLandscapeDrag";
 
-export default function Atlas({
+type AtlasProps = { page: string; params: URLSearchParams; obscured?: boolean };
+export default function Atlas(props: AtlasProps) {
+  return props.page === "journey" ? (
+    <JourneyAtlas params={props.params} obscured={props.obscured} />
+  ) : (
+    <NarrativeAtlas {...props} />
+  );
+}
+function NarrativeAtlas({
   page,
   params,
   obscured = false,
@@ -142,7 +151,11 @@ export default function Atlas({
               disabled={!audio.tracks[audio.selected]}
               onClick={audio.toggleMusic}
             >
-              {audio.playing ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}
+              {audio.playing ? (
+                <Pause aria-hidden="true" />
+              ) : (
+                <Play aria-hidden="true" />
+              )}
             </button>
           )}
           <PageNarrateButton
@@ -252,7 +265,8 @@ export default function Atlas({
                 aria-label={`第${i + 1}站 ${s.title}${status(i) ? "，已阅读" : ""}`}
                 aria-current={preview === i + 1 ? "location" : undefined}
                 onPointerEnter={(e) => {
-                  if (e.pointerType !== "touch" && !landscape.dragging) setPreview(i + 1);
+                  if (e.pointerType !== "touch" && !landscape.dragging)
+                    setPreview(i + 1);
                 }}
                 onFocus={() => setPreview(i + 1)}
                 onKeyDown={(e) => {
@@ -273,9 +287,15 @@ export default function Atlas({
                 }}
               >
                 <span className="atlas-stop-pin">
-                  {String(i + 1).padStart(2, "0")}
+                  {page === "home" ? (
+                    <span className="atlas-home-pin-title">{s.title}</span>
+                  ) : (
+                    String(i + 1).padStart(2, "0")
+                  )}
                 </span>
-                <span className="atlas-stop-title">{s.title}</span>
+                {page !== "home" && (
+                  <span className="atlas-stop-title">{s.title}</span>
+                )}
                 {status(i) && <small>{status(i)}</small>}
               </a>
             ))}

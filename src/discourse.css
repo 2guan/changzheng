@@ -1,0 +1,76 @@
+/* Printed vermilion ink on the shared letter-paper reading surface. */
+.dialog .important-discourse {
+  position: relative;
+  margin: 6px 0 32px;
+  padding: 25px 28px 24px;
+  border: 1px solid #98734d;
+  outline: 1px solid #b49a7359;
+  outline-offset: -6px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #cfb88712, #e4c8921a);
+  color: #8d3029;
+}
+.dialog .important-discourse h3 {
+  margin: 0 0 18px;
+  font-family: var(--font-title);
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  color: #862e25;
+}
+.dialog .important-discourse figure {
+  margin: 0;
+}
+.dialog .important-discourse figure + figure {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid #98734d40;
+}
+.dialog .important-discourse blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.95;
+}
+.dialog .important-discourse blockquote p {
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+.dialog .important-discourse blockquote p + p {
+  margin-top: 0.8em;
+}
+.dialog .important-discourse figcaption {
+  margin-top: 14px;
+  color: #7b5941;
+  font-size: 12px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.dialog .important-discourse cite {
+  font-style: normal;
+}
+@media (max-width: 600px) {
+  .dialog .important-discourse {
+    margin: 4px 0 26px;
+    padding: 20px 18px;
+  }
+  .dialog .important-discourse h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .dialog .important-discourse blockquote {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  .dialog .important-discourse figcaption {
+    font-size: 11px;
+  }
+}

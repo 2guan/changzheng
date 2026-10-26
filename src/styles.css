@@ -4170,3 +4170,47 @@ summary {
     animation: enter-reader 0.25s ease-out both;
   }
 }
+
+.learning-certificate {
+  margin: 32px 0;
+  padding: 28px clamp(16px, 4vw, 36px);
+  border-top: 1px solid #aa8a5655;
+  border-bottom: 1px solid #aa8a5655;
+  background: linear-gradient(130deg, #d5bc8515, transparent);
+  text-align: center;
+}
+.learning-certificate h3 {
+  font-size: 25px;
+  color: #843c2e;
+  margin: 10px 0 14px;
+}
+.badge-gallery + .learning-certificate {
+  margin-top: 0;
+  border-top: 0;
+}
+.learning-certificate > p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #79664c;
+}
+.learning-certificate .certificate-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  box-shadow: 0 12px 32px #49371b25;
+}
+.learning-certificate .certificate-name {
+  max-width: 360px;
+}
+.learning-certificate .button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+.learning-certificate > .fineprint {
+  font-size: 11px;
+  margin-top: 16px;
+}
+.learning-certificate [role="alert"] {
+  color: #992d25;
+}

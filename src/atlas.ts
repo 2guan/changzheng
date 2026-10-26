@@ -69,8 +69,8 @@ export const atlasRoutes: Record<string, AtlasRoute> = {
     mobileFocusX: 0.46,
     title: "二十二站，万水千山。",
     line: "循着中央红军的脚步，延伸至三大主力会师。每一站，都可以停留。",
-    image: "/assets/terrain.webp",
-    alt: "西南至西北山河地形的艺术鸟瞰图",
+    image: "/assets/journey-geographic-corrected.webp",
+    alt: "北向朝上的红军长征山河地图",
     stops: milestones.map((m, i) => ({
       title: m.title,
       subtitle: `${m.date} · ${m.place}`,

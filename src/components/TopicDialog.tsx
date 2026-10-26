@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Dialog } from "./UI";
 import type { atlasDetail } from "../details";
+import { ImportantDiscourse } from "./ImportantDiscourse";
 const Prologue = lazy(() =>
   import("./Editorial").then((m) => ({ default: m.Prologue })),
 );
@@ -46,6 +47,7 @@ export default function TopicDialog({
     );
   return (
     <Dialog narratable title={title} onClose={onClose}>
+      {page !== "stories" && <ImportantDiscourse page={page} params={params} />}
       <Suspense fallback={<p role="status">正在展开内容…</p>}>
         {page === "prologue" ? (
           <Prologue params={params} />

@@ -1,5 +1,5 @@
+import { CertificatePanel } from "./CertificatePanel";
 import { BadgeGallery } from "./Badges";
-import { PANORAMA_KEY, sanitizePanoramaProgress } from "../panoramas";
 import { Experiences, Reflection, ProgressBackup } from "./Experiences";
 import { useState } from "react";
 import {
@@ -7,7 +7,6 @@ import {
   Check,
   ArrowRight,
   ArrowCounterClockwise,
-  Download,
   Certificate,
   BookmarkSimple,
   Footprints,
@@ -306,49 +305,10 @@ export function TaskDialog({
     </Dialog>
   );
 }
-async function createCertificate(name: string, score: number, visited: number) {
-  await Promise.all([
-    document.fonts.load('24px "ChangzhengBody"', name + "长征路上的同行者"),
-    document.fonts.load('70px "ChangzhengTitle"', "山河为证，初心如炬"),
-  ]).catch(() => []);
-  const canvas = document.createElement("canvas");
-  canvas.width = 1600;
-  canvas.height = 1100;
-  const c = canvas.getContext("2d");
-  if (!c) return;
-  c.fillStyle = "#f7f1e1";
-  c.fillRect(0, 0, 1600, 1100);
-  c.strokeStyle = "#9c3029";
-  c.lineWidth = 3;
-  c.strokeRect(46, 46, 1508, 1008);
-  c.lineWidth = 1;
-  c.strokeRect(58, 58, 1484, 984);
-  c.textAlign = "center";
-  c.fillStyle = "#9c3029";
-  c.font = "24px ChangzhengBody, serif";
-  c.fillText("重走长征路 · 学习纪念", 800, 150);
-  c.font = "70px ChangzhengTitle, serif";
-  c.fillText("山河为证，初心如炬", 800, 300);
-  c.fillStyle = "#3c332b";
-  c.font = "44px ChangzhengBody, serif";
-  c.fillText(name.trim().slice(0, 20) || "长征路上的同行者", 800, 450);
-  c.font = "28px ChangzhengBody, serif";
-  c.fillText("已完成长征知识测验", 800, 540);
-  c.fillText(`答对 ${score} / 15 题    ·    阅读 ${visited} / 22 站`, 800, 610);
-  c.font = "30px ChangzhengBody, serif";
-  c.fillText("每一次回望，都是新的出发。", 800, 750);
-  c.font = "20px ChangzhengBody, serif";
-  c.fillStyle = "#857560";
-  c.fillText(new Intl.DateTimeFormat("zh-CN").format(new Date()), 800, 880);
-  c.fillText("个人学习纪念 · 不代表官方认证或学历证明", 800, 950);
-  return canvas.toDataURL("image/png");
-}
 export function Quiz({ onClose }: { onClose: () => void }) {
   const { progress, setProgress } = useProgress();
   const first = quiz.findIndex((_, i) => progress.answers[i] == null);
   const [index, setIndex] = useState(first === -1 ? 15 : first);
-  const [name, setName] = useState("");
-  const [certificate, setCertificate] = useState<string | undefined>();
   const [review, setReview] = useState(false);
   const score = scoreAnswers(
     progress.answers,
@@ -461,45 +421,7 @@ export function Quiz({ onClose }: { onClose: () => void }) {
               ? "全部答对。把理解带到更广阔的阅读里。"
               : `还有 ${15 - score} 个问题值得回看。理解，比一次答对更重要。`}
           </p>
-          <label className="certificate-name">
-            纪念证书上的名字
-            <input
-              value={name}
-              maxLength={20}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="长征路上的同行者"
-            />
-          </label>
-          <button
-            className="button"
-            onClick={async () =>
-              setCertificate(
-                await createCertificate(name, score, progress.visited.length),
-              )
-            }
-          >
-            <Certificate />
-            生成学习纪念证书
-          </button>
-          {certificate && (
-            <div className="certificate-preview">
-              <img
-                src={certificate}
-                alt="已生成的长征学习纪念证书"
-                width="1600"
-                height="1100"
-              />
-              <a
-                className="button"
-                href={certificate}
-                download="重走长征路-学习纪念.png"
-              >
-                <Download />
-                保存 PNG 证书
-              </a>
-              <p className="fineprint">也可以长按图片保存到设备。</p>
-            </div>
-          )}
+          <CertificatePanel />
           <div className="result-actions">
             {wrong.length > 0 && (
               <button
@@ -517,7 +439,6 @@ export function Quiz({ onClose }: { onClose: () => void }) {
               onClick={() => {
                 setProgress((p) => ({ ...p, answers: [] }));
                 setReview(false);
-                setCertificate(undefined);
                 setIndex(0);
               }}
             >
@@ -535,15 +456,6 @@ export function Quiz({ onClose }: { onClose: () => void }) {
 }
 export function Learning({ params }: { params: URLSearchParams }) {
   const { progress, storageError } = useProgress();
-  const [panorama] = useState(() => {
-    try {
-      return sanitizePanoramaProgress(
-        JSON.parse(localStorage.getItem(PANORAMA_KEY) || "null"),
-      );
-    } catch {
-      return sanitizePanoramaProgress(null);
-    }
-  });
   const [task, setTask] = useState<keyof typeof taskNames | null>(null);
   const [quizOpen, setQuiz] = useState(false);
   const focus = params.get("focus");
@@ -559,66 +471,8 @@ export function Learning({ params }: { params: URLSearchParams }) {
       )}
       {focus === "progress" && (
         <>
-          <BadgeGallery />{" "}
-          <a
-            className="exp-learning-entry"
-            href={`#/journey?station=${panorama.lastStation}`}
-          >
-            <div>
-              <span>万里征途 · 二十二站全景</span>
-              <h2>
-                {panorama.seen.length > 0
-                  ? `上次走到 · ${milestones[panorama.lastStation - 1].title}`
-                  : "把二十二站山河，慢慢看完。"}
-              </h2>
-              <p>全景环顾，沿途叙事。无需完成任务，随时前行或停留。</p>
-            </div>
-            <span>
-              <strong>
-                {panorama.seen.length}
-                <small> / 22</small>
-              </strong>
-              {panorama.seen.length > 0 ? "继续全景漫游" : "展开第一站"}
-              <ArrowRight />
-            </span>
-          </a>
-          <a className="panorama-legacy-link" href="#/journey?mode=interactive">
-            可选：六幕互动体验 <ArrowRight />
-          </a>
-          <div id="atlas-progress" tabIndex={-1} className="progress-overview">
-            <div>
-              <Footprints />
-              <strong>
-                {progress.visited.length}
-                <small>/22</small>
-              </strong>
-              <span>留下足迹</span>
-            </div>
-            <div>
-              <BookOpen />
-              <strong>
-                {progress.stories.length}
-                <small>/20</small>
-              </strong>
-              <span>读过故事</span>
-            </div>
-            <div>
-              <Flag />
-              <strong>
-                {progress.tasks.filter((x) => !x.startsWith("station-")).length}
-                <small>/9</small>
-              </strong>
-              <span>完成情境任务</span>
-            </div>
-            <div>
-              <Certificate />
-              <strong>
-                {answered}
-                <small>/15</small>
-              </strong>
-              <span>回答问题</span>
-            </div>
-          </div>
+          <BadgeGallery />
+          <CertificatePanel />
           <section className="learning-actions">
             <div className="continue-panel">
               <span className="chapter-label">沿着上次的脚步</span>
@@ -634,7 +488,7 @@ export function Learning({ params }: { params: URLSearchParams }) {
             <div id="atlas-quiz" tabIndex={-1} className="quiz-invite">
               <Certificate size={45} />
               <h2>你会如何理解这段历史？</h2>
-              <p>15 道情境题，逐题解析。完成后生成一张专属学习纪念。</p>
+              <p>15 道情境题，逐题解析。让每一次思考，成为新的理解。</p>
               <button className="text-button" onClick={() => setQuiz(true)}>
                 {answered === 15
                   ? "查看结果与证书"

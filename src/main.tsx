@@ -23,3 +23,6 @@ import "./header.css";
 
 import "./audio.css";
 import "./badges.css";
+
+import "./journey-map.css";
+import "./discourse.css";

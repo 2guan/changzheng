@@ -1,0 +1,8 @@
+{
+  "id": "object-09",
+  "date": "2026-10-26",
+  "mode": "built-in image_gen",
+  "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-342413a2-90cb-4ecb-a8c1-1bf8b2e3665b.png",
+  "file": "public/assets/object-09.webp",
+  "prompt": "Use case: precise-object-edit. Edit target: the provided museum still-life image for the story 后卫的背影. Completely REMOVE the entire paper commendation/certificate on the right, all its Chinese writing and red border. The ONLY object should be the same old 1930s-style binoculars with their attached worn leather neck strap. Recompose the binoculars and strap centered in the landscape 3:2 frame, keep the entire object visible with generous 20% negative space. Preserve the reference binocular design, aged dark metal, worn leather, warm upper-left side light, subtle natural contact shadow, refined realistic historical illustration style, and seamless pale parchment beige background. Fill the removed certificate area naturally with plain background. No paper sheet, document, certificate, writing, letters, symbols, seal, badges, people, other objects, frame, watermark or logo. Opaque background."
+}

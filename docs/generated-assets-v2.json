@@ -67,12 +67,13 @@
   },
   {
     "id": "object-09",
-    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-332cee7d-6960-4e7c-80ad-a4c981cb1cb5.png",
+    "source": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-342413a2-90cb-4ecb-a8c1-1bf8b2e3665b.png",
     "file": "public/assets/object-09.webp",
-    "prompt": "Use case: historical-scene. 为中文长征数字博物馆制作一张独立的藏品主题艺术插画。Subject: 一副1930年代双筒望远镜与一张毛笔写着“铁流后卫”四个汉字的褒奖令。采用细腻写实静物摄影与手绘历史插画结合风格，物件真实可触的纤维、金属锈迹、磨损细节，柔和左上方暖侧光，微弱自然阴影，统一浅羊皮纸米黄 #efe4c8 无缝背景。横幅 3:2，完整物件居中，周围20%留白。克制庄重、博物馆图录质感，不要人物、边框、logo、水印、现代物品；除明确指定文字外不要任何文字。不是历史实物照片，作为艺术再现。",
+    "prompt": "Use case: precise-object-edit. Edit target: the provided museum still-life image for the story 后卫的背影. Completely REMOVE the entire paper commendation/certificate on the right, all its Chinese writing and red border. The ONLY object should be the same old 1930s-style binoculars with their attached worn leather neck strap. Recompose the binoculars and strap centered in the landscape 3:2 frame, keep the entire object visible with generous 20% negative space. Preserve the reference binocular design, aged dark metal, worn leather, warm upper-left side light, subtle natural contact shadow, refined realistic historical illustration style, and seamless pale parchment beige background. Fill the removed certificate area naturally with plain background. No paper sheet, document, certificate, writing, letters, symbols, seal, badges, people, other objects, frame, watermark or logo. Opaque background.",
     "mode": "built-in image_gen",
     "originalSource": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-917736a3-0e1f-486d-a5fd-ccc4c660f91e.png",
-    "editPrompt": "Edit ONLY the very last bottom Chinese character on the document in this image. The inscription must read 铁流后卫 exactly, top to bottom four characters 铁, 流, 后, 卫. The current last character is wrong. Replace it with simplified Chinese 卫: three simple strokes, horizontal-turn-hook frame with a bottom horizontal stroke. NOT 軍, not 军, not 事, not 章. Preserve the first three characters, paper, binoculars, composition and all colors and light. Exact four characters: 铁流后卫."
+    "previousSource": "/Users/guan/.codex/generated_images/01a16879-c435-70b3-bc45-2d201b8b24d6/exec-332cee7d-6960-4e7c-80ad-a4c981cb1cb5.png",
+    "revision": "docs/object-09-revision.json"
   },
   {
     "id": "object-12",

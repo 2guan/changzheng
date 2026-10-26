@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {
-  MagnifyingGlassPlus,
   Minus,
   Plus,
   BookOpen,
@@ -222,29 +221,15 @@ export function StationChapters({ id }: { id: number }) {
   );
 }
 export function ArtifactViewer({ id }: { id: number }) {
-  const [zoom, setZoom] = useState(false);
   const s = content.stories[id - 1];
   return (
-    <figure
-      className={`artifact-viewer ${zoom ? "is-zoomed" : ""}`}
-      data-no-narration
-    >
-      <button
-        onClick={() => setZoom((z) => !z)}
-        aria-label={zoom ? "还原藏品图片" : "放大藏品图片"}
-        aria-pressed={zoom}
-      >
-        <img
-          src={`/assets/object-${String(id).padStart(2, "0")}.webp`}
-          alt={s.object}
-          width="1536"
-          height="1024"
-        />
-        <span>
-          <MagnifyingGlassPlus />
-          {zoom ? "点击还原" : "点击细看"}
-        </span>
-      </button>
+    <figure className="artifact-viewer" data-no-narration>
+      <img
+        src={`/assets/object-${String(id).padStart(2, "0")}.webp`}
+        alt={s.object}
+        width="1536"
+        height="1024"
+      />
       <figcaption>
         {s.object.replace("（现存中国国家博物馆）", "")}
         <small>AI 艺术再现 · 非馆藏实物照片</small>
