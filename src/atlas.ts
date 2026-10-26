@@ -67,7 +67,7 @@ export const atlasRoutes: Record<string, AtlasRoute> = {
   },
   journey: {
     mobileFocusX: 0.46,
-    title: "二十二站，万水千山。",
+    title: "万水千山，步步征程",
     line: "循着中央红军的脚步，延伸至三大主力会师。每一站，都可以停留。",
     image: "/assets/journey-geographic-corrected.webp",
     alt: "北向朝上的红军长征山河地图",
