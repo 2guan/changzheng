@@ -228,7 +228,9 @@ export default function JourneyAtlas({
       onPointerMove={pointerMove}
       onPointerUp={pointerEnd}
       onPointerCancel={pointerEnd}
-      onLostPointerCapture={pointerEnd}
+      onLostPointerCapture={(e) => {
+        if (e.target === e.currentTarget) pointerEnd(e);
+      }}
       onClickCapture={(e) => {
         if (suppressClick.current) {
           e.preventDefault();

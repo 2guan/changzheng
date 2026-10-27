@@ -101,8 +101,8 @@ function ArmyMap({ chapter }: { chapter: Chapter }) {
         }}
         onPointerUp={stopDrag}
         onPointerCancel={stopDrag}
-        onLostPointerCapture={() => {
-          drag.current = null;
+        onLostPointerCapture={(e) => {
+          if (e.target === e.currentTarget) stopDrag(e);
         }}
         onKeyDown={(e) => {
           const delta: Record<string, [number, number]> = {

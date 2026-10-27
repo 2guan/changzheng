@@ -203,7 +203,11 @@ export function useLandscapeDrag(
       },
       onPointerUp: finish,
       onPointerCancel: finish,
-      onLostPointerCapture: finish,
+      onLostPointerCapture(event: ReactPointerEvent<HTMLElement>) {
+        // Touch implicitly captures the initial child. Its capture-loss event
+        // bubbles here when we transfer capture to the surface; that is not an end.
+        if (event.target === event.currentTarget) finish(event);
+      },
       onKeyDown(event: KeyboardEvent<HTMLElement>) {
         if (
           disabled ||

@@ -195,3 +195,32 @@ test("cancelled gestures stop moving and a fresh gesture can immediately start",
   s.flush();
   assert.notEqual(s.image.style.transform, stopped);
 });
+
+test("touch capture transferred from a child to the map must not end the swipe", () => {
+  const s = setup();
+  s.hook.handlers.onPointerDown(s.event(100, 100));
+  s.hook.handlers.onPointerMove(s.event(120, 101));
+  s.flush();
+  const firstFrame = s.image.style.transform;
+  // Touch browsers implicitly capture the node under the finger. Moving capture
+  // to the map emits a bubbling lostpointercapture on that OLD child first.
+  s.hook.handlers.onLostPointerCapture(s.event(120, 101));
+  s.hook.handlers.onPointerMove(s.event(220, 103));
+  s.flush();
+  assert.notEqual(s.image.style.transform, firstFrame);
+  assert.equal(s.hook.dragging.current, true);
+  s.hook.handlers.onPointerUp(s.event(220, 103));
+  assert.equal(s.hook.dragging.current, false);
+});
+
+test("losing the map's own pointer capture really ends the swipe", () => {
+  const s = setup();
+  s.hook.handlers.onPointerDown(s.event(100, 100));
+  s.hook.handlers.onPointerMove(s.event(130, 101));
+  s.hook.handlers.onLostPointerCapture({ ...s.event(130, 101), target: s.surface });
+  const stopped = s.image.style.transform;
+  s.hook.handlers.onPointerMove(s.event(220, 103));
+  s.flush();
+  assert.equal(s.image.style.transform, stopped);
+  assert.equal(s.hook.dragging.current, false);
+});
