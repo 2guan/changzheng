@@ -4214,3 +4214,113 @@ summary {
 .learning-certificate [role="alert"] {
   color: #992d25;
 }
+
+.certificate-enlarge {
+  display: block;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+.certificate-viewer {
+  width: min(96vw, 1600px);
+  height: 94dvh;
+  max-width: 96vw;
+  max-height: 94dvh;
+  padding: 0;
+  border: 1px solid #b8986555;
+  border-radius: 8px;
+  background: #191713;
+  color: #f6e5c6;
+  overflow: hidden;
+}
+.certificate-viewer::backdrop { background: #090806d9; }
+.certificate-viewer-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 60px;
+  padding: 0 16px;
+}
+.certificate-viewer-toolbar > span { margin-right: auto; }
+.certificate-viewer-toolbar .icon-button { color: #f6e5c6; width: 44px; height: 44px; }
+.certificate-viewer-scroll {
+  height: calc(100% - 60px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+.certificate-viewer-scroll > button {
+  min-width: 0;
+  max-width: 100%;
+  padding: 0;
+  margin: auto;
+  background: transparent;
+  cursor: zoom-in;
+}
+.certificate-viewer-scroll img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(94dvh - 86px);
+}
+.certificate-viewer-scroll.is-zoomed {
+  touch-action: pinch-zoom;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+.certificate-viewer-scroll.is-zoomed > button {
+  max-width: none;
+  cursor: inherit;
+  touch-action: pinch-zoom;
+}
+.certificate-viewer-scroll.is-dragging { cursor: grabbing; }
+.certificate-viewer-scroll.is-zoomed img {
+  width: clamp(900px, 150vw, 1800px);
+  max-width: none;
+  max-height: none;
+}
+
+.quiz-attempt-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin: 12px 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.quiz-attempt-summary .text-button { min-height: 44px; }
+
+.poetry-detail > .reader {
+  margin-top: clamp(32px, 5vw, 48px);
+}
+.poetry-song-title {
+  font-family: var(--serif);
+  color: #843c2e;
+  font-size: clamp(21px, 3vw, 26px);
+  line-height: 1.5;
+  margin: 20px 0 8px;
+}
+.poetry-detail .song-note > p { font-size: 15px; line-height: 1.9; }
+.poetry-detail .song-note > .poetry-song-meta,
+.poetry-detail .song-note > .fineprint { font-size: 12px; }
+.poetry-song-lyrics {
+  margin: 24px 0 28px;
+  padding: 4px 0 4px clamp(16px, 3vw, 28px);
+  border-left: 1px solid #a987554d;
+}
+.poetry-detail .poetry-song-lyrics p {
+  margin: 0;
+  color: #593b2d;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 2;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.poetry-detail .poetry-song-lyrics p + p { margin-top: 24px; }

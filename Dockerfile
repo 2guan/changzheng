@@ -9,7 +9,7 @@ RUN npm run build
 
 # Same-origin static hosting and streaming TTS proxy. Secrets enter only at runtime.
 FROM node:22-alpine AS runtime
-ARG VERSION=1.05
+ARG VERSION=1.06
 ARG VCS_REF=unknown
 LABEL org.opencontainers.image.title="重走长征路" \
       org.opencontainers.image.version=$VERSION \

@@ -1,4 +1,5 @@
 import http from "node:http";
+import { publicConfig } from "./public-config.mjs";
 import { stat } from "node:fs/promises";
 import { createGzip } from "node:zlib";
 import { createReadStream, existsSync } from "node:fs";
@@ -44,6 +45,8 @@ const json = (res, status, data) => {
 http
   .createServer(async (req, res) => {
     const pathname = new URL(req.url, "http://localhost").pathname;
+    if (pathname === "/api/site-config" && req.method === "GET")
+      return json(res, 200, publicConfig());
     if (pathname === "/healthz") {
       res.end("ok");
       return;

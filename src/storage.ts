@@ -7,6 +7,7 @@ export type Progress = {
   stories: number[];
   tasks: string[];
   answers: (number | null)[];
+  lastQuizAnswers: number[];
   lastStation: number;
 };
 export const STORAGE_KEY = "changzheng-fieldnotes-v1";
@@ -18,6 +19,7 @@ export const emptyProgress: Progress = {
   stories: [],
   tasks: [],
   answers: [],
+  lastQuizAnswers: [],
   lastStation: 1,
 };
 export function sanitizeProgress(raw: unknown): Progress {
@@ -31,6 +33,11 @@ export function sanitizeProgress(raw: unknown): Progress {
           ),
         ] as number[])
       : [];
+  const completedAnswers = (value: unknown): number[] =>
+    r.quizVersion === 2 && Array.isArray(value) && value.length === 15 &&
+    Array.from(value).every((x) => Number.isInteger(x) && x >= 0 && x <= 2)
+      ? [...value] : [];
+  const currentResult = completedAnswers(r.answers);
   return {
     quizVersion: 2,
     badges: Array.isArray(r.badges)
@@ -73,6 +80,7 @@ export function sanitizeProgress(raw: unknown): Progress {
             .slice(0, 15)
             .map((x) => (Number.isInteger(x) && x >= 0 && x <= 2 ? x : null))
         : [],
+    lastQuizAnswers: currentResult.length ? currentResult : completedAnswers(r.lastQuizAnswers),
     lastStation:
       Number.isInteger(r.lastStation) &&
       Number(r.lastStation) >= 1 &&

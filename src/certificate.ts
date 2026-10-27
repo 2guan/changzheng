@@ -26,7 +26,7 @@ export function certificateRecord(raw: Progress) {
         unit: "项",
       },
       {
-        value: progress.answers.filter((x) => x !== null).length,
+        value: Math.max(progress.answers.filter((x) => x !== null).length, progress.lastQuizAnswers.length),
         total: 15,
         label: "征途问答",
         unit: "题",
@@ -55,8 +55,9 @@ export async function createCertificate(
   const record = certificateRecord(progress);
   const displayName =
     Array.from(name.trim()).slice(0, 20).join("") || "长征路上的同行者";
-  const [landscape, ...medals] = await Promise.all([
+  const [landscape, logo, ...medals] = await Promise.all([
     loadImage("/assets/hero.webp"),
+    loadImage("/assets/department-logo.png"),
     ...record.badges.map((b) => loadImage(`/assets/badges/${b.id}.svg`)),
   ]);
   await Promise.all([
@@ -222,7 +223,8 @@ export async function createCertificate(
     );
   }
   rule(1347);
-  text("山河为证，初心如炬。", 900, 1400, 32, "#8f3328", true);
+  c.drawImage(logo, 862, 1356, 76, 76);
+  text("山河为证，初心如炬。", 900, 1465, 32, "#8f3328", true);
   c.textAlign = "left";
   text("重走长征路 · 个人学习留念", 154, 1465, 21, "#78664d");
   c.textAlign = "right";

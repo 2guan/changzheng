@@ -8,13 +8,15 @@ export function atlasDetail(page: string, params: URLSearchParams) {
   const focus =
     page === "meaning" && params.get("focus") === "questions"
       ? "anniversary"
-      : params.get("focus");
+      : page === "learn" && params.get("focus") === "backup"
+        ? "reflection"
+        : params.get("focus");
   const focusIndex = route.stops.findIndex(
     (stop) =>
       new URLSearchParams(stop.href.split("?")[1]).get("focus") === focus,
   );
   const stop =
-    (!params.has("stop") || page === "meaning") &&
+    (!params.has("stop") || page === "meaning" || (page === "learn" && params.get("focus") === "backup")) &&
     params.has("focus") &&
     focusIndex >= 0
       ? focusIndex + 1

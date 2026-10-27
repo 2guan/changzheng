@@ -1384,43 +1384,56 @@ body:has(.atlas-poetry),
 .atlas-poetry {
   --chapter-ground: 34 16 20;
   background: rgb(var(--chapter-ground));
-  --chapter-seal: #4e2023f0;
-  --chapter-seal-hover: #67282b;
-  --chapter-seal-selected: #842e32;
-  --chapter-seal-halo: #42191d55;
-  --chapter-seal-shadow: #30181bc7;
+  --chapter-seal: #4e2023c7;
+  --chapter-seal-hover: #67282bde;
+  --chapter-seal-selected: #842e32eb;
+  --chapter-seal-halo: #42191d44;
+  --chapter-seal-shadow: #30181b99;
 }
-:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-stop {
+/* A translucent black palette lets the study landscape remain visible. */
+body:has(.atlas-learn),
+.atlas-learn {
+  --chapter-ground: 0 0 0;
+  --chapter-fade-lower: 78%;
+  --chapter-fade-bottom: 88%;
+  background: rgb(var(--chapter-ground));
+  --chapter-seal: #00000099;
+  --chapter-seal-hover: #000000bf;
+  --chapter-seal-selected: #a34431;
+  --chapter-seal-halo: #00000033;
+  --chapter-seal-shadow: #00000080;
+}
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry, .atlas-learn) .atlas-stop {
   background: radial-gradient(ellipse at center, var(--chapter-seal-shadow), transparent 70%);
 }
-:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-stop-pin {
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry, .atlas-learn) .atlas-stop-pin {
   background: var(--chapter-seal);
   box-shadow: 0 0 0 5px var(--chapter-seal-halo);
 }
-:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-stop:hover .atlas-stop-pin {
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry, .atlas-learn) .atlas-stop:hover .atlas-stop-pin {
   background: var(--chapter-seal-hover);
 }
-:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-stop.is-selected .atlas-stop-pin {
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry, .atlas-learn) .atlas-stop.is-selected .atlas-stop-pin {
   background: var(--chapter-seal-selected);
   box-shadow: 0 0 0 5px var(--chapter-seal-halo), 0 0 0 9px #efcb8c55;
 }
 
 /* Carry each chapter's seal palette through its route and reading-area fade. */
-:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-road-shadow {
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry, .atlas-learn) .atlas-road-shadow {
   stroke: var(--chapter-seal);
 }
-:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-shade {
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry, .atlas-learn) .atlas-shade {
   background: linear-gradient(
     180deg,
     rgb(var(--chapter-ground) / 70%),
     rgb(var(--chapter-ground) / 6%) 37%,
     rgb(var(--chapter-ground) / 28%) 62%,
-    rgb(var(--chapter-ground) / 94%) 86%,
-    rgb(var(--chapter-ground)) 100%
+    rgb(var(--chapter-ground) / var(--chapter-fade-lower, 94%)) 86%,
+    rgb(var(--chapter-ground) / var(--chapter-fade-bottom, 100%)) 100%
   );
 }
-:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry).atlas-quiet .atlas-shade {
-  background: linear-gradient(180deg, rgb(var(--chapter-ground) / 33%), transparent 60%, rgb(var(--chapter-ground)));
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry, .atlas-learn).atlas-quiet .atlas-shade {
+  background: linear-gradient(180deg, rgb(var(--chapter-ground) / 33%), transparent 60%, rgb(var(--chapter-ground) / var(--chapter-fade-bottom, 100%)));
 }
 
 /* Route labels belong to the drag surface, not the browser's text-selection UI. */

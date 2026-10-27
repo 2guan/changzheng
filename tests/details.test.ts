@@ -73,3 +73,15 @@ test("anniversary reading leads the meaning map and previous chapter links remai
     assert.equal(detail?.stop, stop);
   }
 });
+
+test("learning certificate has its own node and old backup links open the combined notebook", () => {
+  const certificate = atlasDetail("learn", new URLSearchParams("view=reading&stop=6&focus=certificate"));
+  assert.equal(certificate?.title, "纪念证书");
+  assert.equal(certificate?.params.get("focus"), "certificate");
+  for (const query of ["view=reading&stop=6&focus=backup", "view=reading&focus=backup"]) {
+    const notebook = atlasDetail("learn", new URLSearchParams(query));
+    assert.equal(notebook?.title, "行军笔记");
+    assert.equal(notebook?.stop, 4);
+    assert.equal(notebook?.params.get("focus"), "reflection");
+  }
+});

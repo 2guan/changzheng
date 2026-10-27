@@ -1,12 +1,12 @@
 # 重走长征路 · Docker 部署
 
-目标服务器：Linux x86_64（Docker 平台名称 `linux/amd64`）。默认访问端口为 **4061**，镜像名称为 `changzheng:1.05`。所有网页、图片、字体和互动资源均包含在镜像内；运行不依赖在线构建服务、数据库或外部素材服务。白桦流式讲解通过本地 Node 服务调用小米 TTS，需要服务器联网。
+目标服务器：Linux x86_64（Docker 平台名称 `linux/amd64`）。默认访问端口为 **4061**，镜像名称为 `changzheng:1.06`。所有网页、图片、字体和互动资源均包含在镜像内；运行不依赖在线构建服务、数据库或外部素材服务。白桦流式讲解通过本地 Node 服务调用小米 TTS，需要服务器联网。
 
 ## 使用已打包镜像（推荐）
 
 将 `release/` 下的以下文件上传到服务器同一目录：
 
-- `changzheng-1.05-linux-amd64.tar.gz`
+- `changzheng-1.06-linux-amd64.tar.gz`
 - `compose.yaml`
 - `SHA256SUMS`
 - `.env.local.example`
@@ -17,7 +17,7 @@
 
 ```sh
 sha256sum -c SHA256SUMS
-docker load -i changzheng-1.05-linux-amd64.tar.gz
+docker load -i changzheng-1.06-linux-amd64.tar.gz
 docker compose up -d --no-build --pull never
 docker compose ps
 curl -fsS http://127.0.0.1:4061/healthz
@@ -60,7 +60,7 @@ docker run -d --name changzheng \
   --read-only --tmpfs /tmp:rw,size=64m,mode=1777 \
   --cap-drop ALL --security-opt no-new-privileges:true \
   --log-opt max-size=10m --log-opt max-file=3 \
-  changzheng:1.05
+  changzheng:1.06
 ```
 
 两种启动方式选择一种，避免重复占用同一端口。
@@ -80,7 +80,7 @@ PORT=8080 docker compose up -d --no-build --pull never
 在项目根目录运行（首次构建需要访问镜像仓库和 npm）：
 
 ```sh
-docker buildx build --platform linux/amd64 --load -t changzheng:1.05 .
+docker buildx build --platform linux/amd64 --load -t changzheng:1.06 .
 docker compose up -d --no-build --pull never
 ```
 
@@ -90,7 +90,7 @@ docker compose up -d --no-build --pull never
 
 ```sh
 mkdir -p release
-docker save changzheng:1.05 | gzip > release/changzheng-1.05-linux-amd64.tar.gz
+docker save changzheng:1.06 | gzip > release/changzheng-1.06-linux-amd64.tar.gz
 ```
 
 ## 日常维护
@@ -105,3 +105,16 @@ docker compose down
 更新镜像后执行 `docker compose up -d --no-build --pull never --force-recreate`。
 
 收藏、阅读进度和笔记保存在访问者浏览器中。更换服务器地址、域名或端口会改变浏览器存储来源；迁移前可通过学习中心导出记录，再在新地址导入。历史资料出处外链仅在主动点击时打开，讲解由小米 TTS 提供；当前浏览器只会向本站提交待朗读正文，不会收到 API 密钥。
+
+## 版本信息卡片
+
+在 `.env.local` 中设置以下两行，配置在服务运行时读取，无需重新构建前端：
+
+```dotenv
+SITE_PRODUCER=纪念长征胜利90周年专题
+SITE_PRODUCER_BRANCH=
+```
+
+第一行未配置时使用上述默认文字，第二行未配置或留空时不显示。若需要两行单位名称，可分别填入 `SITE_PRODUCER` 和 `SITE_PRODUCER_BRANCH`。配置只改变菜单中的版本信息卡片，文字居中显示。
+
+修改后执行 `docker compose up -d --no-build --pull never --force-recreate`，再重新打开版本信息卡片。本地开发则重启 `npm run dev`。首次使用此配置功能需要更新到包含 `/api/site-config` 接口的新镜像；旧镜像无法读取这些字段。接口仅返回这两项公开展示文字，不返回语音密钥等服务端配置。

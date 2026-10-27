@@ -1,6 +1,6 @@
 # 重走长征路
 
-当前发布版本：**V1.05**。更新说明见 [1.05 版本记录](docs/releases/1.05.md)。
+当前发布版本：**V1.06**。更新说明见 [1.06 版本记录](docs/releases/1.06.md)。
 
 **循着先辈的足迹，走进山河深处。在每一次选择与跋涉中，读懂长征。**
 
@@ -112,14 +112,14 @@ API_HOST=0.0.0.0 API_PORT=4061 npm run server
 
 ## Docker 部署
 
-默认目标为 **Linux x86_64 / `linux/amd64`**，默认对外端口 **4061**。当前 Compose 使用镜像 `changzheng:1.05`。
+默认目标为 **Linux x86_64 / `linux/amd64`**，默认对外端口 **4061**。当前 Compose 使用镜像 `changzheng:1.06`。
 
 ### 从源码构建
 
 在仓库根目录准备 `.env.local` 后执行：
 
 ```sh
-docker buildx build --platform linux/amd64 --load -t changzheng:1.05 .
+docker buildx build --platform linux/amd64 --load -t changzheng:1.06 .
 docker compose up -d --no-build --pull never
 docker compose ps
 curl -fsS http://127.0.0.1:4061/healthz
@@ -133,7 +133,7 @@ curl -fsS http://127.0.0.1:4061/healthz
 
 ```sh
 sha256sum -c SHA256SUMS
-docker load -i changzheng-1.05-linux-amd64.tar.gz
+docker load -i changzheng-1.06-linux-amd64.tar.gz
 docker compose up -d --no-build --pull never --force-recreate
 docker compose ps
 ```
@@ -159,6 +159,8 @@ MIMO_TTS_PROMPT=
 | `MIMO_API_KEY`    | 无          | 服务端调用小米 MiMo 的密钥                            |
 | `MIMO_TTS_VOICE`  | `白桦`      | 发言人，填写上游支持的 Voice ID                       |
 | `MIMO_TTS_PROMPT` | 空          | 演绎提示词；留空时不发送风格指令                      |
+| `SITE_PRODUCER` | `纪念长征胜利90周年专题` | 版本信息卡片第一行；留空不显示 |
+| `SITE_PRODUCER_BRANCH` | 空 | 版本信息卡片第二行；留空不显示 |
 | `API_HOST`        | `127.0.0.1` | Node 监听地址；Docker 内设为 `0.0.0.0`                |
 | `API_PORT`        | `4061`      | Node 监听端口；开发脚本使用 `4062`                    |
 | `STATIC_ROOT`     | `dist`      | Node 提供静态文件的目录                               |
@@ -166,7 +168,7 @@ MIMO_TTS_PROMPT=
 
 当前上游地址与模型在 `server/index.mjs`、`server/tts.mjs` 中配置，不由环境变量切换。密钥不使用 `VITE_` 前缀；`.env.local` 已被 Git 和 Docker 构建上下文排除，容器运行时由 Compose 注入。
 
-修改发言人或提示词后，本地重启服务；Docker 执行：
+修改发言人、提示词或版本卡片文字后，本地重启服务；Docker 执行：
 
 ```sh
 docker compose up -d --no-build --pull never --force-recreate

@@ -816,6 +816,7 @@ export function ProgressBackup() {
                     { length: 15 },
                     (_, i) => p.answers[i] ?? next.answers[i] ?? null,
                   ),
+                  lastQuizAnswers: p.lastQuizAnswers.length ? p.lastQuizAnswers : next.lastQuizAnswers,
                   lastStation: next.lastStation,
                 }));
                 setStatus("记录已合并，已有收藏与足迹会保留。");

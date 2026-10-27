@@ -191,7 +191,7 @@ export const atlasRoutes: Record<string, AtlasRoute> = {
       {
         title: "行军笔记",
         subtitle: "04 · 写给自己",
-        description: "记录最有触动的一站，让看见的历史成为自己的思考。",
+        description: "记录最有触动的一站，也可在这里导出或恢复学习记录。",
         href: detail("learn", 4, "reflection"),
       },
       {
@@ -201,10 +201,10 @@ export const atlasRoutes: Record<string, AtlasRoute> = {
         href: detail("learn", 5, "saved"),
       },
       {
-        title: "行囊备份",
-        subtitle: "06 · 带走记录",
-        description: "导出或导入阅读与测验进度；文字笔记可在笔记区单独下载。",
-        href: detail("learn", 6, "backup"),
+        title: "纪念证书",
+        subtitle: "06 · 珍藏收获",
+        description: "将学习足迹与获得的勋章汇成专属纪念证书，生成并保存到本机。",
+        href: detail("learn", 6, "certificate"),
       },
     ],
   },

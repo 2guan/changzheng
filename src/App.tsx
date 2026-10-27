@@ -100,6 +100,21 @@ function Search({ onClose }: { onClose: () => void }) {
 }
 function DirectoryDialog({ onClose }: { onClose: () => void }) {
   const [showInfo, setShowInfo] = useState(false);
+  const [producerLines, setProducerLines] = useState(["纪念长征胜利90周年专题"]);
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch("/api/site-config", { cache: "no-store", signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error("Site configuration unavailable");
+        return response.json();
+      })
+      .then((config) => {
+        if (Array.isArray(config.producerLines) && config.producerLines.every((line: unknown) => typeof line === "string"))
+          setProducerLines(config.producerLines);
+      })
+      .catch(() => { /* Keep the public default when the service is unavailable. */ });
+    return () => controller.abort();
+  }, []);
   return (
     <Dialog
       title="全站目录"
@@ -132,13 +147,17 @@ function DirectoryDialog({ onClose }: { onClose: () => void }) {
             />
             <span>重走长征路</span>
           </div>
-          <p className="production-card-maker">
-            交付事业部<br />测试工程党支部
-          </p>
+          {producerLines.length > 0 && (
+            <p className="production-card-maker">
+              {producerLines.map((line, index) => (
+                <span key={index}>{index > 0 && <br />}{line}</span>
+              ))}
+            </p>
+          )}
           <dl>
             <div className="production-card-version">
               <dt>版本号</dt>
-              <dd>V1.05</dd>
+              <dd>V1.06</dd>
             </div>
           </dl>
         </section>

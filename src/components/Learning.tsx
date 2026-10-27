@@ -1,3 +1,4 @@
+import { answerQuiz, restartQuiz } from "../quizProgress";
 import { CertificatePanel } from "./CertificatePanel";
 import { BadgeGallery } from "./Badges";
 import { Experiences, Reflection, ProgressBackup } from "./Experiences";
@@ -317,6 +318,13 @@ export function Quiz({ onClose }: { onClose: () => void }) {
   const wrong = quiz
     .map((q, i) => (progress.answers[i] !== q.answer ? i : -1))
     .filter((i) => i >= 0);
+  const lastScore = progress.lastQuizAnswers.length === quiz.length
+    ? scoreAnswers(progress.lastQuizAnswers, quiz.map((q) => q.answer)) : null;
+  const restart = () => {
+    setProgress(restartQuiz);
+    setReview(false);
+    setIndex(0);
+  };
   const q = quiz[index];
   const answer = progress.answers[index];
   return (
@@ -326,6 +334,16 @@ export function Quiz({ onClose }: { onClose: () => void }) {
           <div className="quiz-top">
             <span>征途问答</span>
             <span>{String(index + 1).padStart(2, "0")} / 15</span>
+          </div>
+          <div className="quiz-attempt-summary">
+            <span>
+              {lastScore !== null
+                ? `上次成绩 ${Math.round(lastScore / quiz.length * 100)}% · 答对 ${lastScore}/${quiz.length} 题`
+                : "完成测验后，成绩会自动保存在本机。"}
+            </span>
+            {progress.answers.some((answer) => answer != null) && (
+              <button className="text-button" onClick={restart}><ArrowCounterClockwise />重新答题</button>
+            )}
           </div>
           <div className="quiz-progress">
             {quiz.map((_, i) => (
@@ -357,15 +375,7 @@ export function Quiz({ onClose }: { onClose: () => void }) {
                     : ""
                 }
                 onClick={() =>
-                  setProgress((p) => {
-                    if (p.answers[index] != null) return p;
-                    const answers = Array.from(
-                      { length: 15 },
-                      (_, j) => p.answers[j] ?? null,
-                    );
-                    answers[index] = i;
-                    return { ...p, answers };
-                  })
+                  setProgress((p) => answerQuiz(p, index, i))
                 }
               >
                 <span>{String.fromCharCode(65 + i)}</span>
@@ -412,16 +422,20 @@ export function Quiz({ onClose }: { onClose: () => void }) {
           <Certificate size={64} weight="duotone" />
           <p className="chapter-label">每一次回望，都是新的出发</p>
           <h2>这一程，你认真走过。</h2>
+          <p className="chapter-label">上次测验成绩 · 已保存</p>
           <div className="quiz-score">
-            <strong>{score}</strong>
-            <span>/ 15 题</span>
+            <strong>{Math.round(score / quiz.length * 100)}</strong>
+            <span>%</span>
           </div>
+          <p>答对 {score} / {quiz.length} 题</p>
           <p>
             {score === 15
               ? "全部答对。把理解带到更广阔的阅读里。"
               : `还有 ${15 - score} 个问题值得回看。理解，比一次答对更重要。`}
           </p>
-          <CertificatePanel />
+          <LinkButton href="#/learn?view=reading&stop=6&focus=certificate">
+            查看纪念证书
+          </LinkButton>
           <div className="result-actions">
             {wrong.length > 0 && (
               <button
@@ -436,14 +450,10 @@ export function Quiz({ onClose }: { onClose: () => void }) {
             )}
             <button
               className="text-button"
-              onClick={() => {
-                setProgress((p) => ({ ...p, answers: [] }));
-                setReview(false);
-                setIndex(0);
-              }}
+              onClick={restart}
             >
               <ArrowCounterClockwise />
-              重新测验
+              重新答题
             </button>
           </div>
           <p className="fineprint">
@@ -457,10 +467,8 @@ export function Quiz({ onClose }: { onClose: () => void }) {
 export function Learning({ params }: { params: URLSearchParams }) {
   const { progress, storageError } = useProgress();
   const [task, setTask] = useState<keyof typeof taskNames | null>(null);
-  const [quizOpen, setQuiz] = useState(false);
   const focus = params.get("focus");
   const [tab, setTab] = useState("saved");
-  const answered = progress.answers.filter((a) => a != null).length;
   const ids = tab === "saved" ? progress.saved : progress.visited;
   return (
     <div className="topic-content learning-detail">
@@ -469,38 +477,8 @@ export function Learning({ params }: { params: URLSearchParams }) {
           当前浏览器无法保存本地记录，仍可继续学习；关闭页面后进度可能丢失。
         </p>
       )}
-      {focus === "progress" && (
-        <>
-          <BadgeGallery />
-          <CertificatePanel />
-          <section className="learning-actions">
-            <div className="continue-panel">
-              <span className="chapter-label">沿着上次的脚步</span>
-              <h2>{milestones[progress.lastStation - 1].title}</h2>
-              <p>
-                第 {String(progress.lastStation).padStart(2, "0")} 站 ·{" "}
-                {milestones[progress.lastStation - 1].place}
-              </p>
-              <LinkButton href={`#/journey?station=${progress.lastStation}`}>
-                继续我的征途
-              </LinkButton>
-            </div>
-            <div id="atlas-quiz" tabIndex={-1} className="quiz-invite">
-              <Certificate size={45} />
-              <h2>你会如何理解这段历史？</h2>
-              <p>15 道情境题，逐题解析。让每一次思考，成为新的理解。</p>
-              <button className="text-button" onClick={() => setQuiz(true)}>
-                {answered === 15
-                  ? "查看结果与证书"
-                  : answered
-                    ? "继续知识测验"
-                    : "开始知识测验"}
-                <ArrowRight />
-              </button>
-            </div>
-          </section>
-        </>
-      )}
+      {focus === "progress" && <BadgeGallery />}
+      {focus === "certificate" && <CertificatePanel />}
       {focus === "tasks" && (
         <>
           {" "}
@@ -555,8 +533,12 @@ export function Learning({ params }: { params: URLSearchParams }) {
           </div>
         </>
       )}
-      {focus === "reflection" && <Reflection />}
-      {focus === "backup" && <ProgressBackup />}
+      {focus === "reflection" && (
+        <>
+          <Reflection />
+          <ProgressBackup />
+        </>
+      )}
       {focus === "saved" && (
         <>
           {" "}
@@ -610,10 +592,9 @@ export function Learning({ params }: { params: URLSearchParams }) {
         </>
       )}
       <p className="fineprint centered">
-        你的学习记录保存在当前浏览器，无需注册，可在行囊备份中导出。
+        你的学习记录保存在当前浏览器，无需注册，可在行军笔记中导出学习记录。
       </p>
       {task && <TaskDialog task={task} onClose={() => setTask(null)} />}
-      {quizOpen && <Quiz onClose={() => setQuiz(false)} />}
     </div>
   );
 }

@@ -57,7 +57,7 @@ export function AudioProvider({ children }: { children: ReactNode }) {
     error: "",
   });
   const [musicVolume, setMusicVolume] = useState(() =>
-    preference("changzheng-music-volume", 0.3),
+    preference("changzheng-music-volume", 0.2),
   );
   const [voiceVolume, setVoiceVolume] = useState(() =>
     preference("changzheng-voice-volume", 0.7),

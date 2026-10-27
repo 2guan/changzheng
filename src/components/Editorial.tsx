@@ -1,3 +1,4 @@
+import { poetrySongs } from "../poetrySongs";
 import { meaningAnniversary } from "../meaningAnniversary";
 import { NarrateButton } from "../audio";
 import {
@@ -13,7 +14,6 @@ import {
   ArrowRight,
   BookOpen,
   Check,
-  Quotes,
   ArrowSquareOut,
 } from "@phosphor-icons/react";
 import { stories, poems, sources } from "../data";
@@ -185,6 +185,7 @@ export function Poetry({ params }: { params: URLSearchParams }) {
   const active = n >= 0 && n < poems.length ? Math.floor(n) : 0;
   const [highlight, setHighlight] = useState(-1);
   const p = poems[active];
+  const song = poetrySongs[p.title];
   useEffect(() => setHighlight(-1), [active]);
   return (
     <article className="topic-content poetry-detail">
@@ -217,16 +218,6 @@ export function Poetry({ params }: { params: URLSearchParams }) {
           </div>
         </div>
       </div>
-      <section className="poem-commentary">
-        <Quotes size={32} />
-        <div>
-          <h3>把山河，读进诗里。</h3>
-          <p>{p.note}</p>
-          <a className="text-button" href={`#/journey?station=${p.station}`}>
-            在地图上读这首诗 <ArrowRight />
-          </a>
-        </div>
-      </section>
       <section className="reader">
         <h3>写诗背景与白话解读</h3>
         <RichText
@@ -241,14 +232,28 @@ export function Poetry({ params }: { params: URLSearchParams }) {
           </p>
         )}
       </section>
+      <a className="text-button" href={`#/journey?station=${p.station}`}>
+        在地图上读这首诗 <ArrowRight />
+      </a>
       <PoetryPractice key={`practice-${p.title}`} poem={p} />
-      <section className="song-note">
-        <h3>行军路上，也有歌声。</h3>
-        <p>
-          歌谣把月份、地点与行军记忆连成容易传唱的句子。以下为长征题材歌谣节选；流传版本需结合出处核对。
-        </p>
-        <RichText text={content.songs} />
-      </section>
+      {song && (
+        <section className="song-note" aria-label="行军路上，也有歌声">
+          <h3>行军路上，也有歌声。</h3>
+          <h4 className="poetry-song-title">《{song.title}》</h4>
+          <p className="poetry-song-meta">{song.collection}<br />{song.credits}</p>
+          {song.lyrics && <div className="poetry-song-lyrics" aria-label="歌词">
+            {song.lyrics.split("\n\n").map((stanza, index) => <p key={index}>{stanza}</p>)}
+          </div>}
+          <p>{song.background}</p>
+          <p>{song.connection}</p>
+          <a className="text-button" href={song.video.url} target="_blank" rel="noreferrer">
+            {song.video.label}<ArrowSquareOut />
+          </a>
+          <p className="fineprint" data-no-narration>
+            曲目资料：<a href={song.source.url} target="_blank" rel="noreferrer">{song.source.title}</a>
+          </p>
+        </section>
+      )}
     </article>
   );
 }
