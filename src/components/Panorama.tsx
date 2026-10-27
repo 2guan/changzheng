@@ -28,6 +28,8 @@ import { Reader } from "./Reader";
 import { NarrateButton, PageNarrateButton } from "../audio";
 import { stationNarration } from "../narration";
 import { focalPan } from "../landscapeFocus";
+import { stationReadings, stationReadingDetail } from "../stationReadings";
+import TopicDialog from "./TopicDialog";
 
 export default function Panorama({ params }: { params: URLSearchParams }) {
   const [progress, setProgress] = useState<PanoramaProgress>(() => {
@@ -53,7 +55,21 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
   const [reader, setReader] = useState(params.get("read") === "1");
   const readRequested = params.get("read") === "1";
   useEffect(() => setReader(readRequested), [readRequested, active]);
-  const [beat, setBeat] = useState(0);
+  const related = stationReadings(active);
+  const relatedDetail = stationReadingDetail(active, params);
+  const sections = [
+    { id: "first", name: "初见" },
+    { id: "arrival", name: "行至此处" },
+    { id: "reflection", name: "回望" },
+    ...(related.stories.length ? [{ id: "stories", name: "夜话" }] : []),
+    ...(related.poems.length ? [{ id: "poetry", name: "诗篇" }] : []),
+  ];
+  const section = relatedDetail?.page || params.get("section") || "first";
+  const beat = Math.max(
+    0,
+    sections.findIndex((s) => s.id === section),
+  );
+  const readingSection = sections[beat].id;
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
   const [storageError, setStorageError] = useState(false);
@@ -85,7 +101,6 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
   useEffect(() => {
     manuallyPanned.current = false;
     setPan(50);
-    setBeat(0);
     setDetail(null);
     setLoaded(false);
     setFailed(false);
@@ -141,7 +156,7 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
   }, [active, reduced]);
   useEffect(() => {
     const escape = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && !directory && !reader) {
+      if (e.key === "Escape" && !directory && !reader && !relatedDetail) {
         if (detail !== null) setDetail(null);
         else if (quiet) setQuiet(false);
         else setFocused(false);
@@ -149,7 +164,7 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
     };
     window.addEventListener("keydown", escape);
     return () => window.removeEventListener("keydown", escape);
-  }, [directory, reader, detail, quiet]);
+  }, [directory, reader, detail, quiet, !!relatedDetail]);
   const showDetail = (i: number) => {
     manuallyPanned.current = true;
     setDetails(true);
@@ -262,7 +277,7 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
           <PageNarrateButton
             id={`station-${active}`}
             text={stationNarration[active - 1]}
-            enabled={!reader && !readRequested}
+            enabled={!reader && !readRequested && !relatedDetail}
             label="本站讲解"
           />
           <button
@@ -309,12 +324,12 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
           {detail === null ? (
             <>
               <div className="panorama-story-tabs" aria-label="叙事段落">
-                {["初见", "行至此处", "回望"].map((name, i) => (
+                {sections.map(({ id, name }, i) => (
                   <button
                     key={name}
                     aria-pressed={beat === i}
                     onClick={() => {
-                      setBeat(i);
+                      go("journey", { station: active, section: id });
                     }}
                   >
                     {name}
@@ -322,14 +337,47 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
                   </button>
                 ))}
               </div>
-              <motion.p
-                key={`${active}-${beat}`}
-                initial={reduced ? false : { opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35 }}
-              >
-                {paragraphs[beat]}
-              </motion.p>
+              {beat < 3 ? (
+                <motion.p
+                  key={`${active}-${beat}`}
+                  initial={reduced ? false : { opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35 }}
+                >
+                  {paragraphs[beat]}
+                </motion.p>
+              ) : (
+                <div
+                  key={`${active}-${readingSection}`}
+                  className="panorama-related"
+                  aria-label={
+                    readingSection === "stories" ? "本站夜话" : "本站诗篇"
+                  }
+                >
+                  {(readingSection === "stories"
+                    ? related.stories.map((s) => ({
+                        key: `story-${s.id}`,
+                        title: s.title,
+                        subtitle: s.subtitle,
+                        href: `#/journey?station=${active}&section=stories&story=${s.id}`,
+                      }))
+                    : related.poems.map((p) => ({
+                        key: `poem-${p.index}`,
+                        title: p.title,
+                        subtitle: p.lines[0],
+                        href: `#/journey?station=${active}&section=poetry&poem=${p.index}`,
+                      }))
+                  ).map((item) => (
+                    <a key={item.key} href={item.href}>
+                      <div>
+                        <strong>{item.title}</strong>
+                        <span>{item.subtitle}</span>
+                      </div>
+                      <ArrowRight aria-hidden="true" />
+                    </a>
+                  ))}
+                </div>
+              )}
               {beat === 2 && (
                 <blockquote>{m.insight.replace("观察动画时，", "")}</blockquote>
               )}
@@ -446,15 +494,11 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
           ))}
         </div>
         <div className="panorama-colophon">
-          <span>
-            {failed
-              ? "当前全景未加载，显示备用画面。"
-              : "宽幅艺术全景 · 非实地360°影像"}
-          </span>
+          {failed && <span>当前全景未加载，显示备用画面。</span>}
           <span>
             {storageError
               ? "浏览器暂时无法保存浏览记录"
-              : `${progress.seen.length} / 22 站已浏览 · 自动续行`}
+              : `${progress.seen.length} / 22 站已走过`}
           </span>
         </div>
       </footer>
@@ -500,6 +544,15 @@ export default function Panorama({ params }: { params: URLSearchParams }) {
             setReader(false);
             visit(id);
           }}
+        />
+      )}
+      {relatedDetail && (
+        <TopicDialog
+          key={`${relatedDetail.page}-${relatedDetail.stop}`}
+          detail={relatedDetail}
+          onClose={() =>
+            go("journey", { station: active, section: relatedDetail.page })
+          }
         />
       )}
     </main>

@@ -9,6 +9,12 @@ RUN npm run build
 
 # Same-origin static hosting and streaming TTS proxy. Secrets enter only at runtime.
 FROM node:22-alpine AS runtime
+ARG VERSION=1.05
+ARG VCS_REF=unknown
+LABEL org.opencontainers.image.title="重走长征路" \
+      org.opencontainers.image.version=$VERSION \
+      org.opencontainers.image.revision=$VCS_REF \
+      org.opencontainers.image.source="https://github.com/2guan/changzheng"
 WORKDIR /app
 COPY --from=build /app/dist ./dist
 COPY server ./server

@@ -80,12 +80,14 @@ export function Dialog({
   onClose,
   wide = false,
   narratable = false,
+  headerActions,
 }: {
   title: string;
   children: ReactNode;
   onClose: () => void;
   wide?: boolean;
   narratable?: boolean;
+  headerActions?: ReactNode;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   const narrationId = useId();
@@ -143,6 +145,7 @@ export function Dialog({
               label="朗读正文"
             />
           )}
+          {headerActions}
           <button
             className="icon-button"
             aria-label="关闭窗口"

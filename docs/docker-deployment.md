@@ -1,12 +1,12 @@
 # 重走长征路 · Docker 部署
 
-目标服务器：Linux x86_64（Docker 平台名称 `linux/amd64`）。默认访问端口为 **4061**，镜像名称为 `changzheng:2026.10.26.4`。所有网页、图片、字体和互动资源均包含在镜像内；运行不依赖在线构建服务、数据库或外部素材服务。白桦流式讲解通过本地 Node 服务调用小米 TTS，需要服务器联网。
+目标服务器：Linux x86_64（Docker 平台名称 `linux/amd64`）。默认访问端口为 **4061**，镜像名称为 `changzheng:1.05`。所有网页、图片、字体和互动资源均包含在镜像内；运行不依赖在线构建服务、数据库或外部素材服务。白桦流式讲解通过本地 Node 服务调用小米 TTS，需要服务器联网。
 
 ## 使用已打包镜像（推荐）
 
 将 `release/` 下的以下文件上传到服务器同一目录：
 
-- `changzheng-2026.10.26.4-linux-amd64.tar.gz`
+- `changzheng-1.05-linux-amd64.tar.gz`
 - `compose.yaml`
 - `SHA256SUMS`
 - `.env.local.example`
@@ -17,7 +17,7 @@
 
 ```sh
 sha256sum -c SHA256SUMS
-docker load -i changzheng-2026.10.26.4-linux-amd64.tar.gz
+docker load -i changzheng-1.05-linux-amd64.tar.gz
 docker compose up -d --no-build --pull never
 docker compose ps
 curl -fsS http://127.0.0.1:4061/healthz
@@ -60,7 +60,7 @@ docker run -d --name changzheng \
   --read-only --tmpfs /tmp:rw,size=64m,mode=1777 \
   --cap-drop ALL --security-opt no-new-privileges:true \
   --log-opt max-size=10m --log-opt max-file=3 \
-  changzheng:2026.10.26.4
+  changzheng:1.05
 ```
 
 两种启动方式选择一种，避免重复占用同一端口。
@@ -80,7 +80,7 @@ PORT=8080 docker compose up -d --no-build --pull never
 在项目根目录运行（首次构建需要访问镜像仓库和 npm）：
 
 ```sh
-docker buildx build --platform linux/amd64 --load -t changzheng:2026.10.26.4 .
+docker buildx build --platform linux/amd64 --load -t changzheng:1.05 .
 docker compose up -d --no-build --pull never
 ```
 
@@ -90,7 +90,7 @@ docker compose up -d --no-build --pull never
 
 ```sh
 mkdir -p release
-docker save changzheng:2026.10.26.4 | gzip > release/changzheng-2026.10.26.4-linux-amd64.tar.gz
+docker save changzheng:1.05 | gzip > release/changzheng-1.05-linux-amd64.tar.gz
 ```
 
 ## 日常维护

@@ -68,6 +68,23 @@ export default function JourneyAtlas({
       moved: boolean;
     } | null>(null);
   const suppressClick = useRef(false);
+  const panFrame = useRef<number | null>(null);
+  function paintOffset() {
+    panFrame.current = null;
+    const transform = `translate3d(${offset.current.x}px,${offset.current.y}px,0)`;
+    if (plane.current) plane.current.style.transform = transform;
+    if (background.current) background.current.style.transform = transform;
+  }
+  function flushOffset() {
+    if (panFrame.current !== null) cancelAnimationFrame(panFrame.current);
+    paintOffset();
+  }
+  useEffect(
+    () => () => {
+      if (panFrame.current !== null) cancelAnimationFrame(panFrame.current);
+    },
+    [],
+  );
   const { progress } = useProgress();
   const compact = width < 500;
   const mapWidth = width * zoom;
@@ -103,7 +120,7 @@ export default function JourneyAtlas({
     image.style.height = `${frame.height}px`;
     image.style.left = `${frame.left}px`;
     image.style.top = `${frame.top}px`;
-    image.style.transform = `translate(${offset.current.x}px,${offset.current.y}px)`;
+    image.style.transform = `translate3d(${offset.current.x}px,${offset.current.y}px,0)`;
   }
   useEffect(() => {
     const el = viewport.current,
@@ -147,16 +164,17 @@ export default function JourneyAtlas({
       x: Math.max(bounds.minX, Math.min(bounds.maxX, x)),
       y: Math.max(bounds.minY, Math.min(bounds.maxY, y)),
     };
-    if (plane.current)
-      plane.current.style.transform = `translate(${offset.current.x}px,${offset.current.y}px)`;
-    paintBackground();
+    // Geometry only changes on resize/zoom. Dragging updates two compositor layers
+    // together, at most once per display frame, without width/height/style churn.
+    if (panFrame.current === null)
+      panFrame.current = requestAnimationFrame(paintOffset);
   }
   useEffect(() => {
     move(0, 0);
   }, [width, zoom]);
   function pointerDown(e: PointerEvent<HTMLElement>) {
     suppressClick.current = false;
-    if (e.button !== 0 || obscured || drag.current) return;
+    if (!e.isPrimary || e.button !== 0 || obscured || drag.current) return;
     const target = e.target as HTMLElement;
     if (
       target.closest(
@@ -188,6 +206,7 @@ export default function JourneyAtlas({
   }
   function pointerEnd(e: PointerEvent<HTMLElement>) {
     if (drag.current?.id !== e.pointerId) return;
+    flushOffset();
     suppressClick.current = e.type !== "pointercancel" && drag.current.moved;
     surface.current?.classList.remove("is-panning");
     drag.current = null;

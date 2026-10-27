@@ -19,7 +19,7 @@ test("all eight chapters have complete map routes, local artwork and real conten
   );
   assert.deepEqual(
     Object.values(atlasRoutes).map((r) => r.stops.length),
-    [6, 4, 22, 4, 20, 4, 6, 6],
+    [6, 4, 22, 5, 20, 4, 6, 6],
   );
   for (const [page, r] of Object.entries(atlasRoutes)) {
     assert.ok(existsSync(new URL("../public" + r.image, import.meta.url)));

@@ -48,7 +48,7 @@ export function RichText({ text }: { text: string }) {
             className="reading-table"
             tabIndex={0}
             role="region"
-            aria-label="横向滚动查看完整对照表"
+            aria-label="内容对照表"
           >
             <table>
               <thead>

@@ -7,6 +7,7 @@ import {
   Backpack,
   MagnifyingGlass,
   List,
+  Info,
   BookOpen,
   Mountains,
   ArrowSquareOut,
@@ -93,6 +94,65 @@ function Search({ onClose }: { onClose: () => void }) {
             </div>
           </>
         )}
+      </div>
+    </Dialog>
+  );
+}
+function DirectoryDialog({ onClose }: { onClose: () => void }) {
+  const [showInfo, setShowInfo] = useState(false);
+  return (
+    <Dialog
+      title="全站目录"
+      onClose={onClose}
+      headerActions={
+        <button
+          className="icon-button directory-info-button"
+          aria-label="制作方与版本信息"
+          aria-expanded={showInfo}
+          aria-controls="directory-production-info"
+          onClick={() => setShowInfo((value) => !value)}
+        >
+          <Info size={22} aria-hidden="true" />
+        </button>
+      }
+    >
+      <div className="directory-body">
+        <section
+          id="directory-production-info"
+          className="directory-production-info"
+          aria-label="制作方与版本信息"
+          hidden={!showInfo}
+        >
+          <div className="production-card-heading">
+            <img
+              src="/assets/department-logo.png"
+              alt=""
+              width={40}
+              height={40}
+            />
+            <span>重走长征路</span>
+          </div>
+          <p className="production-card-maker">
+            交付事业部<br />测试工程党支部
+          </p>
+          <dl>
+            <div className="production-card-version">
+              <dt>版本号</dt>
+              <dd>V1.05</dd>
+            </div>
+          </dl>
+        </section>
+        <nav className="mobile-nav">
+          {modules
+            .filter((m) => m.id !== "learn")
+            .map((m, i) => (
+              <a key={m.id} href={`#/${m.id}`} onClick={onClose}>
+                <span>0{i + 1}</span>
+                {m.name}
+                <ArrowUpRight />
+              </a>
+            ))}
+        </nav>
       </div>
     </Dialog>
   );
@@ -191,21 +251,7 @@ function Site() {
           </button>
         </div>
       </header>
-      {menu && (
-        <Dialog title="全站目录" onClose={() => setMenu(false)}>
-          <nav className="mobile-nav">
-            {modules
-              .filter((m) => m.id !== "learn")
-              .map((m, i) => (
-                <a key={m.id} href={`#/${m.id}`} onClick={() => setMenu(false)}>
-                  <span>0{i + 1}</span>
-                  {m.name}
-                  <ArrowUpRight />
-                </a>
-              ))}
-          </nav>
-        </Dialog>
-      )}
+      {menu && <DirectoryDialog onClose={() => setMenu(false)} />}
       <div id="main-content" tabIndex={-1}>
         {mapVisible && (
           <Atlas

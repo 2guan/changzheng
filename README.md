@@ -1,5 +1,7 @@
 # 重走长征路
 
+当前发布版本：**V1.05**。更新说明见 [1.05 版本记录](docs/releases/1.05.md)。
+
 **循着先辈的足迹，走进山河深处。在每一次选择与跋涉中，读懂长征。**
 
 “重走长征路”是交付事业部纪念长征胜利 90 周年专栏，也是一个以地图、全景、故事和声音串联历史内容的互动学习网站。读者可以沿着二十二个历史节点走进长征，也可以从一则故事、一首诗词或一支队伍的行程开始阅读。
@@ -37,11 +39,13 @@
 - 支持放大、缩小和上下左右拖动。电脑端右侧、手机端下方的图文预览也可直接点击进入当前站点。
 - 中央红军主路线结束于 1935 年的吴起镇；1936 年三大主力会师单独表达，不将两者画成直接连续的行军线。
 
+“四路红军”分别呈现四支队伍的独立行进地图、五阶段过程与总结，并增加“四路对照”，从时间、路线和贡献比较各支队伍。详细地图复用万里征途的地理坐标与地名数据。
+
 地图采用本地艺术底图与矢量路线叠加，不依赖在线地图 SDK、瓦片服务或地图密钥。地理定位依据、范围与数据来源见 [地图说明](docs/maps/journey-geography.md)。
 
 ### 二十二站全景与信纸阅读
 
-从于都夜渡到三大主力会师，每站都有独立宽幅画面、三段短叙事和可选观察点。读者可以左右环顾、隐藏文字看景、查看完整史料，也可以随时切换站点，不设解锁门槛。
+从于都夜渡到三大主力会师，每站都有独立宽幅画面、三段短叙事和可选观察点。读者可以左右环顾、隐藏文字看景、查看完整史料，也可以随时切换站点，不设解锁门槛。有对应故事或诗词的站点提供“夜话”“诗篇”入口，直接在当前场景上展开阅读。
 
 详情统一在当前场景上以暖黄旧信纸风格弹窗展开，保留背景与阅读上下文。手机端调整内边距，并将详情表格转为卡片；关闭弹窗或按 Escape 可回到地图。搜索、收藏和直接链接也能定位到对应内容。
 
@@ -108,14 +112,14 @@ API_HOST=0.0.0.0 API_PORT=4061 npm run server
 
 ## Docker 部署
 
-默认目标为 **Linux x86_64 / `linux/amd64`**，默认对外端口 **4061**。当前 Compose 使用镜像 `changzheng:2026.10.26.4`。
+默认目标为 **Linux x86_64 / `linux/amd64`**，默认对外端口 **4061**。当前 Compose 使用镜像 `changzheng:1.05`。
 
 ### 从源码构建
 
 在仓库根目录准备 `.env.local` 后执行：
 
 ```sh
-docker buildx build --platform linux/amd64 --load -t changzheng:2026.10.26.4 .
+docker buildx build --platform linux/amd64 --load -t changzheng:1.05 .
 docker compose up -d --no-build --pull never
 docker compose ps
 curl -fsS http://127.0.0.1:4061/healthz
@@ -129,7 +133,7 @@ curl -fsS http://127.0.0.1:4061/healthz
 
 ```sh
 sha256sum -c SHA256SUMS
-docker load -i changzheng-2026.10.26.4-linux-amd64.tar.gz
+docker load -i changzheng-1.05-linux-amd64.tar.gz
 docker compose up -d --no-build --pull never --force-recreate
 docker compose ps
 ```
@@ -207,6 +211,8 @@ src/
   journeyMap.ts             长征地理坐标、路线、地名与标签布局
   journeyGeography.json     地理矢量数据
   panoramas.ts              22 站全景、叙事与手机取景位置
+  armyChapters.ts           四支队伍独立篇章与共享地理数据
+  stationReadings.ts        征途节点关联故事、诗词与详情路由
   content.json / data.ts    正文内容库、模块与摘要数据
   meaningAnniversary.ts     长征回响纪念专题内容
   narration.ts              模块与站点讲解词

@@ -82,15 +82,24 @@ export const atlasRoutes: Record<string, AtlasRoute> = {
   armies: {
     mobileFocusX: 0.47,
     title: "不同来路，共赴远方。",
-    line: "四支队伍，四段行程。选择一条来路，读懂长征的全貌。",
+    line: "循着四支队伍的来路，看各自的征程，也看彼此的联系。",
     image: "/assets/panorama-17.webp",
     alt: "群山之间的河谷与桥梁上，两支队伍相遇",
-    stops: armies.map((a) => ({
-      title: a.name,
-      subtitle: a.time,
-      description: a.description,
-      href: `#/armies?army=${a.id}`,
-    })),
+    stops: [
+      ...armies.map((a) => ({
+        title: a.name,
+        subtitle: a.time,
+        description: a.description,
+        href: `#/armies?army=${a.id}`,
+      })),
+      {
+        title: "四路对照",
+        subtitle: "时间 · 路线 · 贡献",
+        description:
+          "从不同时间出发，走过不同的路。对照四支队伍的行程，理解相互策应与西北会合。",
+        href: detail("armies", 5, "comparison"),
+      },
+    ],
   },
   stories: {
     mobileFocusX: 0.8,
@@ -218,7 +227,9 @@ export function atlasSelection(page: string, params: URLSearchParams) {
         : page === "poetry" && params.has("poem")
           ? Number(params.get("poem")) + 1
           : page === "armies"
-            ? armies.findIndex((a) => a.id === params.get("army")) + 1
+            ? params.get("focus") === "comparison"
+              ? 5
+              : armies.findIndex((a) => a.id === params.get("army")) + 1
             : 0;
   const n = direct || Number(params.get("stop"));
   return Number.isInteger(n) && n >= 1 && n <= count ? n : 1;
@@ -307,4 +318,33 @@ export function atlasMobilePath(points: [number, number][], height: number) {
 export function homeMapHref(page: string) {
   const index = themeModules.findIndex((m) => m.id === page);
   return index < 0 ? "#/home" : `#/home?stop=${index + 1}`;
+}
+
+// The four force nodes share a narrative route; the comparison stays separate.
+export function armyAtlasLayout() {
+  return {
+    desktop: [
+      ...atlasPositions(4).map(([x]): [number, number] => [x, 28]),
+      [50, 78] as [number, number],
+    ],
+    mobile: {
+      height: 450,
+      rows: 3,
+      points: [
+        [24, 10],
+        [76, 10],
+        [76, 68],
+        [24, 68],
+        [50, 39],
+      ] as [number, number][],
+    },
+  };
+}
+export function armyAtlasPath(
+  points: [number, number][],
+  selected?: number,
+  height = 400,
+) {
+  if (selected === 5) return "";
+  return atlasMobilePath(points.slice(0, selected ?? 4), height);
 }

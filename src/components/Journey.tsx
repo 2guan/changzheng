@@ -1,4 +1,3 @@
-import { RichText, content } from "./ReadingContent";
 import { StationDecision, Experiences } from "./Experiences";
 import { ElevationTrail } from "./TerrainExplore";
 import { useState, useEffect, lazy, Suspense } from "react";
@@ -267,76 +266,4 @@ export function Journey({ params }: { params: URLSearchParams }) {
     </main>
   );
 }
-export function Armies({ params }: { params: URLSearchParams }) {
-  const army = params.get("army") || "first";
-  const a = armies.find((a) => a.id === army) || armies[0];
-  const setArmy = (id: string) => go("armies", { army: id });
-  return (
-    <article className="topic-content army-detail">
-      {" "}
-      <div className="army-layout">
-        <RouteMap army={army} setArmy={setArmy} />
-        <article className="army-dossier" style={{ borderColor: a.color }}>
-          <p className="chapter-label" data-no-narration>
-            {a.time}
-          </p>
-          <h2 data-no-narration>{a.name}</h2>
-          <p>{a.description}</p>
-          <dl>
-            <div>
-              <dt>出发地</dt>
-              <dd>{a.from}</dd>
-            </div>
-            <div>
-              <dt>会师 / 抵达地</dt>
-              <dd>{a.to}</dd>
-            </div>
-            <div>
-              <dt>行程概述</dt>
-              <dd>{a.distance}</dd>
-            </div>
-            <div>
-              <dt>主要领导人</dt>
-              <dd>{a.leaders}</dd>
-            </div>
-          </dl>
-          <p className="fineprint">
-            路线简化展示主要方向；各路行程统计存在口径差异。
-          </p>
-        </article>
-      </div>
-      <section className="section army-full-table">
-        <span className="chapter-label">四路全景 · 完整对照</span>
-        <h2>时间、行程，与各自的贡献。</h2>
-        <RichText text={content.armies} />
-        <p className="fineprint">
-          省份采用历史行政区划；兵力和里程随统计时点与口径不同而变化。
-        </p>
-      </section>
-      <section className="section">
-        <h2>同一段历史，不同的时间刻度。</h2>
-        <div className="army-timeline">
-          {armies.map((ar, i) => (
-            <div key={ar.id}>
-              <strong>{ar.name}</strong>
-              <div className="time-track">
-                <span
-                  style={{
-                    marginLeft: `${[0, 55, 22, 5][i]}%`,
-                    width: `${[52, 45, 78, 43][i]}%`,
-                    background: ar.color,
-                  }}
-                >
-                  {ar.time}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="editorial-note">
-          1935年10月，中央红军到达陕北；1936年10月，三大主力会师。两个时刻，都值得准确记住。
-        </p>
-      </section>
-    </article>
-  );
-}
+export { Armies } from "./ArmyChapter";

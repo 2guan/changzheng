@@ -81,11 +81,12 @@ test("all explicitly matched milestones and stories receive their own relevant d
     [19],
   );
   assert.deepEqual(discourseIds("poetry", new URLSearchParams("poem=2")), [13]);
+  assert.deepEqual(
+    discourseIds("armies", new URLSearchParams("focus=comparison")),
+    [14],
+  );
   for (const army of ["first", "second", "fourth", "twentyfive"])
-    assert.deepEqual(
-      discourseIds("armies", new URLSearchParams({ army })),
-      [14],
-    );
+    assert.deepEqual(discourseIds("armies", new URLSearchParams({ army })), []);
 });
 
 test("unmatched content and learning tools do not get an unrelated generic quotation", () => {

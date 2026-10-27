@@ -1,0 +1,272 @@
+.army-chapter {
+  min-width: 0;
+  color: #494033;
+  font-size: 17px;
+  line-height: 2;
+}
+.army-chapter-heading {
+  margin: 0 0 24px;
+}
+.army-chapter-heading h2 {
+  font: 34px/1.5 var(--serif);
+  color: #703b2b;
+  margin: 6px 0 10px;
+}
+.army-chapter-heading > p:last-child {
+  color: #877050;
+  margin: 0;
+}
+.army-chapter .army-chapter-lead {
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 28px;
+}
+.army-chapter h3 {
+  font: 24px/1.6 var(--serif);
+  color: #693d2b;
+  margin: 32px 0 18px;
+}
+.army-chapter-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 28px;
+  border-block: 1px solid #9c7c493b;
+  padding: 22px 0;
+}
+.army-chapter-facts > div {
+  min-width: 0;
+}
+.army-chapter-facts dt {
+  font-size: 12px;
+  color: #907651;
+}
+.army-chapter-facts dd {
+  margin: 4px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.army-geographic {
+  position: relative;
+  margin: 0;
+  background: #21372f;
+  color: #eddeb9;
+}
+.army-geographic-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 10 / 9;
+  overflow: hidden;
+  cursor: grab;
+  user-select: none;
+}
+.army-geographic-viewport:active {
+  cursor: grabbing;
+}
+.army-geographic-layer {
+  position: absolute;
+  will-change: transform;
+}
+.army-geographic-layer > svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
+}
+.army-province-labels {
+  fill: #e1d7b4;
+  opacity: 0.45;
+  font: 21px var(--font-body);
+  text-anchor: middle;
+}
+.army-city-labels text {
+  fill: #ffebbc;
+  stroke: #1e3029;
+  stroke-width: 3.5px;
+  paint-order: stroke;
+  stroke-linejoin: round;
+  text-anchor: middle;
+  font: 12px var(--font-body);
+}
+.army-geographic figcaption {
+  padding: 10px 12px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #d5c39c;
+}
+.army-map-controls {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  bottom: 47px;
+  background: #152d26e8;
+  border: 1px solid #dbc38a55;
+}
+.army-map-controls button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: #f5d79d;
+  border: 0;
+  background: transparent;
+}
+.army-map-controls button:disabled {
+  opacity: 0.3;
+}
+.army-map-controls button:hover:not(:disabled) {
+  background: #d9b77826;
+}
+.army-map-controls svg {
+  width: 20px;
+  height: 20px;
+}
+.army-place-index {
+  border-bottom: 1px solid #99794944;
+  padding: 8px 0 16px;
+  margin-bottom: 24px;
+}
+.army-place-index summary {
+  cursor: pointer;
+  color: #856139;
+  font-size: 14px;
+  padding: 8px 0;
+}
+.army-place-index p {
+  font-size: 14px;
+  line-height: 2;
+  color: #76634a;
+}
+.army-march-stage {
+  position: relative;
+  padding: 0 0 28px 30px;
+  border-left: 1px solid #a5865455;
+  margin-left: 10px;
+}
+.army-march-stage:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+.army-stage-number {
+  position: absolute;
+  left: -14px;
+  top: 0;
+  background: #f1e6c9;
+  border: 1px solid #ad936666;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  color: #845336;
+  font-size: 12px;
+}
+.army-chapter .army-stage-date {
+  font-size: 13px;
+  color: #8f7048;
+  margin: 0 0 4px;
+}
+.army-march-stage h4 {
+  margin: 0 0 10px;
+  font: 23px/1.6 var(--serif);
+  color: #5f3829;
+}
+.army-chapter .army-stage-places {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #8c7557;
+  margin: 0 0 14px;
+}
+.army-march-stage p:last-child {
+  margin: 0;
+}
+.army-conclusion {
+  border-block: 1px solid #97734555;
+  margin-top: 32px;
+  padding-bottom: 16px;
+}
+.army-related {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  margin: 28px 0;
+}
+.army-related a,
+.army-compare-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  color: #8b4430;
+  font-size: 15px;
+  border-bottom: 1px solid #a4865355;
+  padding: 12px 0;
+  text-decoration: none;
+}
+.army-related svg,
+.army-compare-link svg {
+  flex: none;
+}
+.army-time-comparison {
+  padding: 20px 0;
+  border-block: 1px solid #a4865344;
+  margin: 24px 0;
+}
+.army-time-comparison > div + div {
+  margin-top: 16px;
+}
+.army-time-comparison strong {
+  font: 18px var(--serif);
+  margin-right: 14px;
+}
+.army-time-comparison span {
+  font-size: 12px;
+  color: #826e50;
+}
+.army-time-axis {
+  height: 7px;
+  background: #5f4a3214;
+  margin-top: 8px;
+}
+.army-time-axis i {
+  display: block;
+  height: 100%;
+  box-shadow: inset 0 0 0 1px #5c3a3426;
+}
+.army-chapter .source-block a {
+  display: block;
+  margin: 8px 0;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 768px) {
+  .army-chapter {
+    font-size: 16px;
+  }
+  .army-chapter-heading h2 {
+    font-size: 28px;
+  }
+  .army-chapter-facts {
+    gap: 16px;
+  }
+  .army-chapter-facts dd {
+    font-size: 14px;
+  }
+  .army-chapter .army-chapter-lead {
+    font-size: 17px;
+  }
+  .army-march-stage {
+    padding-left: 23px;
+  }
+  .army-march-stage h4 {
+    font-size: 21px;
+  }
+  .army-related {
+    grid-template-columns: 1fr;
+  }
+  .army-time-comparison span {
+    display: block;
+  }
+}

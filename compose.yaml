@@ -1,6 +1,6 @@
 services:
   changzheng:
-    image: changzheng:2026.10.26.4
+    image: changzheng:1.05
     platform: linux/amd64
     build:
       context: .

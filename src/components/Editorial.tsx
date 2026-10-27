@@ -19,36 +19,10 @@ import {
 import { stories, poems, sources } from "../data";
 import { useProgress } from "../state";
 import { ImportantDiscourse } from "./ImportantDiscourse";
-import { Reveal } from "./UI";
 import { Packing } from "./Learning";
 
 export function Prologue({ params }: { params: URLSearchParams }) {
   const { setProgress } = useProgress();
-  const [comparison, setComparison] = useState(0);
-  const comparisons = [
-    {
-      title: "兵力",
-      left: "8.6万余",
-      right: "约50万",
-      unit: "出发时中央红军人数 / 直接进攻中央苏区兵力",
-      text: "两组数字对应不同时间与统计范围，不能直接当作同一战场上的兵力对比。它们帮助理解战略转移前后的力量条件。",
-    },
-    {
-      title: "战略",
-      left: "运动战",
-      right: "堡垒推进",
-      unit: "集中优势、灵活机动 / 逐步压缩根据地",
-      text: "第五次反“围剿”中，对方采用堡垒推进与经济封锁。红军此前有效的机动作战经验，没有得到充分发挥。",
-    },
-    {
-      title: "补给",
-      left: "日渐困难",
-      right: "封锁加紧",
-      unit: "粮食、盐与药品短缺 / 根据地空间持续收缩",
-      text: "战争不是只有前线交战。封锁使普通人的生活和军队供给一起承压，失去回旋空间后，战略转移成为选择。",
-    },
-  ];
-  const c = comparisons[comparison];
   const focus = params.get("focus");
   if (focus?.startsWith("chapter-")) {
     const chapter = content.prologue[focus === "chapter-1" ? 1 : 0];
@@ -85,38 +59,68 @@ export function Prologue({ params }: { params: URLSearchParams }) {
       </article>
     );
   return (
-    <article className="topic-content">
-      {" "}
-      <section id="atlas-comparison" tabIndex={-1} className="section">
-        <Reveal>
-          <h2 data-no-narration>把当时的处境，摆在一起看。</h2>
-          <div className="tabs">
-            {comparisons.map((x, i) => (
-              <button
-                key={x.title}
-                onClick={() => setComparison(i)}
-                className={comparison === i ? "active" : ""}
-              >
-                {x.title}
-              </button>
-            ))}
-          </div>
-          <div className="comparison">
-            <div>
-              <span>红军与中央苏区</span>
-              <strong>{c.left}</strong>
-            </div>
-            <span className="comparison-divider">与</span>
-            <div>
-              <span>围堵与封锁</span>
-              <strong>{c.right}</strong>
-            </div>
-          </div>
-          <p className="centered fineprint">{c.unit}</p>
-          <p className="comparison-explanation" aria-live="polite">
-            {c.text}
-          </p>
-        </Reveal>
+    <article id="atlas-comparison" tabIndex={-1} className="reader">
+      <h2 data-no-narration>当时的处境</h2>
+      <p>
+        1933年秋，第五次反“围剿”开始。中央苏区面对的压力，既来自国民党军队在兵力和装备上的优势，也来自封锁加紧、物资不足，以及红军军事指挥上的错误。到1934年秋，这些困难使红军难以继续留在原来的根据地作战。
+      </p>
+      <h3>兵力和装备：双方的条件并不相同</h3>
+      <p>
+        第五次反“围剿”开始时，中央革命根据地的主力红军有8万多人，国民党方面先以约50万兵力向中央苏区进攻。国民党军队人数较多、装备较好；红军兵力较少、装备较差。这是整个作战区域的总体情况，并不是某一场战斗中同时交战的人数。
+      </p>
+      <h3>作战方式：堡垒推进，压缩回旋余地</h3>
+      <p>
+        国民党军队改变了过去长驱直入的办法，采取持久作战和堡垒推进，边修筑工事边向前推进，逐步缩小苏区范围。红军过去依靠灵活机动、集中兵力，曾在敌军总体占优的情况下取得反“围剿”的胜利。
+      </p>
+      <p>
+        但在第五次反“围剿”中，博古、李德等人放弃了此前行之有效的积极防御方针，先采取冒险进攻，要求在根据地之外战胜敌军，受挫后又转向消极防御。红军被要求同装备更好的对手打阵地战、堡垒战，人员和弹药不断消耗，机动作战的长处难以发挥。
+      </p>
+      <h3>补给和生活：封锁也落在百姓身上</h3>
+      <p>
+        国民党方面在军事进攻之外，还严控交通和贸易，限制粮食、食盐、布匹、药材等物资进入苏区。苏区既要维持群众生活，又要供应前线；战争造成的损耗和不当的经济政策，又加重了困难。食盐、药品等物资短缺，不只影响军队，也影响普通家庭。
+      </p>
+      <p>
+        苏区军民曾通过发展生产、组织贸易和秘密运输争取补给，缓解了一部分困难，但随着封锁加紧和根据地缩小，物资来源仍然受到很大限制。
+      </p>
+      <h3>从坚守到转移</h3>
+      <p>
+        1934年4月，广昌失守，此后根据地继续缩小，军队和群众的负担越来越重。5月，中央书记处决定准备撤出主力；到9月，国民党军队进一步进攻苏区腹地，局面更加困难。10月，中共中央、中革军委率中央红军主力等8.6万余人开始战略转移。
+      </p>
+      <p>
+        因此，长征出发前的处境，不能只用兵力多少来解释。敌军的优势、严密的封锁和红军指挥上的错误共同造成了困局。离开中央苏区，是第五次反“围剿”失利后，为保存力量、寻找新的发展条件而采取的行动。
+      </p>
+      <section className="source-block" data-no-narration>
+        <h3>参考资料</h3>
+        <p>
+          <a
+            href="https://www.12371.cn/2022/04/11/ARTI1649653908063997.shtml"
+            target="_blank"
+            rel="noreferrer"
+          >
+            共产党员网：《为什么中央红军要进行战略转移的漫漫长征？》
+            <ArrowSquareOut />
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://www.mem.gov.cn/xw/ztzl/2021/dsxxjy/xxfd/202103/t20210329_382254.shtml"
+            target="_blank"
+            rel="noreferrer"
+          >
+            学习时报：《1933：高天滚滚寒流急》（应急管理部转载）
+            <ArrowSquareOut />
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://www.dswxyjy.org.cn/n1/2016/0530/c219021-28393265.html"
+            target="_blank"
+            rel="noreferrer"
+          >
+            中央党史和文献研究院：《中央苏区时期的经济封锁与反封锁》
+            <ArrowSquareOut />
+          </a>
+        </p>
       </section>
     </article>
   );

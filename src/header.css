@@ -5,13 +5,30 @@
 body .site-header,
 body:has(.atlas) .site-header,
 body:has(.atlas-home) .site-header {
-  background: linear-gradient(180deg, #181c19e6 0%, #1c201ab3 46%, #20221b52 78%, transparent 100%);
+  background: transparent;
   color: #ede0c7;
   border-bottom: 0;
   box-shadow: none;
   backdrop-filter: none;
   margin-bottom: calc(-1 * var(--site-header-height));
-  text-shadow: 0 1px 5px #101812aa;
+  text-shadow: 0 1px 5px #000000aa;
+}
+/* Extend the fade without moving navigation or covering page controls. */
+body .site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 -28px;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #000000c7 0%,
+    #000000a3 24%,
+    #00000066 48%,
+    #0000002e 70%,
+    #0000000a 88%,
+    #00000000 100%
+  );
 }
 body .site-header .brand small,
 body .site-header .desktop-nav a {

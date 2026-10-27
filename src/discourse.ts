@@ -37,7 +37,7 @@ export function discourseIds(page: string, params: URLSearchParams): number[] {
     if (focus === "comparison" || focus === "chapter-0") id = 1;
     if (focus === "chapter-1") id = 2;
   }
-  if (page === "armies") id = 14;
+  if (page === "armies" && params.get("focus") === "comparison") id = 14;
   if (page === "poetry" && params.get("poem") === "2") id = 13;
   if (page === "meaning") {
     const focus = params.get("focus");

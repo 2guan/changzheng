@@ -197,8 +197,22 @@
 .dialog .artifact-viewer > img {
   border-radius: 4px;
 }
+.dialog .reading-table-group,
+.dialog .reading-table {
+  min-width: 0;
+  max-width: 100%;
+}
+.dialog .reading-table table {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+}
 .dialog .reading-table th,
 .dialog .reading-table td {
+  min-width: 0;
+  padding: 12px 10px;
+  white-space: normal;
+  overflow-wrap: anywhere;
   border-color: var(--dialog-rule);
 }
 .reading-table-cards {
@@ -447,5 +461,98 @@
   }
   .dialog::before {
     display: none;
+  }
+}
+
+/* A compact production note tucked into the directory's parchment. */
+.dialog-bar .directory-info-button[aria-expanded="true"] {
+  color: #8d3027;
+  background: #bda37c22;
+}
+.directory-body {
+  position: relative;
+}
+.directory-production-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: min(100%, 250px);
+  margin: 0;
+  padding: 18px 20px 16px;
+  border: 1px solid #b69a686b;
+  border-top: 3px solid #853b30;
+  border-radius: 5px 5px 12px 5px;
+  background:
+    linear-gradient(125deg, #fffaf0de, #f3e6cae8),
+    url("/assets/letter-paper-aged.webp") center / cover,
+    #f8efdb;
+  box-shadow: 0 3px 8px #55401f0a, 0 12px 24px #55401f18;
+}
+.directory-production-info::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid #b69a682e;
+  border-radius: 1px 1px 7px 1px;
+  pointer-events: none;
+}
+.production-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  color: #713a2d;
+  font-family: var(--font-title);
+  font-size: 20px;
+  line-height: 1.3;
+}
+.production-card-heading img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.directory-production-info dl {
+  margin: 0;
+}
+.directory-production-info dt {
+  color: #8b7756;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+.directory-production-info dd {
+  margin: 0;
+  color: #543d2b;
+  font-size: 17px;
+  line-height: 1.75;
+}
+.production-card-maker {
+  margin: 0 0 12px;
+  color: #543d2b;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: center;
+}
+.production-card-version {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #b69a6847;
+  padding-top: 10px;
+}
+.production-card-version dd {
+  color: #8a3c30;
+  padding: 2px 10px;
+  background: #913c2b0a;
+  border: 1px solid #913c2b26;
+  border-radius: 3px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 600px) {
+  .directory-production-info {
+    padding: 18px 20px 16px;
   }
 }

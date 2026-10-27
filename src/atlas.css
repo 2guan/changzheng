@@ -401,7 +401,7 @@ body:has(.atlas) .backpack-link {
 }
 .atlas-colophon {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 16px;
   color: #a9b2a5;
   font-size: 9px;
@@ -1244,4 +1244,188 @@ body:has(.atlas-home) .desktop-nav a:hover {
 .atlas a,
 .atlas button {
   cursor: pointer;
+}
+
+/* A small wooden marker, quieter than the numbered route seals. */
+.atlas-comparison-stop .atlas-stop-pin,
+.atlas-comparison-stop.is-selected .atlas-stop-pin {
+  width: 112px;
+  height: 42px;
+  border-radius: 5px;
+  border-color: #b89a653d;
+  background:
+    repeating-linear-gradient(
+      2deg,
+      transparent 0 6px,
+      #d8b37408 7px,
+      transparent 8px 13px
+    ),
+    linear-gradient(105deg, #392423c2, #271a19c7);
+  box-shadow:
+    inset 0 1px #d7b77c12,
+    0 3px 10px #16130e30;
+  color: #dfcba6;
+  text-shadow: 0 1px 3px #1e160dcc;
+}
+.atlas-comparison-stop:hover .atlas-stop-pin,
+.atlas-comparison-stop:focus-visible .atlas-stop-pin {
+  background-color: #542d29;
+  border-color: #c8a76b70;
+  color: #f4dfb6;
+  transform: translateY(-1px);
+}
+.atlas-comparison-pin-title {
+  width: auto;
+  font-family: var(--font-title);
+  font-size: 17px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .atlas-comparison-stop .atlas-stop-pin,
+  .atlas-comparison-stop.is-selected .atlas-stop-pin {
+    width: 108px;
+    height: 42px;
+  }
+  .atlas-comparison-pin-title {
+    font-size: 16px;
+  }
+}
+
+/* Warm red-brown seals for this chapter, with the shared selected red. */
+.atlas-armies .atlas-road-shadow {
+  stroke: #532c29e8;
+}
+.atlas-armies
+  .atlas-stop:not(.atlas-comparison-stop):not(.is-selected)
+  .atlas-stop-pin {
+  background: #532c29e8;
+  box-shadow: 0 0 0 5px #48242255;
+}
+.atlas-armies
+  .atlas-stop:not(.atlas-comparison-stop):not(.is-selected):hover
+  .atlas-stop-pin {
+  background: #69362e;
+}
+.atlas-comparison-stop.is-selected .atlas-stop-pin {
+  background: #a34431;
+  border-color: #ffe6ad;
+  color: #fff0d2;
+  box-shadow:
+    0 0 0 5px #ac743e44,
+    0 0 0 9px #efcb8c55;
+}
+
+/* Keep the chapter's large soft shadows in the same warm palette. */
+body:has(.atlas-armies),
+.atlas-armies {
+  background: #241716;
+}
+.atlas-armies .atlas-stop {
+  background: radial-gradient(ellipse at center, #301c1bc7, transparent 70%);
+  text-shadow:
+    0 2px 6px #201211,
+    0 1px 14px #201211;
+}
+.atlas-armies .atlas-shade {
+  background: linear-gradient(
+    180deg,
+    #241716b3,
+    #291b190f 37%,
+    #291b1947 62%,
+    #241716ef 86%,
+    #241716 100%
+  );
+}
+.atlas-armies.atlas-quiet .atlas-shade {
+  background: linear-gradient(180deg, #24171655, transparent 60%, #241716);
+}
+.atlas-armies .atlas-heading h1 {
+  text-shadow: 0 2px 22px #241716aa;
+}
+.atlas-armies .atlas-dock {
+  border-top-color: #c9a77c4a;
+}
+
+/* Chapter-specific seal colors; gold lettering and selection rings stay shared. */
+body:has(.atlas-prologue),
+.atlas-prologue {
+  --chapter-ground: 15 25 38;
+  background: rgb(var(--chapter-ground));
+  --chapter-seal: #21364bf0;
+  --chapter-seal-hover: #2b465f;
+  --chapter-seal-selected: #345673;
+  --chapter-seal-halo: #182b4055;
+  --chapter-seal-shadow: #142234c7;
+}
+body:has(.atlas-stories),
+.atlas-stories {
+  --chapter-ground: 29 21 16;
+  background: rgb(var(--chapter-ground));
+  --chapter-seal: #3e2b20f0;
+  --chapter-seal-hover: #543a29;
+  --chapter-seal-selected: #69452e;
+  --chapter-seal-halo: #35231855;
+  --chapter-seal-shadow: #291c15c7;
+}
+body:has(.atlas-meaning),
+.atlas-meaning {
+  --chapter-ground: 31 21 8;
+  background: rgb(var(--chapter-ground));
+  --chapter-seal: #573b13f0;
+  --chapter-seal-hover: #704b18;
+  --chapter-seal-selected: #825922;
+  --chapter-seal-halo: #49300f55;
+  --chapter-seal-shadow: #30200cc7;
+}
+body:has(.atlas-poetry),
+.atlas-poetry {
+  --chapter-ground: 34 16 20;
+  background: rgb(var(--chapter-ground));
+  --chapter-seal: #4e2023f0;
+  --chapter-seal-hover: #67282b;
+  --chapter-seal-selected: #842e32;
+  --chapter-seal-halo: #42191d55;
+  --chapter-seal-shadow: #30181bc7;
+}
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-stop {
+  background: radial-gradient(ellipse at center, var(--chapter-seal-shadow), transparent 70%);
+}
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-stop-pin {
+  background: var(--chapter-seal);
+  box-shadow: 0 0 0 5px var(--chapter-seal-halo);
+}
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-stop:hover .atlas-stop-pin {
+  background: var(--chapter-seal-hover);
+}
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-stop.is-selected .atlas-stop-pin {
+  background: var(--chapter-seal-selected);
+  box-shadow: 0 0 0 5px var(--chapter-seal-halo), 0 0 0 9px #efcb8c55;
+}
+
+/* Carry each chapter's seal palette through its route and reading-area fade. */
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-road-shadow {
+  stroke: var(--chapter-seal);
+}
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry) .atlas-shade {
+  background: linear-gradient(
+    180deg,
+    rgb(var(--chapter-ground) / 70%),
+    rgb(var(--chapter-ground) / 6%) 37%,
+    rgb(var(--chapter-ground) / 28%) 62%,
+    rgb(var(--chapter-ground) / 94%) 86%,
+    rgb(var(--chapter-ground)) 100%
+  );
+}
+:is(.atlas-prologue, .atlas-stories, .atlas-meaning, .atlas-poetry).atlas-quiet .atlas-shade {
+  background: linear-gradient(180deg, rgb(var(--chapter-ground) / 33%), transparent 60%, rgb(var(--chapter-ground)));
+}
+
+/* Route labels belong to the drag surface, not the browser's text-selection UI. */
+.atlas-map-area {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }

@@ -15,7 +15,7 @@ const Poetry = lazy(() =>
   import("./Editorial").then((m) => ({ default: m.Poetry })),
 );
 const Armies = lazy(() =>
-  import("./Journey").then((m) => ({ default: m.Armies })),
+  import("./ArmyChapter").then((m) => ({ default: m.Armies })),
 );
 const Learning = lazy(() =>
   import("./Learning").then((m) => ({ default: m.Learning })),

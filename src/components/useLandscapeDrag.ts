@@ -1,7 +1,6 @@
 import {
   useEffect,
   useRef,
-  useState,
   type PointerEvent as ReactPointerEvent,
   type MouseEvent,
   type KeyboardEvent,
@@ -23,7 +22,8 @@ export function useLandscapeDrag(
   const pendingScroll = useRef<{ viewport: HTMLElement; left: number } | null>(
     null,
   );
-  const [dragging, setDragging] = useState(false);
+  const dragging = useRef(false);
+  const nativeVerticalScroll = useRef(true);
   const gesture = useRef<{
     id: number;
     x: number;
@@ -51,6 +51,10 @@ export function useLandscapeDrag(
     if (animationFrame.current === null) {
       animationFrame.current = requestAnimationFrame(paint);
     }
+  };
+  const setDragging = (active: boolean) => {
+    dragging.current = active;
+    surface.current?.classList.toggle("is-dragging-landscape", active);
   };
   const cancelPaint = () => {
     if (animationFrame.current !== null)
@@ -82,6 +86,12 @@ export function useLandscapeDrag(
     if (!el || !image) return;
     const measure = () => {
       const viewportWidth = el.clientWidth;
+      // A full-screen map owns one-finger gestures, including diagonal swipes.
+      // Long chapters still yield vertical scrolling and pinch zoom to the browser.
+      nativeVerticalScroll.current = el.scrollHeight > window.innerHeight + 1;
+      el.style.touchAction = nativeVerticalScroll.current
+        ? "pan-y pinch-zoom"
+        : "pinch-zoom";
       const ratio = image.naturalWidth / image.naturalHeight || 1.8;
       const width = Math.max(viewportWidth * 1.2, image.clientHeight * ratio);
       frame.current = { width, travel: width - viewportWidth };
@@ -98,10 +108,12 @@ export function useLandscapeDrag(
     observer.observe(el);
     observer.observe(image);
     image.addEventListener("load", measure);
+    window.addEventListener("resize", measure);
     measure();
     return () => {
       observer.disconnect();
       image.removeEventListener("load", measure);
+      window.removeEventListener("resize", measure);
     };
   }, [resetKey, mobileFocusX]);
 
@@ -123,7 +135,13 @@ export function useLandscapeDrag(
     dragging,
     handlers: {
       onPointerDown(event: ReactPointerEvent<HTMLElement>) {
-        if (disabled || !event.isPrimary || event.button !== 0) return;
+        if (
+          disabled ||
+          !event.isPrimary ||
+          event.button !== 0 ||
+          gesture.current
+        )
+          return;
         suppressClick.current = false;
         if (
           (event.target as Element).closest(
@@ -141,7 +159,9 @@ export function useLandscapeDrag(
           start: position.current,
           moved: false,
           viewport:
-            viewport && viewport.scrollWidth > viewport.clientWidth
+            viewport &&
+            window.matchMedia("(min-width: 769px)").matches &&
+            viewport.scrollWidth > viewport.clientWidth
               ? viewport
               : null,
           scroll: viewport?.scrollLeft || 0,
@@ -153,7 +173,12 @@ export function useLandscapeDrag(
         const dx = event.clientX - drag.x;
         const dy = event.clientY - drag.y;
         if (!drag.moved) {
-          if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 8) {
+          // Wait for a clear direction instead of rejecting the first diagonal sample.
+          if (Math.hypot(dx, dy) < 10) return;
+          if (
+            nativeVerticalScroll.current &&
+            Math.abs(dy) > Math.abs(dx) * 1.3
+          ) {
             gesture.current = null;
             return;
           }

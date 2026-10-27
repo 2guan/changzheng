@@ -11,6 +11,8 @@ import {
 } from "@phosphor-icons/react";
 import { modules, themeModules } from "../data";
 import {
+  armyAtlasLayout,
+  armyAtlasPath,
   atlasRoutes,
   atlasSelection,
   atlasPositions,
@@ -48,11 +50,14 @@ function NarrativeAtlas({
   const selected = atlasSelection(page, params);
   const [preview, setPreview] = useState(selected);
   const current = route.stops[preview - 1];
-  const points = atlasPositions(route.stops.length);
-  const mobile = atlasMobileLayout(
-    route.stops.length,
-    page === "home" ? 2 : undefined,
-  );
+  const points =
+    page === "armies"
+      ? armyAtlasLayout().desktop
+      : atlasPositions(route.stops.length);
+  const mobile =
+    page === "armies"
+      ? armyAtlasLayout().mobile
+      : atlasMobileLayout(route.stops.length, page === "home" ? 2 : undefined);
   const [quiet, setQuiet] = useState(false);
   const [failed, setFailed] = useState(false);
   const { progress } = useProgress();
@@ -118,10 +123,10 @@ function NarrativeAtlas({
     <main
       ref={landscape.surface}
       {...landscape.handlers}
-      className={`atlas ${page === "home" ? "atlas-home" : ""} ${page !== "journey" && page !== "stories" ? "atlas-fit" : ""} ${quiet ? "atlas-quiet" : ""} ${landscape.dragging ? "is-dragging-landscape" : ""}`}
+      className={`atlas atlas-${page} ${page !== "journey" && page !== "stories" ? "atlas-fit" : ""} ${quiet ? "atlas-quiet" : ""}`}
       style={
         {
-          "--fit-map-min-height": `${mobile.rows * (page === "poetry" ? 110 : 80)}px`,
+          "--fit-map-min-height": `${mobile.rows * (page === "poetry" ? 110 : page === "armies" ? 100 : 80)}px`,
         } as CSSProperties
       }
     >
@@ -219,11 +224,25 @@ function NarrativeAtlas({
               preserveAspectRatio="none"
               aria-hidden="true"
             >
-              <path className="atlas-road-shadow" d={atlasPath(points)} />
-              <path className="atlas-road" d={atlasPath(points)} />
+              <path
+                className="atlas-road-shadow"
+                d={
+                  page === "armies" ? armyAtlasPath(points) : atlasPath(points)
+                }
+              />
+              <path
+                className="atlas-road"
+                d={
+                  page === "armies" ? armyAtlasPath(points) : atlasPath(points)
+                }
+              />
               <path
                 className="atlas-road-progress"
-                d={atlasPath(points.slice(0, preview))}
+                d={
+                  page === "armies"
+                    ? armyAtlasPath(points, preview)
+                    : atlasPath(points.slice(0, preview))
+                }
               />
             </svg>
             <svg
@@ -234,18 +253,30 @@ function NarrativeAtlas({
             >
               <path
                 className="atlas-road-shadow"
-                d={atlasMobilePath(mobile.points, mobile.height)}
+                d={
+                  page === "armies"
+                    ? armyAtlasPath(mobile.points, undefined, mobile.height)
+                    : atlasMobilePath(mobile.points, mobile.height)
+                }
               />
               <path
                 className="atlas-road"
-                d={atlasMobilePath(mobile.points, mobile.height)}
+                d={
+                  page === "armies"
+                    ? armyAtlasPath(mobile.points, undefined, mobile.height)
+                    : atlasMobilePath(mobile.points, mobile.height)
+                }
               />
               <path
                 className="atlas-road-progress"
-                d={atlasMobilePath(
-                  mobile.points.slice(0, preview),
-                  mobile.height,
-                )}
+                d={
+                  page === "armies"
+                    ? armyAtlasPath(mobile.points, preview, mobile.height)
+                    : atlasMobilePath(
+                        mobile.points.slice(0, preview),
+                        mobile.height,
+                      )
+                }
               />
             </svg>
             {route.stops.map((s, i) => (
@@ -253,7 +284,7 @@ function NarrativeAtlas({
                 key={s.href}
                 href={s.href}
                 data-stop={i + 1}
-                className={`atlas-stop ${i + 1 === preview ? "is-selected" : ""}`}
+                className={`atlas-stop ${page === "armies" && i === 4 ? "atlas-comparison-stop" : ""} ${i + 1 === preview ? "is-selected" : ""}`}
                 style={
                   {
                     "--desktop-x": `${points[i][0]}%`,
@@ -265,10 +296,12 @@ function NarrativeAtlas({
                 aria-label={`第${i + 1}站 ${s.title}${status(i) ? "，已阅读" : ""}`}
                 aria-current={preview === i + 1 ? "location" : undefined}
                 onPointerEnter={(e) => {
-                  if (e.pointerType !== "touch" && !landscape.dragging)
+                  if (e.pointerType !== "touch" && !landscape.dragging.current)
                     setPreview(i + 1);
                 }}
-                onFocus={() => setPreview(i + 1)}
+                onFocus={() => {
+                  if (!landscape.dragging.current) setPreview(i + 1);
+                }}
                 onKeyDown={(e) => {
                   if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
                     e.preventDefault();
@@ -289,11 +322,15 @@ function NarrativeAtlas({
                 <span className="atlas-stop-pin">
                   {page === "home" ? (
                     <span className="atlas-home-pin-title">{s.title}</span>
+                  ) : page === "armies" && i === 4 ? (
+                    <span className="atlas-comparison-pin-title">
+                      {s.title}
+                    </span>
                   ) : (
                     String(i + 1).padStart(2, "0")
                   )}
                 </span>
-                {page !== "home" && (
+                {page !== "home" && !(page === "armies" && i === 4) && (
                   <span className="atlas-stop-title">{s.title}</span>
                 )}
                 {status(i) && <small>{status(i)}</small>}
@@ -351,7 +388,6 @@ function NarrativeAtlas({
         </div>
       </section>
       <div className="atlas-colophon">
-        <span>宽幅艺术全景</span>
         {page === "journey" ? (
           <a href={`#/journey?mode=archive&station=${preview}`}>
             查看地理资料地图 <ArrowRight />

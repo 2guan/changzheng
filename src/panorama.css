@@ -385,6 +385,9 @@ body:has(.panorama.is-focused) .site-header {
   padding: 10px 0 14px;
   letter-spacing: 0.02em;
 }
+.panorama-colophon > span:last-child {
+  margin-left: auto;
+}
 .panorama-hotspot {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -866,4 +869,63 @@ body:has(.panorama.is-focused) .site-header {
   margin: -10px 0 28px;
   font-size: 12px;
   color: #887455;
+}
+
+/* Related readings stay within the panorama and use the shared paper dialog. */
+.panorama-story-tabs {
+  flex-wrap: wrap;
+  column-gap: clamp(12px, 3vw, 21px);
+  row-gap: 4px;
+}
+.panorama-story-tabs button {
+  min-height: 44px;
+}
+.panorama-related {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 20px;
+  max-height: 190px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #bb99666b transparent;
+  margin-bottom: 14px;
+}
+.panorama-related a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 58px;
+  gap: 8px;
+  padding: 9px 0;
+  border-bottom: 1px solid #d8ba822b;
+  color: #f1dfbf;
+  text-shadow: 0 1px 12px #0009;
+}
+.panorama-related a > div { min-width: 0; }
+.panorama-related a:only-child { grid-column: 1 / -1; }
+.panorama-related strong {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.panorama-related span {
+  display: block;
+  margin-top: 2px;
+  color: #c5c9c6;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.panorama-related svg { flex: none; width: 15px; height: 15px; }
+.panorama-related a:hover { color: #ffe3ad; border-color: #d8ba8299; }
+.panorama-related a:focus-visible { outline: 2px solid #e6c38e; outline-offset: -2px; }
+@media (max-width: 650px) {
+  .panorama-related { gap: 0 14px; max-height: 190px; }
+  .panorama-related strong { font-size: 14px; }
 }

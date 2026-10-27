@@ -238,7 +238,5 @@ export async function createCertificate(
     21,
     "#78664d",
   );
-  c.textAlign = "center";
-  text("依据个人学习记录生成 · 非官方认证", 900, 1488, 16, "#8a785c");
   return canvas.toDataURL("image/png");
 }
