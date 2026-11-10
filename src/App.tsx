@@ -140,7 +140,7 @@ function DirectoryDialog({ onClose }: { onClose: () => void }) {
         >
           <div className="production-card-heading">
             <img
-              src="/assets/department-logo.png"
+              src="/branding/logo.png"
               alt=""
               width={40}
               height={40}
@@ -157,7 +157,7 @@ function DirectoryDialog({ onClose }: { onClose: () => void }) {
           <dl>
             <div className="production-card-version">
               <dt>版本号</dt>
-              <dd>V1.06</dd>
+              <dd>V1.1</dd>
             </div>
           </dl>
         </section>
@@ -219,7 +219,7 @@ function Site() {
         <a className="brand" href="#/home" aria-label="重走长征路，首页">
           <img
             className="brand-logo"
-            src="/assets/department-logo.png"
+            src="/branding/logo.png"
             alt=""
             width={48}
             height={48}

@@ -1,6 +1,6 @@
 services:
   changzheng:
-    image: changzheng:1.06
+    image: changzheng:1.1
     platform: linux/amd64
     build:
       context: .
@@ -9,6 +9,13 @@ services:
         required: false
     ports:
       - "${PORT:-4061}:4061"
+    volumes:
+      - type: bind
+        source: ./public/branding
+        target: /app/dist/branding
+        read_only: true
+        bind:
+          create_host_path: false
     restart: unless-stopped
     read_only: true
     tmpfs:

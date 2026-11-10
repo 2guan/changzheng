@@ -1,15 +1,17 @@
 # 重走长征路 · Docker 部署
 
-目标服务器：Linux x86_64（Docker 平台名称 `linux/amd64`）。默认访问端口为 **4061**，镜像名称为 `changzheng:1.06`。所有网页、图片、字体和互动资源均包含在镜像内；运行不依赖在线构建服务、数据库或外部素材服务。白桦流式讲解通过本地 Node 服务调用小米 TTS，需要服务器联网。
+目标服务器：Linux x86_64（Docker 平台名称 `linux/amd64`）。默认访问端口为 **4061**，镜像名称为 `changzheng:1.1`。所有网页、图片、字体和互动资源均包含在镜像内；运行不依赖在线构建服务、数据库或外部素材服务。白桦流式讲解通过本地 Node 服务调用小米 TTS，需要服务器联网。
 
 ## 使用已打包镜像（推荐）
 
-将 `release/` 下的以下文件上传到服务器同一目录：
+将 `release/1.1/` 整个目录复制到服务器，保留下列文件和子目录。
 
-- `changzheng-1.06-linux-amd64.tar.gz`
+- `changzheng-1.1-linux-amd64.tar.gz`
 - `compose.yaml`
 - `SHA256SUMS`
 - `.env.local.example`
+- `public/branding/logo.png`
+- `部署说明.md` 和 `版本说明.md`
 
 将 `.env.local.example` 复制为 `.env.local`，填入你的密钥，然后执行 `chmod 600 .env.local`。密钥不包含在镜像和发布包中。未配置时网页和本地音乐正常使用，讲解会提示尚未配置。
 
@@ -17,7 +19,7 @@
 
 ```sh
 sha256sum -c SHA256SUMS
-docker load -i changzheng-1.06-linux-amd64.tar.gz
+docker load -i changzheng-1.1-linux-amd64.tar.gz
 docker compose up -d --no-build --pull never
 docker compose ps
 curl -fsS http://127.0.0.1:4061/healthz
@@ -26,6 +28,17 @@ curl -fsS http://127.0.0.1:4061/healthz
 浏览器打开 `http://服务器IP:4061/`。如果服务器有安全组或防火墙，需允许 TCP 4061 入站。
 
 `compose.yaml` 默认将宿主机 4061 映射到容器 4061，需要 Docker Compose 2.24 或更新版本（支持可选 env_file）。设置自动重启、日志轮转、非 root 用户和只读根文件系统。站点不需要数据卷。
+
+## 替换 Logo
+
+在 `compose.yaml` 所在目录执行以下命令，并将示例源路径改为自己的方形 PNG 文件。
+
+```sh
+install -m 644 /path/to/new-logo.png public/branding/logo.next.png
+mv public/branding/logo.next.png public/branding/logo.png
+```
+
+刷新页面即可看到新图。标题栏、版本信息卡片和随后生成的证书共用这一文件。Compose 按目录挂载，容器运行期间也能识别文件替换。发行包的 SHA256 校验用于首次部署，随后自定义 Logo 会改变该文件的校验值。
 
 ## 发言人与演绎提示词
 
@@ -56,11 +69,12 @@ docker run -d --name changzheng \
   --platform linux/amd64 \
   --restart unless-stopped \
   -p 4061:4061 \
+  --mount "type=bind,source=${PWD}/public/branding,target=/app/dist/branding,readonly" \
   --env-file .env.local \
   --read-only --tmpfs /tmp:rw,size=64m,mode=1777 \
   --cap-drop ALL --security-opt no-new-privileges:true \
   --log-opt max-size=10m --log-opt max-file=3 \
-  changzheng:1.06
+  changzheng:1.1
 ```
 
 两种启动方式选择一种，避免重复占用同一端口。
@@ -80,7 +94,7 @@ PORT=8080 docker compose up -d --no-build --pull never
 在项目根目录运行（首次构建需要访问镜像仓库和 npm）：
 
 ```sh
-docker buildx build --platform linux/amd64 --load -t changzheng:1.06 .
+docker buildx build --platform linux/amd64 --load -t changzheng:1.1 .
 docker compose up -d --no-build --pull never
 ```
 
@@ -90,7 +104,7 @@ docker compose up -d --no-build --pull never
 
 ```sh
 mkdir -p release
-docker save changzheng:1.06 | gzip > release/changzheng-1.06-linux-amd64.tar.gz
+docker save changzheng:1.1 | gzip > release/changzheng-1.1-linux-amd64.tar.gz
 ```
 
 ## 日常维护

@@ -57,7 +57,7 @@ export async function createCertificate(
     Array.from(name.trim()).slice(0, 20).join("") || "长征路上的同行者";
   const [landscape, logo, ...medals] = await Promise.all([
     loadImage("/assets/hero.webp"),
-    loadImage("/assets/department-logo.png"),
+    loadImage("/branding/logo.png"),
     ...record.badges.map((b) => loadImage(`/assets/badges/${b.id}.svg`)),
   ]);
   await Promise.all([

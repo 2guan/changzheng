@@ -1,6 +1,6 @@
 # 重走长征路
 
-当前发布版本：**V1.06**。更新说明见 [1.06 版本记录](docs/releases/1.06.md)。
+当前发布版本：**V1.1**。更新说明见 [1.1 版本记录](docs/releases/1.1.md)。
 
 **循着先辈的足迹，走进山河深处。在每一次选择与跋涉中，读懂长征。**
 
@@ -112,14 +112,14 @@ API_HOST=0.0.0.0 API_PORT=4061 npm run server
 
 ## Docker 部署
 
-默认目标为 **Linux x86_64 / `linux/amd64`**，默认对外端口 **4061**。当前 Compose 使用镜像 `changzheng:1.06`。
+默认目标为 **Linux x86_64 / `linux/amd64`**，默认对外端口 **4061**。当前 Compose 使用镜像 `changzheng:1.1`。
 
 ### 从源码构建
 
 在仓库根目录准备 `.env.local` 后执行：
 
 ```sh
-docker buildx build --platform linux/amd64 --load -t changzheng:1.06 .
+docker buildx build --platform linux/amd64 --load -t changzheng:1.1 .
 docker compose up -d --no-build --pull never
 docker compose ps
 curl -fsS http://127.0.0.1:4061/healthz
@@ -129,11 +129,11 @@ curl -fsS http://127.0.0.1:4061/healthz
 
 ### 使用已导出的镜像包
 
-发布目录包含镜像压缩包、`compose.yaml`、`.env.local.example`、`SHA256SUMS` 和部署说明。将这些文件放在服务器同一目录，首次部署时将 `.env.local.example` 复制为 `.env.local` 并配置语音密钥；更新时保留原有 `.env.local`。
+将离线发布目录整体复制到服务器，保留 `public/branding/logo.png` 子目录结构。首次部署时将 `.env.local.example` 复制为 `.env.local` 并配置语音密钥，更新时保留原有 `.env.local`。
 
 ```sh
 sha256sum -c SHA256SUMS
-docker load -i changzheng-1.06-linux-amd64.tar.gz
+docker load -i changzheng-1.1-linux-amd64.tar.gz
 docker compose up -d --no-build --pull never --force-recreate
 docker compose ps
 ```
@@ -143,6 +143,10 @@ docker compose ps
 容器以非 root 用户运行，使用只读根文件系统和临时 `/tmp`，配置了健康检查、日志轮转与自动重启。无需数据库或持久化数据卷。更换服务器端口可执行 `PORT=8080 docker compose up -d --no-build --pull never`，容器内部仍监听 4061。
 
 更多操作见 [Docker 部署说明](docs/docker-deployment.md)。
+
+### 替换站点标志
+
+默认标志采用[共产党员网发布的金黄色党徽标准图案](https://www.12371.cn/2021/07/09/ARTI1625818075938118.shtml)。Compose 将 `public/branding/` 目录只读挂载到容器。用方形透明 PNG 替换部署目录中的 `public/branding/logo.png` 并刷新页面，标题栏、版本卡片和新生成的纪念证书都会使用新图。
 
 ## 环境配置
 

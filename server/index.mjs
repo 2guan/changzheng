@@ -160,7 +160,9 @@ http
       const headers = {
         "Content-Type": types[extname(file)] || "application/octet-stream",
         "X-Content-Type-Options": "nosniff",
-        "Cache-Control": pathname.startsWith("/assets/")
+        "Cache-Control": pathname === "/branding/logo.png"
+          ? "no-store"
+          : pathname.startsWith("/assets/")
           ? "public, max-age=0, must-revalidate"
           : "no-cache",
         "Accept-Ranges": "bytes",
